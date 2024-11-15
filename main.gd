@@ -1,22 +1,24 @@
 extends Node2D
 
-@onready var text = $Label
-@onready var button = $Button
+@onready var label = $Label
+@onready var control = $Control
 
+var visible_text_tween;
+var hello := -1
+var array = ["hello", "what is up?", "woop woop wa wa"]
 
-func _ready():
-	button.text = "Click me"
-	button.pressed.connect(self._button_pressed)
-	text.text = str("helloseafdxghc")
-	
+func _ready() -> void:
+	control.display_label_text.connect(display_label_text)
 
-func _button_pressed():
-	var speed = 0
-	print("Hello world!")
-	while speed < 1:
-		speed += 0.1
-		await get_tree().create_timer(0.5).timeout
-		text.visible_ratio = speed
+func display_label_text():
+
+	label.visible_ratio = 0
+	if hello <= 2:
+		hello += 1
+		label.text = array[hello]
+		visible_text_tween = create_tween()
+		visible_text_tween.tween_property(label, "visible_ratio", 1.0, 2.0)
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -1,0 +1,16 @@
+extends Control
+
+@onready var button = $Button
+
+signal display_label_text
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	button.text = "Click me"
+
+func _on_button_pressed() -> void:
+	display_label_text.emit()
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
