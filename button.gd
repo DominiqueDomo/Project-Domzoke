@@ -9,7 +9,10 @@ func _ready():
 	button.text = "Click me"
 
 func _on_button_pressed() -> void:
-	display_label_text.emit()
+	if Global.gatekeeping == false:
+		display_label_text.emit()
+	else:
+		print("woop")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -1,21 +1,3 @@
-[gd_scene load_steps=3 format=3 uid="uid://dt0l50sfesi7e"]
-
-[ext_resource type="Script" path="res://main.gd" id="1_7d63g"]
-[ext_resource type="PackedScene" uid="uid://csvb65k22b4my" path="res://button.tscn" id="2_8ge5d"]
+[gd_scene format=3 uid="uid://y3tgdyxvyw4t"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_7d63g")
-
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(112, 64)
-zoom = Vector2(4, 4)
-
-[node name="Control" parent="." instance=ExtResource("2_8ge5d")]
-offset_left = 103.0
-offset_top = 53.0
-offset_right = 103.0
-offset_bottom = 53.0
