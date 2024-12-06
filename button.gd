@@ -2,7 +2,7 @@ extends Control
 
 @onready var button = $Button
 
-signal display_label_text
+#signal display_label_text
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,7 +10,7 @@ func _ready():
 
 func _on_button_pressed() -> void:
 	if Global.gatekeeping == false:
-		display_label_text.emit()
+		Global.display_label_text.emit()
 	else:
 		print("woop")
 

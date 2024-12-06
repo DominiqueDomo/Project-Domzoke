@@ -1,3 +1,20 @@
-[gd_scene format=3 uid="uid://y3tgdyxvyw4t"]
+[gd_scene load_steps=4 format=3 uid="uid://y3tgdyxvyw4t"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" path="res://main.gd" id="1_48o68"]
+[ext_resource type="PackedScene" uid="uid://csvb65k22b4my" path="res://button.tscn" id="1_vmceb"]
+[ext_resource type="PackedScene" uid="uid://dt0l50sfesi7e" path="res://dialogue.tscn" id="2_me0ay"]
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource("1_48o68")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(112, 64)
+zoom = Vector2(4, 4)
+
+[node name="Button" parent="." instance=ExtResource("1_vmceb")]
+offset_left = 140.0
+offset_top = 79.0
+offset_right = 178.0
+offset_bottom = 101.0
+
+[node name="DialogueReader" parent="." instance=ExtResource("2_me0ay")]
