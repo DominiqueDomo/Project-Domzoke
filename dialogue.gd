@@ -27,8 +27,8 @@ func display_label_text():
 		Global.gatekeeping = false
 	else:
 		Global.text_array = []
-		print(Global.text_array.size()) 
-	print(Global.gatekeeping)
+		
+	#print(Global.gatekeeping)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

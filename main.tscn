@@ -11,10 +11,10 @@ script = ExtResource("1_48o68")
 position = Vector2(112, 64)
 zoom = Vector2(4, 4)
 
-[node name="Button" parent="." instance=ExtResource("1_vmceb")]
-offset_left = 140.0
-offset_top = 79.0
-offset_right = 178.0
-offset_bottom = 101.0
-
 [node name="DialogueReader" parent="." instance=ExtResource("2_me0ay")]
+
+[node name="Button" parent="." instance=ExtResource("1_vmceb")]
+offset_left = 159.0
+offset_top = 86.0
+offset_right = 159.0
+offset_bottom = 86.0
