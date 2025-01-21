@@ -1,0 +1,25 @@
+{
+  "Conversations": {
+    "AAAA": {
+      "convlength": 6,
+      "str1": "Hi I'm Domo",
+      "pose1": "Wave",
+      "char1": "Domo",
+      "pos1": "left",
+      "str2": "Bingle bongle",
+      "str3": "I love ninjago!",
+      "str4": "Woop woop wa wa",
+      "str5": "Hvdhsuigdih",
+      "str6": "Hvdhsjghjsgjh"
+    },
+    "AAAB": {
+      "convlength": 6,
+      "str1": "Hi I'm evil Domo",
+      "str2": "Bangle boongle",
+      "str3": "I hate ninjago grrrrr!",
+      "str4": "Weep weep we we",
+      "str5": "ninjago dragons rising is da best",
+      "str6": "Evil Tomo come join me in evil land"
+    }
+  }
+}

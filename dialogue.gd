@@ -7,13 +7,10 @@ var text := 0
 
 func _ready() -> void:
 	Global.display_label_text.connect(display_label_text)
-			# Load the JSON file
-	var array = ["hello", "what is up?", "woop woop wa wa", "yippie"]
+	Global.setup_convo.connect(setup_convo)
 	
-	for i in range(array.size()):
-		Global.text_array.push_back(array[i])
-		#print(i)
-		#print(Global.text_array[i])
+			# Load the JSON file
+
 func setup_convo(convo):
 	var file = FileAccess.open("res://JSON/JSONTest.json", FileAccess.READ)
 	if file:
@@ -52,6 +49,7 @@ func setup_convo(convo):
 	else:
 		print("File not found: res://JSON/JSONTest.json")
 	pass
+	
 func display_label_text():
 	dialogue.visible_ratio = 0
 	
