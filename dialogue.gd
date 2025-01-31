@@ -30,14 +30,25 @@ func setup_convo(convo):
 
 				if conversations.has(convo):  # Safely check if "AAAA" exists
 					var Conversation = conversations[convo]
-
-				# Extract the strings from Str1 to Str6
-					for i in range(1, 7):  # From 1 to 6
+				# Extract the strings from Str1 to convlength
+					for i in range(1, Conversation.size()):  # From 1 to convlength
 						var string = "str" + str(i)
-						if Conversation.has(string):  # Safely check if the key exists
+						var anim = "anim" + str(i)
+						var char = "char" + str(i)
+						var pos = "pos" + str(i)
+						if Conversation.has(string) and Conversation.has(anim):  # Safely check if the key exists
 							var value = Conversation[string]
+							var animvalue = Conversation[anim]
+							var charvalue = Conversation[char]
+							var posvalue = Conversation[pos]
+							
+							var preloads = ("res://"+ charvalue + ".tscn")
+							print(preloads)
+							load(preloads)
 							Global.text_array.push_back(value)
-							print("Extracted value for ", string, ": ", value)
+							Global.anim_array.push_back(animvalue)
+							print("Extracted value for ", string, 	": ", value)
+							print("Extracted value for ", anim, ": ", animvalue)
 						else:
 							print("Key not found: ", string)
 				else:

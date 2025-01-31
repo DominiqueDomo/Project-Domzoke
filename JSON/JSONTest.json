@@ -1,16 +1,23 @@
 {
   "Conversations": {
     "AAAA": {
-      "convlength": 6,
-      "str1": "Hi I'm Domo",
-      "pose1": "Wave",
-      "char1": "Domo",
-      "pos1": "left",
-      "str2": "Bingle bongle",
-      "str3": "I love ninjago!",
-      "str4": "Woop woop wa wa",
-      "str5": "Hvdhsuigdih",
-      "str6": "Hvdhsjghjsgjh"
+      "convlength": 4,
+      "str1": "Hi I'm Goober!",
+      "anim1": "GooberHappy",
+      "char1": "Goober",
+      "pos1": "right",
+      "str2": "and I'm sad :(",
+      "anim2": "GooberSad",
+      "char2": "Goober",
+      "pos2": "right",
+      "str3": "But ninjago so cooool, and that makes me happy!",
+      "anim3": "GooberHappy",
+      "char3": "Goober",
+      "pos3": "right",
+      "str4": "The code won't work and that makes me sad",
+      "anim4": "GooberSad",
+      "char4": "Goober",
+      "pos4": "right"
     },
     "AAAB": {
       "convlength": 6,
