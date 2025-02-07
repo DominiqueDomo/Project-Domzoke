@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://npe1t11sxhcs"]
 
-[ext_resource type="Texture2D" uid="uid://dmkvg1inko705" path="res://Assets/GooberHappy.png" id="1_pprmi"]
-[ext_resource type="Texture2D" uid="uid://bsis2fqqumk7k" path="res://Assets/GooberSad.png" id="2_xb1qb"]
+[ext_resource type="Texture2D" uid="uid://dmkvg1inko705" path="res://assets/GooberHappy.png" id="1_pprmi"]
+[ext_resource type="Texture2D" uid="uid://bsis2fqqumk7k" path="res://assets/GooberSad.png" id="2_xb1qb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mjqis"]
 animations = [{

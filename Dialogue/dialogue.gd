@@ -1,6 +1,7 @@
 extends Control
 
 @onready var dialogue = $Dialogue
+#@onready var Goober = $"../Goober"
 
 var visible_text_tween;
 var text := 0
@@ -9,8 +10,6 @@ func _ready() -> void:
 	Global.display_label_text.connect(display_label_text)
 	Global.setup_convo.connect(setup_convo)
 	
-			# Load the JSON file
-
 func setup_convo(convo):
 	var file = FileAccess.open("res://JSON/JSONTest.json", FileAccess.READ)
 	if file:
@@ -44,12 +43,12 @@ func setup_convo(convo):
 							
 							# read through the JSON file, and finds everything with valuex for example
 							
-							var preloads = ("res://"+ charvalue + ".tscn")
+							var preloads = ("res://Characters/"+ charvalue + ".tscn")
 							print(preloads)
 							load(preloads)
 							Global.text_array.push_back(value)
 							Global.anim_array.push_back(animvalue)
-							Global.char_array.push_back("$" + charvalue)
+							Global.char_array.push_back(charvalue)
 							print("Extracted value for ", string, ": ", value)
 							print("Extracted value for ", anim, ": ", animvalue)
 							
@@ -74,14 +73,14 @@ func display_label_text():
 		dialogue.text = Global.text_array[text]
 		var string = Global.text_array[text]
 		var length = string.length()
-		length = length * 0.1
-		Global.char_array[text].play("Global.anim_array[text]")
+		var textspeed = length * 0.07
+		get_node("../%s" % Global.char_array[text]).play(Global.anim_array[text])
 		visible_text_tween = create_tween()
-		visible_text_tween.tween_property(dialogue, "visible_ratio", 1.0, length)
+		visible_text_tween.tween_property(dialogue, "visible_ratio", 1.0, textspeed)
 	
 		text += 1
 		
-		await get_tree().create_timer(length).timeout
+		await get_tree().create_timer(textspeed).timeout
 		Global.gatekeeping = false
 	else:
 		Global.text_array = []

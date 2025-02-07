@@ -1,15 +1,17 @@
 [gd_scene load_steps=2 format=3 uid="uid://dt0l50sfesi7e"]
 
-[ext_resource type="Script" path="res://dialogue.gd" id="1_oa6iu"]
+[ext_resource type="Script" path="res://Dialogue/dialogue.gd" id="1_tt57t"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_oa6iu")
+script = ExtResource("1_tt57t")
 
 [node name="Dialogue" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 1146.0
+offset_bottom = 633.0
+theme_override_font_sizes/font_size = 50
+autowrap_mode = 3

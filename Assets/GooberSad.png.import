@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsis2fqqumk7k"
-path="res://.godot/imported/GooberSad.png-a0f0434cab4d07b4e7c7292cf0ee1332.ctex"
+path="res://.godot/imported/GooberSad.png-10e2d48861f56779f3ed0efe7d2ec85d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GooberSad.png"
-dest_files=["res://.godot/imported/GooberSad.png-a0f0434cab4d07b4e7c7292cf0ee1332.ctex"]
+source_file="res://assets/GooberSad.png"
+dest_files=["res://.godot/imported/GooberSad.png-10e2d48861f56779f3ed0efe7d2ec85d.ctex"]
 
 [params]
 
