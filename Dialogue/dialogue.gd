@@ -75,11 +75,10 @@ func display_label_text():
 		var string = Global.text_array[text]
 		var length = string.length()
 		length = length * 0.1
-		var sceneplays = "res://Characters/Goober.tscn"
-		sceneplays.play("Global.anim_array[text]")
+		Global.char_array[text].play("Global.anim_array[text]")
 		visible_text_tween = create_tween()
 		visible_text_tween.tween_property(dialogue, "visible_ratio", 1.0, length)
-
+	
 		text += 1
 		
 		await get_tree().create_timer(length).timeout
