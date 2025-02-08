@@ -21,5 +21,6 @@ offset_right = 517.0
 offset_bottom = 274.0
 
 [node name="Goober" parent="." instance=ExtResource("4_nhhot")]
-position = Vector2(305.969, 298.402)
-scale = Vector2(0.421902, 0.487317)
+position = Vector2(250, 250)
+scale = Vector2(14.2002, 16.4019)
+animation = &"GooberSad"
