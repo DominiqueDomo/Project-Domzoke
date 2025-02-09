@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmkvg1inko705"
-path="res://.godot/imported/GooberHappy.png-a0d2cf74ac411f86c90a82bec1829dd6.ctex"
+uid="uid://k5s0pbhwjmr0"
+path="res://.godot/imported/Kitty.png-5be08246d5bae74240f44dbc75689606.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GooberHappy.png"
-dest_files=["res://.godot/imported/GooberHappy.png-a0d2cf74ac411f86c90a82bec1829dd6.ctex"]
+source_file="res://Assets/CharacterSprites/Other/Kitty.png"
+dest_files=["res://.godot/imported/Kitty.png-5be08246d5bae74240f44dbc75689606.ctex"]
 
 [params]
 

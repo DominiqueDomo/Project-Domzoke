@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6gabevw3n0cn"
-path="res://.godot/imported/DominicTalking.png-015047fbf059f1f2b2a6ab336cb2655b.ctex"
+uid="uid://c1e8nr47w4x2p"
+path="res://.godot/imported/DominicShouting.png-e9665a6b22684f0244414b43eec276f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/DominicTalking.png"
-dest_files=["res://.godot/imported/DominicTalking.png-015047fbf059f1f2b2a6ab336cb2655b.ctex"]
+source_file="res://Assets/CharacterSprites/Dominic/DominicShouting.png"
+dest_files=["res://.godot/imported/DominicShouting.png-e9665a6b22684f0244414b43eec276f8.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byg5sf4c6s5yp"
-path="res://.godot/imported/Dominic.png-9be0a426be26ff551e4b97e2d92ae42d.ctex"
+uid="uid://dmkvg1inko705"
+path="res://.godot/imported/GooberHappy.png-afc485e63866df585f972357a86e9e3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Dominic.png"
-dest_files=["res://.godot/imported/Dominic.png-9be0a426be26ff551e4b97e2d92ae42d.ctex"]
+source_file="res://Assets/CharacterSprites/Goober/GooberHappy.png"
+dest_files=["res://.godot/imported/GooberHappy.png-afc485e63866df585f972357a86e9e3a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k5s0pbhwjmr0"
-path="res://.godot/imported/Kitty.png-bb6e74b99206717589d722f7efb53d02.ctex"
+uid="uid://bsis2fqqumk7k"
+path="res://.godot/imported/GooberSad.png-c6287f5e4c2776d27a1c9cf83f5dd786.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Kitty.png"
-dest_files=["res://.godot/imported/Kitty.png-bb6e74b99206717589d722f7efb53d02.ctex"]
+source_file="res://Assets/CharacterSprites/Goober/GooberSad.png"
+dest_files=["res://.godot/imported/GooberSad.png-c6287f5e4c2776d27a1c9cf83f5dd786.ctex"]
 
 [params]
 

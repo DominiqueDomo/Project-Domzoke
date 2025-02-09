@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsis2fqqumk7k"
-path="res://.godot/imported/GooberSad.png-a0f0434cab4d07b4e7c7292cf0ee1332.ctex"
+uid="uid://byg5sf4c6s5yp"
+path="res://.godot/imported/Dominic.png-15e7845bbf7ee6f23a8736428b9d9109.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GooberSad.png"
-dest_files=["res://.godot/imported/GooberSad.png-a0f0434cab4d07b4e7c7292cf0ee1332.ctex"]
+source_file="res://Assets/CharacterSprites/Dominic/Dominic.png"
+dest_files=["res://.godot/imported/Dominic.png-15e7845bbf7ee6f23a8736428b9d9109.ctex"]
 
 [params]
 
