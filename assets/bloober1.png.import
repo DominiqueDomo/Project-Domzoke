@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0qr81cvrx5nb"
-path="res://.godot/imported/bloober1.png-149650477d0f8fcb758169602f8e55ba.ctex"
+path="res://.godot/imported/bloober1.png-2bcd32199fcd929901663a3615e6670f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bloober1.png"
-dest_files=["res://.godot/imported/bloober1.png-149650477d0f8fcb758169602f8e55ba.ctex"]
+source_file="res://Assets/bloober1.png"
+dest_files=["res://.godot/imported/bloober1.png-2bcd32199fcd929901663a3615e6670f.ctex"]
 
 [params]
 

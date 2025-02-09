@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://npe1t11sxhcs"]
+[gd_scene load_steps=28 format=3 uid="uid://npe1t11sxhcs"]
 
-[ext_resource type="Texture2D" uid="uid://0qr81cvrx5nb" path="res://assets/bloober1.png" id="1_225u3"]
-[ext_resource type="Texture2D" uid="uid://dmkvg1inko705" path="res://assets/GooberHappy.png" id="1_pprmi"]
-[ext_resource type="Texture2D" uid="uid://bsis2fqqumk7k" path="res://assets/GooberSad.png" id="2_xb1qb"]
-[ext_resource type="Texture2D" uid="uid://k5s0pbhwjmr0" path="res://assets/Kitty.png" id="4_q1aik"]
+[ext_resource type="Texture2D" uid="uid://0qr81cvrx5nb" path="res://Assets/bloober1.png" id="1_225u3"]
+[ext_resource type="Texture2D" uid="uid://dmkvg1inko705" path="res://Assets/GooberHappy.png" id="1_pprmi"]
+[ext_resource type="Texture2D" uid="uid://bsis2fqqumk7k" path="res://Assets/GooberSad.png" id="2_xb1qb"]
+[ext_resource type="Texture2D" uid="uid://k5s0pbhwjmr0" path="res://Assets/Kitty.png" id="4_q1aik"]
+[ext_resource type="Texture2D" uid="uid://dew1o0do6vl68" path="res://Assets/GooberSleepdeprived.png" id="4_uge8g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6kijv"]
 atlas = ExtResource("1_225u3")
@@ -51,6 +52,22 @@ region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_01w84"]
 atlas = ExtResource("2_xb1qb")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57d0q"]
+atlas = ExtResource("4_uge8g")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xg6y6"]
+atlas = ExtResource("4_uge8g")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_issyg"]
+atlas = ExtResource("4_uge8g")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1f5u"]
+atlas = ExtResource("4_uge8g")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_grqxs"]
@@ -128,6 +145,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_57d0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xg6y6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_issyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1f5u")
+}],
+"loop": true,
+"name": &"GooberSleepdeprived",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_grqxs")
 }, {
 "duration": 1.0,
@@ -158,4 +192,4 @@ animations = [{
 
 [node name="Goober" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_mjqis")
-animation = &"Bloober"
+animation = &"GooberSleepdeprived"

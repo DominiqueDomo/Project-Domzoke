@@ -14,10 +14,14 @@
 	  "anim3": "GooberHappy",
 	  "char3": "Goober",
 	  "pos3": "right",
-	  "str4": "The code won't work and that makes me sad",
+	  "str4": "I wish our code would work",
 	  "anim4": "GooberSad",
 	  "char4": "Goober",
-	  "pos4": "right"
+	  "pos4": "right",
+	  "str5": "I have been working on this dialogue system for 20 hours.",
+	  "anim5": "GooberSleepdeprived",
+	  "char5": "Goober",
+	  "pos5": "right"
 	},
 	"AAAB": {
 	  "convlength": 6,
