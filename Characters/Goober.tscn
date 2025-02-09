@@ -1,8 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://npe1t11sxhcs"]
+[gd_scene load_steps=43 format=3 uid="uid://npe1t11sxhcs"]
 
 [ext_resource type="Texture2D" uid="uid://0qr81cvrx5nb" path="res://Assets/bloober1.png" id="1_225u3"]
 [ext_resource type="Texture2D" uid="uid://dmkvg1inko705" path="res://Assets/GooberHappy.png" id="1_pprmi"]
+[ext_resource type="Texture2D" uid="uid://byg5sf4c6s5yp" path="res://Assets/Dominic.png" id="2_fqagr"]
 [ext_resource type="Texture2D" uid="uid://bsis2fqqumk7k" path="res://Assets/GooberSad.png" id="2_xb1qb"]
+[ext_resource type="Texture2D" uid="uid://c1e8nr47w4x2p" path="res://Assets/DominicShouting.png" id="3_5aboj"]
+[ext_resource type="Texture2D" uid="uid://b6gabevw3n0cn" path="res://Assets/DominicTalking.png" id="4_4ytv8"]
 [ext_resource type="Texture2D" uid="uid://k5s0pbhwjmr0" path="res://Assets/Kitty.png" id="4_q1aik"]
 [ext_resource type="Texture2D" uid="uid://dew1o0do6vl68" path="res://Assets/GooberSleepdeprived.png" id="4_uge8g"]
 
@@ -21,6 +24,54 @@ region = Rect2(32, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_5nlii"]
 atlas = ExtResource("1_225u3")
 region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ihmi"]
+atlas = ExtResource("2_fqagr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtagi"]
+atlas = ExtResource("2_fqagr")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hiu85"]
+atlas = ExtResource("2_fqagr")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6a1cc"]
+atlas = ExtResource("2_fqagr")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmwg4"]
+atlas = ExtResource("3_5aboj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hcx2"]
+atlas = ExtResource("3_5aboj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wx45n"]
+atlas = ExtResource("3_5aboj")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhkxk"]
+atlas = ExtResource("3_5aboj")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsmlw"]
+atlas = ExtResource("4_4ytv8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnq3p"]
+atlas = ExtResource("4_4ytv8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3ny7"]
+atlas = ExtResource("4_4ytv8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40umk"]
+atlas = ExtResource("4_4ytv8")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v3jsm"]
 atlas = ExtResource("1_pprmi")
@@ -111,6 +162,57 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_4ihmi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtagi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hiu85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6a1cc")
+}],
+"loop": true,
+"name": &"Dominic",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tmwg4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hcx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wx45n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhkxk")
+}],
+"loop": true,
+"name": &"DominicShouting",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsmlw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnq3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3ny7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40umk")
+}],
+"loop": true,
+"name": &"DominicTalking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_v3jsm")
 }, {
 "duration": 1.0,
@@ -192,4 +294,4 @@ animations = [{
 
 [node name="Goober" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_mjqis")
-animation = &"GooberSleepdeprived"
+animation = &"DominicShouting"
