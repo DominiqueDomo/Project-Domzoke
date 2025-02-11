@@ -27,5 +27,5 @@ scale = Vector2(11.8814, 11.9822)
 animation = &"Bloober"
 
 [node name="Dominic" parent="." instance=ExtResource("5_rkmlg")]
-position = Vector2(848, 376)
+position = Vector2(805, 360)
 scale = Vector2(11.1875, 11.1875)
