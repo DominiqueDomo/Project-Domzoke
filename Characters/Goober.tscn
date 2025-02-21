@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://npe1t11sxhcs"]
+[gd_scene load_steps=46 format=3 uid="uid://npe1t11sxhcs"]
 
 [ext_resource type="Texture2D" uid="uid://0qr81cvrx5nb" path="res://Assets/CharacterSprites/Other/bloober1.png" id="1_p6bde"]
 [ext_resource type="Texture2D" uid="uid://byg5sf4c6s5yp" path="res://Assets/CharacterSprites/Dominic/Dominic.png" id="2_c2e2c"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bsis2fqqumk7k" path="res://Assets/CharacterSprites/Goober/GooberSad.png" id="5_615rr"]
 [ext_resource type="Texture2D" uid="uid://dew1o0do6vl68" path="res://Assets/CharacterSprites/Goober/GooberSleepdeprived.png" id="6_6grsi"]
 [ext_resource type="Texture2D" uid="uid://k5s0pbhwjmr0" path="res://Assets/CharacterSprites/Other/Kitty.png" id="7_e45w3"]
+[ext_resource type="Texture2D" uid="uid://dliqo24xerbm5" path="res://Assets/CharacterSprites/Other/Yapyap.png" id="8_tpk8x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_idl0w"]
 atlas = ExtResource("1_p6bde")
@@ -135,6 +136,22 @@ region = Rect2(32, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_73cg1"]
 atlas = ExtResource("7_e45w3")
 region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_628uv"]
+atlas = ExtResource("8_tpk8x")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5pnm"]
+atlas = ExtResource("8_tpk8x")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7x6d"]
+atlas = ExtResource("8_tpk8x")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8romy"]
+atlas = ExtResource("8_tpk8x")
+region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mjqis"]
 animations = [{
@@ -268,8 +285,26 @@ animations = [{
 "loop": true,
 "name": &"Kitty",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_628uv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5pnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i7x6d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8romy")
+}],
+"loop": true,
+"name": &"Yapyap",
+"speed": 5.0
 }]
 
 [node name="Goober" type="AnimatedSprite2D"]
+scale = Vector2(-1, 1)
 sprite_frames = SubResource("SpriteFrames_mjqis")
-animation = &"Kitty"
+animation = &"Yapyap"

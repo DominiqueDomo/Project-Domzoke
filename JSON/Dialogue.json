@@ -3,8 +3,8 @@
 	"AAAA": {
 	  "convlength": 4,
 	  "str1": "Hi I'm Bloober!",
-	  "anim1": "Dominic",
-	  "char1": "Dominic",
+	  "anim1": "BlooberYapping",
+	  "char1": "Bloober",
 	  "pos1": "right",
 	  "str2": "and I'm cat :3",
 	  "anim2": "Kitty",
@@ -20,10 +20,10 @@
 	  "pos4": "right",
 	  "str5": "I have been working on this dialogue system for 20 hours.",
 	  "anim5": "GooberSleepdeprived",
-	  "char5": "Dominic",
+	  "char5": "Goober",
 	  "pos5": "right",
 	  "str6": "Were you about to be sad right there?",
-	  "anim6": "Dominic",
+	  "anim6": "DominicStill",
 	  "char6": "Dominic",
 	  "pos6": "right",
 	  "str7": "Being sad is for LOSERS!",
@@ -32,7 +32,7 @@
 	  "pos7": "right",
 	  "str8": "And that crosses my BOUNDARIES!",
 	  "anim8": "DominicShouting",
-	  "char8": "Goober",
+	  "char8": "Dominic",
 	  "pos8": "right"
 	},
 	"AAAB": {

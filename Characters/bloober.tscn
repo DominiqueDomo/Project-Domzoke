@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://ccgd3pmhalvr8"]
+
+[ext_resource type="Texture2D" uid="uid://0qr81cvrx5nb" path="res://Assets/CharacterSprites/Other/bloober1.png" id="1_11wi6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6rsy"]
+atlas = ExtResource("1_11wi6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofvcw"]
+atlas = ExtResource("1_11wi6")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfcxw"]
+atlas = ExtResource("1_11wi6")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmpv2"]
+atlas = ExtResource("1_11wi6")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pylku"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6rsy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofvcw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfcxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tmpv2")
+}],
+"loop": true,
+"name": &"BlooberYapping",
+"speed": 8.0
+}]
+
+[node name="Bloober" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_pylku")
+animation = &"BlooberYapping"

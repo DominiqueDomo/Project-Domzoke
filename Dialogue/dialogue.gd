@@ -11,7 +11,7 @@ func _ready() -> void:
 	Global.setup_convo.connect(setup_convo)
 	
 func setup_convo(convo):
-	var file = FileAccess.open("res://JSON/JSONTest.json", FileAccess.READ)
+	var file = FileAccess.open("res://JSON/Dialogue.json", FileAccess.READ)
 	if file:
 	# Read the file's content
 		var json_data = file.get_as_text()
@@ -62,7 +62,7 @@ func setup_convo(convo):
 		else:
 			print("JSON parsing error: ", json.get_error_message())
 	else:
-		print("File not found: res://JSON/JSONTest.json")
+		print("File not found: res://JSON/Dialogue.json")
 	pass
 	
 func display_label_text():
@@ -74,6 +74,8 @@ func display_label_text():
 		var string = Global.text_array[text]
 		var length = string.length()
 		var textspeed = length * 0.07
+		var charinpos = $Global.char_array[text]
+		charinpos.position = Vector2(10, -23)
 		get_node("../%s" % Global.char_array[text]).play(Global.anim_array[text])
 		visible_text_tween = create_tween()
 		visible_text_tween.tween_property(dialogue, "visible_ratio", 1.0, textspeed)
