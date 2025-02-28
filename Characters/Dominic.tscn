@@ -1,0 +1,112 @@
+[gd_scene load_steps=17 format=3 uid="uid://cpjbu7xlg1adj"]
+
+[ext_resource type="Texture2D" uid="uid://c1e8nr47w4x2p" path="res://Assets/CharacterSprites/Dominic/DominicShouting.png" id="1_1i1rd"]
+[ext_resource type="Texture2D" uid="uid://byg5sf4c6s5yp" path="res://Assets/CharacterSprites/Dominic/Dominic.png" id="2_g8m25"]
+[ext_resource type="Texture2D" uid="uid://b6gabevw3n0cn" path="res://Assets/CharacterSprites/Dominic/DominicTalking.png" id="3_p37lf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqor7"]
+atlas = ExtResource("1_1i1rd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6d7e1"]
+atlas = ExtResource("1_1i1rd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03c35"]
+atlas = ExtResource("1_1i1rd")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd4v0"]
+atlas = ExtResource("1_1i1rd")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwmfn"]
+atlas = ExtResource("2_g8m25")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rou13"]
+atlas = ExtResource("2_g8m25")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y666e"]
+atlas = ExtResource("2_g8m25")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijufm"]
+atlas = ExtResource("2_g8m25")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87cy6"]
+atlas = ExtResource("3_p37lf")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3is8k"]
+atlas = ExtResource("3_p37lf")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfxsf"]
+atlas = ExtResource("3_p37lf")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk3o6"]
+atlas = ExtResource("3_p37lf")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cj4as"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqor7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6d7e1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03c35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qd4v0")
+}],
+"loop": true,
+"name": &"DominicShouting",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwmfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rou13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y666e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijufm")
+}],
+"loop": true,
+"name": &"DominicStill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87cy6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3is8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfxsf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sk3o6")
+}],
+"loop": true,
+"name": &"DominicTalking",
+"speed": 5.0
+}]
+
+[node name="Dominic" type="AnimatedSprite2D"]
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_cj4as")
+animation = &"DominicStill"
