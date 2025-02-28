@@ -11,7 +11,7 @@ func _ready() -> void:
 	Global.setup_convo.connect(setup_convo)
 	
 func setup_convo(convo):
-	var file = FileAccess.open("res://JSON/JSONTest.json", FileAccess.READ)
+	var file = FileAccess.open("res://JSON/Dialogue.json", FileAccess.READ)
 	if file:
 	# Read the file's content
 		var json_data = file.get_as_text()
@@ -31,26 +31,43 @@ func setup_convo(convo):
 					var Conversation = conversations[convo]
 				# Extract the strings from Str1 to convlength
 					for i in range(1, Conversation.size()):  # From 1 to convlength
+						var charA = "charA" + str(i)
+						var charB = "charB" + str(i)
+						var charC = "charC" + str(i)
+						var charD = "charD" + str(i)
+						var animA = "animA" + str(i)
+						var animB = "animB" + str(i)
+						var animC = "animC" + str(i)
+						var animD = "animD" + str(i)
+						var oriA = "oriA" + str(i)
+						var oriB = "oriB" + str(i)
+						var oriC = "oriC" + str(i)
+						var oriD = "oriD" + str(i)
+						var posA = "posA" + str(i)
+						var posB = "posB" + str(i)
+						var posC = "posC" + str(i)
+						var posD = "posD" + str(i)
 						var string = "str" + str(i)
-						var anim = "anim" + str(i)
-						var char = "char" + str(i)
-						var pos = "pos" + str(i)
-						if Conversation.has(string) and Conversation.has(anim):  # Safely check if the key exists
-							var value = Conversation[string]
-							var animvalue = Conversation[anim]
-							var charvalue = Conversation[char]
-							var posvalue = Conversation[pos]
+						var yapper = "yapper" +  str(i)
+						if Conversation.has(string):  # Safely check if the key exists
+							var stringvalue = Conversation[string]
+							Global.text_array.push_back(stringvalue)
+						if Conversation.has(charA):
+							var charAvalue = Conversation[charA]
+							else:
+							Global.text_array.push_back(stringvalue)
+							var animAvalue = Conversation[animA]
+							var posAvalue = Conversation[posA]
 							
 							# read through the JSON file, and finds everything with valuex for example
 							
-							var preloads = ("res://Characters/"+ charvalue + ".tscn")
+							var preloads = ("res://Characters/"+ charAvalue + ".tscn")
 							print(preloads)
 							load(preloads)
-							Global.text_array.push_back(value)
-							Global.anim_array.push_back(animvalue)
-							Global.char_array.push_back(charvalue)
-							print("Extracted value for ", string, ": ", value)
-							print("Extracted value for ", anim, ": ", animvalue)
+							Global.anim_array.push_back(animAvalue)
+							Global.char_array.push_back(charAvalue)
+							print("Extracted value for ", string, ": ", stringvalue)
+							print("Extracted value for ", animA, ": ", animAvalue)
 							
 							#stores and loads those values, into an array, hoppa
 						else:
@@ -62,7 +79,7 @@ func setup_convo(convo):
 		else:
 			print("JSON parsing error: ", json.get_error_message())
 	else:
-		print("File not found: res://JSON/JSONTest.json")
+		print("File not found: res://JSON/Dialogue.json")
 	pass
 	
 func display_label_text():
@@ -74,6 +91,9 @@ func display_label_text():
 		var string = Global.text_array[text]
 		var length = string.length()
 		var textspeed = length * 0.07
+
+		#Change position by replacing the entire vector  
+
 		get_node("../%s" % Global.char_array[text]).play(Global.anim_array[text])
 		visible_text_tween = create_tween()
 		visible_text_tween.tween_property(dialogue, "visible_ratio", 1.0, textspeed)

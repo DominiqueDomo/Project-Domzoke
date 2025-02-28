@@ -1,0 +1,43 @@
+{
+  "Conversations": {
+	"Template": {
+	 	"charA": "",
+		"charB": "",
+		"charC": "",
+		"charD": "",
+		"animA": "",
+		"animB": "",
+		"animC": "",
+		"animD": "",
+		"oriA": "",
+		"oriB": "",
+		"oriC": "",
+		"oriD": "",
+		"posA": "",
+		"posB": "",
+		"posC": "",
+		"posD": "",
+		"yapper": "",
+		"str": ""
+	},
+	"AAAA": {
+		"charA": "Goober",
+		"charB": "Bloober",
+		"charC": "Dominic",
+		"animA": "",
+		"animB": "",
+		"animC": "",
+		"animD": "",
+		"oriA": "",
+		"oriB": "",
+		"oriC": "",
+		"oriD": "",
+		"posA": "",
+		"posB": "",
+		"posC": "",
+		"posD": "",
+		"yapper": "",
+		"str": ""
+	}
+  }
+}
