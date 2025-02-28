@@ -49,29 +49,30 @@ func setup_convo(convo):
 						var posD = "posD" + str(i)
 						var string = "str" + str(i)
 						var yapper = "yapper" +  str(i)
+						#for each variable, it checks if it's present in the JSON file.
+						#if it is present, said var gets pushed into the respective array. Else, NULL gets pushed in
+						#pushed var string
 						if Conversation.has(string):  # Safely check if the key exists
 							var stringvalue = Conversation[string]
 							Global.text_array.push_back(stringvalue)
+						#pushes var CharA
 						if Conversation.has(charA):
 							var charAvalue = Conversation[charA]
-							else:
-							Global.text_array.push_back(stringvalue)
+							var preloads = ("res://Characters/"+ charAvalue + ".tscn")
+							Global.charA_array.push_back(charAvalue)
+						else:
+							Global.text_array.push_back("NULL")
+						#pushes var CharB
+						if Conversation.has(charB):
+							var charBvalue = Conversation[charB]
+							Global.charB_array.push_back(charBvalue)
+						else:
+							Global.charB_array.push_back("NULL")
+						
 							var animAvalue = Conversation[animA]
 							var posAvalue = Conversation[posA]
 							
 							# read through the JSON file, and finds everything with valuex for example
-							
-							var preloads = ("res://Characters/"+ charAvalue + ".tscn")
-							print(preloads)
-							load(preloads)
-							Global.anim_array.push_back(animAvalue)
-							Global.char_array.push_back(charAvalue)
-							print("Extracted value for ", string, ": ", stringvalue)
-							print("Extracted value for ", animA, ": ", animAvalue)
-							
-							#stores and loads those values, into an array, hoppa
-						else:
-							print("Key not found: ", string)
 				else:
 					print("'AAAA' key not found in 'Conversations'")
 			else:
