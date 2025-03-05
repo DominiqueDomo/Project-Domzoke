@@ -1,6 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccgd3pmhalvr8"]
+[gd_scene load_steps=12 format=3 uid="uid://ccgd3pmhalvr8"]
 
+[ext_resource type="Texture2D" uid="uid://u7s64dctpmak" path="res://Assets/CharacterSprites/Other/bloober-idle.png" id="1_1sbjb"]
 [ext_resource type="Texture2D" uid="uid://0qr81cvrx5nb" path="res://Assets/CharacterSprites/Other/bloober1.png" id="1_11wi6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_171cr"]
+atlas = ExtResource("1_1sbjb")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hb3e"]
+atlas = ExtResource("1_1sbjb")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_742id"]
+atlas = ExtResource("1_1sbjb")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5v4x"]
+atlas = ExtResource("1_1sbjb")
+region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i6rsy"]
 atlas = ExtResource("1_11wi6")
@@ -22,6 +39,23 @@ region = Rect2(48, 0, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_171cr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hb3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_742id")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5v4x")
+}],
+"loop": true,
+"name": &"BlooberIdle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_i6rsy")
 }, {
 "duration": 1.0,
@@ -34,10 +68,11 @@ animations = [{
 "texture": SubResource("AtlasTexture_tmpv2")
 }],
 "loop": true,
-"name": &"BlooberYapping",
+"name": &"BlooberTalking",
 "speed": 8.0
 }]
 
 [node name="Bloober" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_pylku")
-animation = &"BlooberYapping"
+animation = &"BlooberTalking"
+frame_progress = 0.975371

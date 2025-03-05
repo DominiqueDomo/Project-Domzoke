@@ -1,5 +1,6 @@
 extends Node
 
+# all dialogue arrays
 
 var charA_array = []
 var charB_array = []
@@ -19,6 +20,27 @@ var posC_array = []
 var posD_array = []
 var yapper_array = []
 var text_array = []
+
+# all dialogue vars
+
+var charAvalue = []
+var charBvalue = []
+var charCvalue = []
+var charDvalue = []
+var animAvalue = []
+var animBvalue = []
+var animCvalue = []
+var animDvalue = []
+var oriAvalue = []
+var oriBvalue = []
+var oriCvalue = []
+var oriDvalue = []
+var posAvalue = []
+var posBvalue = []
+var posCvalue = []
+var posDvalue = []
+var yapperValue = []
+var textValue = []
 var gatekeeping = false
 
 signal display_label_text

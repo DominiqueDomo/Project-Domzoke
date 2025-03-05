@@ -21,23 +21,12 @@
 		"str": ""
 	},
 	"AAAA": {
-		"charA": "Goober",
-		"charB": "Bloober",
-		"charC": "Dominic",
-		"animA": "",
-		"animB": "",
-		"animC": "",
-		"animD": "",
-		"oriA": "",
-		"oriB": "",
-		"oriC": "",
-		"oriD": "",
-		"posA": "",
-		"posB": "",
-		"posC": "",
-		"posD": "",
-		"yapper": "",
-		"str": ""
+		"charA1": "Dominic",
+		"charB1": "Bloober",
+		"animA1": "DominicIdle",
+		"animB1": "BlooberTalking",
+		"yapper1": "Bloober",
+		"str1": "Heyyy Dominic it's me, Bloober!"
 	}
   }
 }
