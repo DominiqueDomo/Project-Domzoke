@@ -11,6 +11,7 @@ script = ExtResource("1_tt57t")
 
 [node name="Dialogue" type="Label" parent="."]
 layout_mode = 0
+offset_top = 430.0
 offset_right = 1146.0
 offset_bottom = 633.0
 theme_override_font_sizes/font_size = 50

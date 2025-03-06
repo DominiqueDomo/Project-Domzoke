@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://y3tgdyxvyw4t"]
+[gd_scene load_steps=8 format=3 uid="uid://y3tgdyxvyw4t"]
 
 [ext_resource type="PackedScene" uid="uid://csvb65k22b4my" path="res://Dialogue/button.tscn" id="1_vmceb"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_xfwt3"]
 [ext_resource type="PackedScene" uid="uid://dt0l50sfesi7e" path="res://Dialogue/dialogue.tscn" id="2_me0ay"]
-[ext_resource type="PackedScene" uid="uid://npe1t11sxhcs" path="res://Characters/Goober.tscn" id="4_nhhot"]
+[ext_resource type="PackedScene" uid="uid://pacolmlbxgx4" path="res://Characters/Goober.tscn" id="4_nhhot"]
 [ext_resource type="PackedScene" uid="uid://cpjbu7xlg1adj" path="res://Characters/Dominic.tscn" id="5_rkmlg"]
 [ext_resource type="PackedScene" uid="uid://ccgd3pmhalvr8" path="res://Characters/bloober.tscn" id="6_h6x8r"]
+[ext_resource type="PackedScene" uid="uid://7qm54nl3na07" path="res://Characters/Misc.tscn" id="7_eriic"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_xfwt3")
@@ -22,15 +23,18 @@ offset_top = 211.0
 offset_right = 517.0
 offset_bottom = 274.0
 
-[node name="Goober" parent="." instance=ExtResource("4_nhhot")]
-position = Vector2(1032, 59)
-scale = Vector2(1.6907, 1.70505)
-animation = &"Bloober"
-
 [node name="Dominic" parent="." instance=ExtResource("5_rkmlg")]
-position = Vector2(1081, 62.0001)
+position = Vector2(1047, 52)
 scale = Vector2(0.687501, 0.687501)
+animation = &"DominicIdle"
 
 [node name="Bloober" parent="." instance=ExtResource("6_h6x8r")]
-position = Vector2(1055.94, 61.0624)
+position = Vector2(1072, 54)
 scale = Vector2(1.2422, 1.2422)
+
+[node name="Misc" parent="." instance=ExtResource("7_eriic")]
+position = Vector2(1005, 56)
+
+[node name="Goober" parent="." instance=ExtResource("4_nhhot")]
+position = Vector2(978, 52)
+animation = &"GooberHappy"

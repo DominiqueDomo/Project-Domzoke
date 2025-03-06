@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://7qm54nl3na07"]
+
+[ext_resource type="Texture2D" uid="uid://du04atyu3okmj" path="res://Assets/CharacterSprites/Other/TinyDominic.png" id="1_jxruo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1rwp"]
+atlas = ExtResource("1_jxruo")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epx8w"]
+atlas = ExtResource("1_jxruo")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hft7"]
+atlas = ExtResource("1_jxruo")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exgut"]
+atlas = ExtResource("1_jxruo")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v64ab"]
+atlas = ExtResource("1_jxruo")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyt78"]
+atlas = ExtResource("1_jxruo")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f26ql"]
+atlas = ExtResource("1_jxruo")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_381sd"]
+atlas = ExtResource("1_jxruo")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y7ia3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1rwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epx8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hft7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exgut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v64ab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyt78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f26ql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_381sd")
+}],
+"loop": true,
+"name": &"DominicTinyIdle",
+"speed": 5.0
+}]
+
+[node name="Misc" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_y7ia3")
+animation = &"DominicTinyIdle"

@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://ccgd3pmhalvr8"]
 
-[ext_resource type="Texture2D" uid="uid://u7s64dctpmak" path="res://Assets/CharacterSprites/Other/bloober-idle.png" id="1_1sbjb"]
-[ext_resource type="Texture2D" uid="uid://0qr81cvrx5nb" path="res://Assets/CharacterSprites/Other/bloober1.png" id="1_11wi6"]
+[ext_resource type="Texture2D" uid="uid://u7s64dctpmak" path="res://Assets/CharacterSprites/Bloober/bloober-idle.png" id="1_1sbjb"]
+[ext_resource type="Texture2D" uid="uid://0qr81cvrx5nb" path="res://Assets/CharacterSprites/Bloober/bloober1.png" id="1_11wi6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_171cr"]
 atlas = ExtResource("1_1sbjb")
@@ -74,5 +74,4 @@ animations = [{
 
 [node name="Bloober" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_pylku")
-animation = &"BlooberTalking"
-frame_progress = 0.975371
+animation = &"BlooberIdle"

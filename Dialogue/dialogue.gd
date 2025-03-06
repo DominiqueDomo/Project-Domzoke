@@ -233,6 +233,7 @@ func display_label_text():
 				get_node("../%s" % Global.charB_array[text]).set_scale(Vector2(-10, 10))
 
 		if Global.charC_array[text] != "NONE": 
+			print(get_node("../%s" % Global.charC_array[text]))
 			get_node("../%s" % Global.charC_array[text]).play(Global.animC_array[text])
 			print(Global.posC_array[text])
 			if Global.posC_array[text] == "NONE":
