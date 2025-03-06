@@ -22,7 +22,8 @@ var yapper_array = []
 var text_array = []
 
 # all dialogue vars
-
+var convlengthfound = false
+var convlength = 0
 var charAvalue = []
 var charBvalue = []
 var charCvalue = []

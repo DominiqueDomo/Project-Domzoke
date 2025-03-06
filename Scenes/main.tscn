@@ -23,14 +23,14 @@ offset_right = 517.0
 offset_bottom = 274.0
 
 [node name="Goober" parent="." instance=ExtResource("4_nhhot")]
-position = Vector2(242, 382)
-scale = Vector2(11.8814, 11.9822)
+position = Vector2(1032, 59)
+scale = Vector2(1.6907, 1.70505)
 animation = &"Bloober"
 
 [node name="Dominic" parent="." instance=ExtResource("5_rkmlg")]
-position = Vector2(805, 360)
-scale = Vector2(11.1875, 11.1875)
+position = Vector2(1081, 62.0001)
+scale = Vector2(0.687501, 0.687501)
 
 [node name="Bloober" parent="." instance=ExtResource("6_h6x8r")]
-position = Vector2(243, 189)
-scale = Vector2(12.9688, 12.9688)
+position = Vector2(1055.94, 61.0624)
+scale = Vector2(1.2422, 1.2422)

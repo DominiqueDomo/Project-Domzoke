@@ -21,12 +21,44 @@
 		"str": ""
 	},
 	"AAAA": {
-		"charA1": "Dominic",
-		"charB1": "Bloober",
-		"animA1": "DominicIdle",
-		"animB1": "BlooberTalking",
+		"charA1": "Bloober",
+		"charB1": "Dominic",
+		"animA1": "BlooberTalking",
+		"animB1": "DominicIdle",
 		"yapper1": "Bloober",
-		"str1": "Heyyy Dominic it's me, Bloober!"
+		"str1": "Yellowwww Dominic it's me, Bloober!",
+
+		"charA2": "Bloober",
+		"charB2": "Dominic",
+		"animA2": "BlooberIdle",
+		"animB2": "DominicTalking",
+		"yapper2": "Dominic",
+		"str2": "Wassup bro, it's me Dominic, I love bangin chicks and respecting boundaries",
+
+		"charA3": "Bloober",
+		"charB3": "Dominic",
+		"animA3": "BlooberTalking",
+		"animB3": "DominicIdle",
+		"yapper3": "Goober",
+		"str3": "Wauwi! I'm going to stare at the wall now weeee",
+
+		"charA4": "Bloober",
+		"charB4": "Dominic",
+		"animA4": "BlooberTalking",
+		"animB4": "DominicIdle",
+		"oriA4": "left",
+		"yapper4": "Goober",
+		"str4": "wooowww this wall is so cool",
+
+		"charA5": "Bloober",
+		"charB5": "Dominic",
+		"charC5": "Goober",
+		"animA5": "BlooberIdle",
+		"animB5": "DominicIdle",
+		"animC5": "Kitty",
+		"oriC5": "left",
+		"yapper5": "Kitty",
+		"str5": "Nya I'm a little kitty katt :3"
 	}
   }
 }

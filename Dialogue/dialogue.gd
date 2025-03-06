@@ -30,7 +30,21 @@ func setup_convo(convo):
 				if conversations.has(convo):  # Safely check if "AAAA" exists
 					var Conversation = conversations[convo]
 				# Extract the strings from Str1 to convlength
-					for i in range(1, Conversation.size()):  # From 1 to convlength
+					for i in range(1, Conversation.size()):
+						if Global.convlengthfound == false :
+							var seeker = 1
+							#seeker is the variable that increases when the string has not been found
+							#when the string is found, convlength is set to seeker and seeker will no longer increase
+							var string = "str" + str(i)
+							if Conversation.has(string):
+								print(i)
+								i += 1
+							else:
+								Global.convlengthfound = true
+								Global.convlength = i
+								print(Global.convlength)
+
+					for i in range(1, Global.convlength):  # From 1 to convlength
 						var charA = "charA" + str(i)
 						var charB = "charB" + str(i)
 						var charC = "charC" + str(i)
@@ -62,129 +76,109 @@ func setup_convo(convo):
 								var preloads = "res://Characters/" + Global.charAvalue + ".tscn"
 								Global.charA_array.push_back(Global.charAvalue)
 							else:
-								Global.text_array.push_back("NULL")
+								Global.charA_array.push_back("NONE")
 
-							# Pushes var charB
 							if Conversation.has(charB):
 								Global.charBvalue = Conversation[charB]
 								var preloads = "res://Characters/" + Global.charBvalue + ".tscn"
 								Global.charB_array.push_back(Global.charBvalue)
 							else:
-								Global.text_array.push_back("NULL")
+								Global.charB_array.push_back("NONE")
 
-							# Pushes var charC
 							if Conversation.has(charC):
 								Global.charCvalue = Conversation[charC]
 								var preloads = "res://Characters/" + Global.charCvalue + ".tscn"
 								Global.charC_array.push_back(Global.charCvalue)
 							else:
-								Global.text_array.push_back("NULL")
+								Global.charC_array.push_back("NONE")
 
-							# Pushes var charD
 							if Conversation.has(charD):
 								Global.charDvalue = Conversation[charD]
 								var preloads = "res://Characters/" + Global.charDvalue + ".tscn"
 								Global.charD_array.push_back(Global.charDvalue)
 							else:
-								Global.text_array.push_back("NULL")
+								Global.charD_array.push_back("NONE")
 
-							# Pushes var animA
 							if Conversation.has(animA):
 								Global.animAvalue = Conversation[animA]
 								Global.animA_array.push_back(Global.animAvalue)
 							else:
-								Global.text_array.push_back("NULL")
+								Global.animA_array.push_back("NONE")
 
-							# Pushes var animB
 							if Conversation.has(animB):
 								Global.animBvalue = Conversation[animB]
 								Global.animB_array.push_back(Global.animBvalue)
 							else:
-								Global.text_array.push_back("NULL")
+								Global.animB_array.push_back("NONE")
 
-							# Pushes var animC
 							if Conversation.has(animC):
 								Global.animCvalue = Conversation[animC]
 								Global.animC_array.push_back(Global.animCvalue)
 							else:
-								Global.text_array.push_back("NULL")
+								Global.animC_array.push_back("NONE")
 
-							# Pushes var animD
 							if Conversation.has(animD):
 								Global.animDvalue = Conversation[animD]
 								Global.animD_array.push_back(Global.animDvalue)
 							else:
-								Global.text_array.push_back("NULL")
+								Global.animD_array.push_back("NONE")
 
-							# Pushes var oriA
 							if Conversation.has(oriA):
 								Global.oriAvalue = Conversation[oriA]
 								Global.oriA_array.push_back(Global.oriAvalue)
 							else:
-								Global.text_array.push_back("NULL")
+								Global.oriA_array.push_back("right")
 
-							# Pushes var oriB
 							if Conversation.has(oriB):
 								Global.oriBvalue = Conversation[oriB]
 								Global.oriB_array.push_back(Global.oriBvalue)
 							else:
-								Global.text_array.push_back("NULL")
+								Global.oriB_array.push_back("left")
 
-							# Pushes var oriC
 							if Conversation.has(oriC):
 								Global.oriCvalue = Conversation[oriC]
 								Global.oriC_array.push_back(Global.oriCvalue)
 							else:
-								Global.text_array.push_back("NULL")
+								Global.oriC_array.push_back("right")
 
-							# Pushes var oriD
 							if Conversation.has(oriD):
 								Global.oriDvalue = Conversation[oriD]
 								Global.oriD_array.push_back(Global.oriDvalue)
 							else:
-								Global.text_array.push_back("NULL")
+								Global.oriD_array.push_back("left")
 
-							# Pushes var posA
 							if Conversation.has(posA):
 								Global.posAvalue = Conversation[posA]
 								Global.posA_array.push_back(Global.posAvalue)
 							else:
-								Global.text_array.push_back("NULL")
+								Global.posA_array.push_back("NONE")
 
-							# Pushes var posB
 							if Conversation.has(posB):
 								Global.posBvalue = Conversation[posB]
 								Global.posB_array.push_back(Global.posBvalue)
 							else:
-								Global.text_array.push_back("NULL")
+								Global.posB_array.push_back("NONE")
 
-							# Pushes var posC
 							if Conversation.has(posC):
 								Global.posCvalue = Conversation[posC]
 								Global.posC_array.push_back(Global.posCvalue)
 							else:
-								Global.text_array.push_back("NULL")
+								Global.posC_array.push_back("NONE")
 
-							# Pushes var posD
 							if Conversation.has(posD):
 								Global.posDvalue = Conversation[posD]
 								Global.posD_array.push_back(Global.posDvalue)
 							else:
-								Global.text_array.push_back("NULL")
+								Global.posD_array.push_back("NONE")
 
-							# Pushes var yapper
 							if Conversation.has(yapper):
 								Global.yapperValue = Conversation[yapper]
 								Global.yapper_array.push_back(Global.yapperValue)
 							else:
-								Global.text_array.push_back("NULL")
+								Global.yapper_array.push_back("NONE")
 
-							# Pushes var text
-							if Conversation.has(text):
-								Global.textValue = Conversation[text]
-								Global.text_array.push_back(Global.textValue)
-							else:
-								Global.text_array.push_back("NULL")
+
+
 							
 							# read through the JSON file, and finds everything with valuex for example
 						else:
@@ -210,14 +204,58 @@ func display_label_text():
 		var textspeed = length * 0.07
 
 		#Change position by replacing the entire vector  
-		if Global.charA_array[text] != "NULL":
+		#checks if the character exists
+		if Global.charA_array[text] != "NONE": 
+			#makes the character play their animation
 			get_node("../%s" % Global.charA_array[text]).play(Global.animA_array[text])
 			print(Global.posA_array[text])
-			#if Global.posA_array[text] == "NULL":
-				#get_node("../%s" % Global.charA_array[text]).set_position(Vector2(250, 300))
-			#else:
-				#get_node("../%s" % Global.charA_array[text]).set_position(Vector2(Global.posA_array[text]))	
-			
+			#checks if a position is given, otherwise, puts it at the default position for charA
+			if Global.posA_array[text] == "NONE":
+				get_node("../%s" % Global.charA_array[text]).set_position(Vector2(250, 300))
+			else:
+				get_node("../%s" % Global.charA_array[text]).set_position(Vector2(Global.posA_array[text]))
+			#makes the character face either right or left
+			if Global.oriA_array[text] == "right":
+				get_node("../%s" % Global.charA_array[text]).set_scale(Vector2(10, 10))
+			else:
+				get_node("../%s" % Global.charA_array[text]).set_scale(Vector2(-10, 10))
+
+		if Global.charB_array[text] != "NONE": 
+			get_node("../%s" % Global.charB_array[text]).play(Global.animB_array[text])
+			print(Global.posB_array[text])
+			if Global.posB_array[text] == "NONE":
+				get_node("../%s" % Global.charB_array[text]).set_position(Vector2(900, 300))
+			else:
+				get_node("../%s" % Global.charB_array[text]).set_position(Vector2(Global.posB_array[text]))
+			if Global.oriB_array[text] == "right":
+				get_node("../%s" % Global.charB_array[text]).set_scale(Vector2(10, 10))
+			else:
+				get_node("../%s" % Global.charB_array[text]).set_scale(Vector2(-10, 10))
+
+		if Global.charC_array[text] != "NONE": 
+			get_node("../%s" % Global.charC_array[text]).play(Global.animC_array[text])
+			print(Global.posC_array[text])
+			if Global.posC_array[text] == "NONE":
+				get_node("../%s" % Global.charC_array[text]).set_position(Vector2(500, 300))
+			else:
+				get_node("../%s" % Global.charC_array[text]).set_position(Vector2(Global.posC_array[text]))
+			if Global.oriC_array[text] == "right":
+				get_node("../%s" % Global.charC_array[text]).set_scale(Vector2(10, 10))
+			else:
+				get_node("../%s" % Global.charC_array[text]).set_scale(Vector2(-10, 10))
+
+		if Global.charD_array[text] != "NONE": 
+			get_node("../%s" % Global.charD_array[text]).play(Global.animD_array[text])
+			print(Global.posD_array[text])
+			if Global.posD_array[text] == "NONE":
+				get_node("../%s" % Global.charD_array[text]).set_position(Vector2(650, 300))
+			else:
+				get_node("../%s" % Global.charD_array[text]).set_position(Vector2(Global.posD_array[text]))
+			if Global.oriD_array[text] == "right":
+				get_node("../%s" % Global.charD_array[text]).set_scale(Vector2(10, 10))
+			else:
+				get_node("../%s" % Global.charD_array[text]).set_scale(Vector2(-10, 10))
+
 		visible_text_tween = create_tween()
 		visible_text_tween.tween_property(dialogue, "visible_ratio", 1.0, textspeed)
 	
