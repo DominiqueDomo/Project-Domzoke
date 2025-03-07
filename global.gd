@@ -1,6 +1,7 @@
 extends Node
 
 # all dialogue arrays
+var allvars_array = ["charA", "charB", "charC", "charD", "animA", "animB", "animC", "animD", "oriA", "oriB", "oriC", "oriD", "posA", "posB", "posC", "posD", "yapper"]
 
 var charA_array = []
 var charB_array = []
@@ -43,6 +44,9 @@ var posDvalue = []
 var yapperValue = []
 var textValue = []
 var gatekeeping = false
+
+var left = Vector2(10, 10)
+var right = Vector2(-10, 10)
 
 signal display_label_text
 

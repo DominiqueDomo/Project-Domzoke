@@ -108,4 +108,4 @@ animations = [{
 
 [node name="Goober" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_lce6u")
-animation = &"GooberSad"
+animation = &"GooberSleepDeprived"

@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://7qm54nl3na07"]
+[gd_scene load_steps=21 format=3 uid="uid://7qm54nl3na07"]
 
 [ext_resource type="Texture2D" uid="uid://du04atyu3okmj" path="res://Assets/CharacterSprites/Other/TinyDominic.png" id="1_jxruo"]
+[ext_resource type="Texture2D" uid="uid://k5s0pbhwjmr0" path="res://Assets/CharacterSprites/Other/Kitty.png" id="2_6hqf6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q1rwp"]
 atlas = ExtResource("1_jxruo")
@@ -34,6 +35,42 @@ region = Rect2(96, 0, 16, 16)
 atlas = ExtResource("1_jxruo")
 region = Rect2(112, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctb16"]
+atlas = ExtResource("2_6hqf6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op6rx"]
+atlas = ExtResource("2_6hqf6")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awtme"]
+atlas = ExtResource("2_6hqf6")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oluav"]
+atlas = ExtResource("2_6hqf6")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6p32"]
+atlas = ExtResource("2_6hqf6")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o00mc"]
+atlas = ExtResource("2_6hqf6")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s625a"]
+atlas = ExtResource("2_6hqf6")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blmp1"]
+atlas = ExtResource("2_6hqf6")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4x5ti"]
+atlas = ExtResource("2_6hqf6")
+region = Rect2(0, 0, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_y7ia3"]
 animations = [{
 "frames": [{
@@ -64,8 +101,40 @@ animations = [{
 "loop": true,
 "name": &"DominicTinyIdle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctb16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_op6rx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awtme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oluav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6p32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o00mc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s625a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_blmp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4x5ti")
+}],
+"loop": true,
+"name": &"Kitty",
+"speed": 5.0
 }]
 
 [node name="Misc" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_y7ia3")
-animation = &"DominicTinyIdle"
+animation = &"Kitty"

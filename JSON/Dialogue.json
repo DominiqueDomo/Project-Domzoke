@@ -25,6 +25,7 @@
 		"charB1": "Goober",
 		"animA1": "BlooberTalking",
 		"animB1": "GooberHappy",
+		"oriA1": "left",
 		"yapper1": "Bloober",
 		"str1": "Yellowwww Goober it's me, Bloober!",
 
@@ -41,6 +42,8 @@
 		"charC3": "Misc",
 		"animA3": "BlooberTalking",
 		"animB3": "DominicIdle",
+		"animC3": "Kitty",
+		"oriA3": "left",
 		"yapper3": "Goober",
 		"str3": "Wauwi! I'm going to stare at the wall now weeee",
 

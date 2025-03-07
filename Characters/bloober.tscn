@@ -74,4 +74,4 @@ animations = [{
 
 [node name="Bloober" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_pylku")
-animation = &"BlooberIdle"
+animation = &"BlooberTalking"
