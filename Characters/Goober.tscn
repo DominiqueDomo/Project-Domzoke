@@ -141,7 +141,16 @@ animations = [{
 "texture": SubResource("AtlasTexture_yqsso")
 }, {
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_yqsso")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqsso")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_1t4mj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qej3v")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qej3v")
@@ -151,9 +160,9 @@ animations = [{
 }],
 "loop": true,
 "name": &"GooberSleepDeprived",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [node name="Goober" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_lce6u")
-animation = &"GooberIdle"
+animation = &"GooberSleepDeprived"

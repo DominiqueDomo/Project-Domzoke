@@ -129,6 +129,9 @@ func display_label_text():
 	else:
 		NameTag.text = ""
 		Global.text_array = []
+		for t in range (0, Global.allvars_array.size()):
+			Global.set(Global.allvars_array[t] + "_array", [])
+			print(Global.get(Global.allvars_array[t] + "_array"))
 		
 	#print(Global.gatekeeping)
 	
