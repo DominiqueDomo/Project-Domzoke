@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://7qm54nl3na07"]
+[gd_scene load_steps=28 format=3 uid="uid://7qm54nl3na07"]
 
 [ext_resource type="Texture2D" uid="uid://du04atyu3okmj" path="res://Assets/CharacterSprites/Other/TinyDominic.png" id="1_jxruo"]
 [ext_resource type="Texture2D" uid="uid://k5s0pbhwjmr0" path="res://Assets/CharacterSprites/Other/Kitty.png" id="2_6hqf6"]
+[ext_resource type="Texture2D" uid="uid://cjruconwv5v5d" path="res://Assets/CharacterSprites/Other/samsonite.png" id="3_dpyam"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q1rwp"]
 atlas = ExtResource("1_jxruo")
@@ -71,6 +72,30 @@ region = Rect2(16, 0, 16, 16)
 atlas = ExtResource("2_6hqf6")
 region = Rect2(0, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnmt2"]
+atlas = ExtResource("3_dpyam")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irlq5"]
+atlas = ExtResource("3_dpyam")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur54r"]
+atlas = ExtResource("3_dpyam")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js3r1"]
+atlas = ExtResource("3_dpyam")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a12wb"]
+atlas = ExtResource("3_dpyam")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2152b"]
+atlas = ExtResource("3_dpyam")
+region = Rect2(32, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_y7ia3"]
 animations = [{
 "frames": [{
@@ -133,8 +158,31 @@ animations = [{
 "loop": true,
 "name": &"Kitty",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnmt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irlq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur54r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js3r1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a12wb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2152b")
+}],
+"loop": true,
+"name": &"Samsonite",
+"speed": 5.0
 }]
 
 [node name="Misc" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_y7ia3")
-animation = &"Kitty"
+animation = &"Samsonite"

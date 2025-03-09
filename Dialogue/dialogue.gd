@@ -80,7 +80,7 @@ func display_label_text():
 		dialogue.text = Global.text_array[text]
 		var string = Global.text_array[text]
 		var length = string.length()
-		var textspeed = length * 0.07
+		var textspeed = length * 0.06
 
 		#Change position by replacing the entire vector  
 		#checks if there's a character at this spot in the conversation
