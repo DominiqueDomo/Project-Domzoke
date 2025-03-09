@@ -84,7 +84,7 @@ func display_label_text():
 
 		#Change position by replacing the entire vector  
 		#checks if there's a character at this spot in the conversation
-		for p in range(0, 4):
+		for p in range(0, 3):
 			#checks if previous character matches ANY of the current characters; if they don't match, then removes previous character
 			#it also just doesn't activate if it's on line 0, because there is no value -1
 			if text != 0:
