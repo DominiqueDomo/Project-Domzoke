@@ -32,9 +32,6 @@ func setup_convo(convo):
 				# Extract the strings from Str1 to convlength
 					for i in range(1, Conversation.size()):
 						if Global.convlengthfound == false :
-							var seeker = 1
-							#seeker is the variable that increases when the string has not been found
-							#when the string is found, convlength is set to seeker and seeker will no longer increase
 							var string = "str" + str(i)
 							if Conversation.has(string):
 								print(i)
@@ -45,24 +42,7 @@ func setup_convo(convo):
 								print(Global.convlength)
 
 					for i in range(1, Global.convlength):  # From 1 to convlength
-						var charA = "charA" + str(i)
-						var charB = "charB" + str(i)
-						var charC = "charC" + str(i)
-						var charD = "charD" + str(i)
-						var animA = "animA" + str(i)
-						var animB = "animB" + str(i)
-						var animC = "animC" + str(i)
-						var animD = "animD" + str(i)
-						var oriA = "oriA" + str(i)
-						var oriB = "oriB" + str(i)
-						var oriC = "oriC" + str(i)
-						var oriD = "oriD" + str(i)
-						var posA = "posA" + str(i)
-						var posB = "posB" + str(i)
-						var posC = "posC" + str(i)
-						var posD = "posD" + str(i)
 						var string = "str" + str(i)
-						var yapper = "yapper" +  str(i)
 						#for each variable, it checks if it's present in the JSON file.
 						#if it is present, said var gets pushed into the respective array. Else, NULL gets pushed in
 						#pushed var string
@@ -83,7 +63,7 @@ func setup_convo(convo):
 						else:
 							print("dude you're missing the var string")
 				else:
-					print("'AAAA' key not found in 'Conversations'")
+					print("'" + str(convo) + "' key not found in 'Conversations'")
 			else:
 				print("'Conversations' key not found in JSON")
 		else:
@@ -104,121 +84,40 @@ func display_label_text():
 
 		#Change position by replacing the entire vector  
 		#checks if there's a character at this spot in the conversation
-		if Global.charA_array[text] != "NONE": 
-			#it checks if this is the first line of dialogue
+		for p in range(0, 4):
+			#checks if previous character matches ANY of the current characters; if they don't match, then removes previous character
+			#it also just doesn't activate if it's on line 0, because there is no value -1
 			if text != 0:
-				#if it's not the first line of dialogue, it checks if the previous character matches the current character at that location
-				if get_node("../%s" % Global.charA_array[text]) == get_node("../%s" % Global.charA_array[text-1]):
-					#if they match, the character stays the same, and no one turns invisible, and plays the animation
-					get_node("../%s" % Global.charA_array[text]).play(Global.animA_array[text])
-					#checks if a position is given, otherwise, puts it at the default position for charA
-					if Global.posA_array[text] == "NONE":
-						get_node("../%s" % Global.charA_array[text]).set_position(Vector2(250, 300))
+				if get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != get_node("../%s" % Global.charA_array[text]) and get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != get_node("../%s" % Global.charB_array[text]) and get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != get_node("../%s" % Global.charC_array[text]) and get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != get_node("../%s" % Global.charD_array[text]):
+				#if there is no current character on this position, the previous character should disappear
+				#AND the previous character doesn't match ANY of the current characters
+					get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]).visible = false
+			#if the character exists (doesn't not exist)
+			if Global.get("char" + Global.allchartypes_array[p] + "_array")[text] != "NONE": 
+			#sets the position
+				#if the position doesn't exists 
+				if Global.get("pos" + Global.allchartypes_array[p] + "_array")[text] == "NONE":
+					#set position to the default position
+					get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_position(Global.alldefaultpos_array[p])
+				else:
+					#fetch position from the JSON file
+					get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_position(Vector2(Global.get("pos" + Global.allchartypes_array[p] + "_array")[text]))
+			#sets the orientation
+				#if the orientation doesn't exist
+				if Global.get("ori" + Global.allchartypes_array[p] + "_array")[text] == "NONE":
+					#set to default orientation
+					get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_scale(Global.alldefaultscale_array[p])
+				else:
+					#if the character should not be in the default position, make it face right, or left
+					if Global.get("ori" + Global.allchartypes_array[p] + "_array")[text] == "right":
+						get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_scale(Vector2(10, 10))
 					else:
-						get_node("../%s" % Global.charA_array[text]).set_position(Vector2(Global.posA_array[text]))
-					#makes the character face either right or left, depending on the default position
-					if Global.oriA_array[text] != "NONE":
-						get_node("../%s" % Global.charA_array[text]).set_scale(Global.get(Global.oriA_array[text]))
-					else:
-						get_node("../%s" % Global.charA_array[text]).set_scale(Vector2(10, 10))
-				else:
-					if get_node("../%s" % Global.charA_array[text-1]) != get_node("../%s" % Global.charA_array[text]) and get_node("../%s" % Global.charA_array[text-1]) != get_node("../%s" % Global.charB_array[text]) and get_node("../%s" % Global.charA_array[text-1]) != get_node("../%s" % Global.charC_array[text]) and get_node("../%s" % Global.charA_array[text-1]) != get_node("../%s" % Global.charD_array[text]):
-					#this if-case makes sure that the previous character doesnt match ANY of the current characters. So they only turn invisible if they're leaving field entirely
-						get_node("../%s" % Global.charA_array[text]).visible = true
-						get_node("../%s" % Global.charA_array[text-1]).visible = false
-						get_node("../%s" % Global.charA_array[text]).play(Global.animA_array[text])
-						#checks if a position is given, otherwise, puts it at the default position for charA
-						if Global.posA_array[text] == "NONE":
-							get_node("../%s" % Global.charA_array[text]).set_position(Vector2(250, 300))
-						else:
-							get_node("../%s" % Global.charA_array[text]).set_position(Vector2(Global.posA_array[text]))
-						#makes the character face either right or left
-						if Global.oriA_array[text] != "NONE":
-							get_node("../%s" % Global.charA_array[text]).set_scale(Global.Global.oriA_array[text])
-						else:
-							get_node("../%s" % Global.charA_array[text]).set_scale(Vector2(10, 10))
-			else:
-				#if it's not the first line of dialogue, then there's no previous character, so no one to turn invisible
-				get_node("../%s" % Global.charA_array[text]).visible = true
-				get_node("../%s" % Global.charA_array[text]).play(Global.animA_array[text])
-				#checks if a position is given, otherwise, puts it at the default position for charA
-				if Global.posA_array[text] == "NONE":
-					get_node("../%s" % Global.charA_array[text]).set_position(Vector2(250, 300))
-				else:
-					get_node("../%s" % Global.charA_array[text]).set_position(Vector2(Global.posA_array[text]))
-				#makes the character face either right or left
-				if Global.oriA_array[text] != "NONE":
-					get_node("../%s" % Global.charA_array[text]).set_scale(Vector2(10, 10))
-				else:
-					get_node("../%s" % Global.charA_array[text]).set_scale(Global.Global.oriA_array[text])
-		else:
-			if text != 0 and get_node("../%s" % Global.charA_array[text-1]) != get_node("../%s" % Global.charA_array[text]) and get_node("../%s" % Global.charA_array[text-1]) != get_node("../%s" % Global.charB_array[text]) and get_node("../%s" % Global.charA_array[text-1]) != get_node("../%s" % Global.charC_array[text]) and get_node("../%s" % Global.charA_array[text-1]) != get_node("../%s" % Global.charD_array[text]):
-			#if there is no current character on this position, the previous character should disappear
-			#AND the previous character doesn't match ANY of the current characters
-				get_node("../%s" % Global.charA_array[text-1]).visible = false
-			
-				
-
-		#if Global.charB_array[text] != "NONE": 
-			#get_node("../%s" % Global.charB_array[text]).play(Global.animB_array[text])
-			#print(Global.posB_array[text])
-			#if Global.posB_array[text] == "NONE":
-				#get_node("../%s" % Global.charB_array[text]).set_position(Vector2(900, 300))
-			#else:
-				#get_node("../%s" % Global.charB_array[text]).set_position(Vector2(Global.posB_array[text]))
-			#if Global.oriB_array[text] == "right":
-				#get_node("../%s" % Global.charB_array[text]).set_scale(Vector2(10, 10))
-			#else:
-				#get_node("../%s" % Global.charB_array[text]).set_scale(Vector2(-10, 10))
-##charC is broken right now
-		#if Global.charC_array[text] != "NONE":
-			#if text != 0 and Global.charC_array[text-1] != "NONE":
-				#if Global.charC_array[text] == Global.charC_array[text-1]:
-					#get_node("../%s" % Global.charC_array[text]).play(Global.animC_array[text])
-					#if Global.posC_array[text] == "NONE":
-						#get_node("../%s" % Global.charC_array[text]).set_position(Vector2(500, 300))
-					#else:
-						#get_node("../%s" % Global.charC_array[text]).set_position(Vector2(Global.posC_array[text]))
-					#if Global.oriC_array[text] == "right":
-						#get_node("../%s" % Global.charC_array[text]).set_scale(Vector2(10, 10))
-					#else:
-						#get_node("../%s" % Global.charC_array[text]).set_scale(Vector2(-10, 10))
-				#else:
-					#get_node("../%s" % Global.charC_array[text]).visible = true
-					#get_node("../%s" % Global.charC_array[text-1]).visible = false
-					#get_node("../%s" % Global.charC_array[text]).play(Global.animC_array[text])
-					#if Global.posC_array[text] == "NONE":
-						#get_node("../%s" % Global.charC_array[text]).set_position(Vector2(500, 300))
-					#else:
-						#get_node("../%s" % Global.charC_array[text]).set_position(Vector2(Global.posC_array[text]))
-					#if Global.oriC_array[text] == "right":
-						#get_node("../%s" % Global.charC_array[text]).set_scale(Vector2(10, 10))
-					#else:
-						#get_node("../%s" % Global.charC_array[text]).set_scale(Vector2(-10, 10))
-			#else:
-				#get_node("../%s" % Global.charC_array[text]).visible = true
-				#get_node("../%s" % Global.charC_array[text]).play(Global.animC_array[text])
-				#if Global.posC_array[text] == "NONE":
-					#get_node("../%s" % Global.charC_array[text]).set_position(Vector2(500, 300))
-				#else:
-					#get_node("../%s" % Global.charC_array[text]).set_position(Vector2(Global.posC_array[text]))
-				#if Global.oriC_array[text] == "right":
-					#get_node("../%s" % Global.charC_array[text]).set_scale(Vector2(10, 10))
-				#else:
-					#get_node("../%s" % Global.charC_array[text]).set_scale(Vector2(-10, 10))
-#
-		#if Global.charD_array[text] != "NONE": 
-			#get_node("../%s" % Global.charD_array[text]).play(Global.animD_array[text])
-			#print(Global.posD_array[text])
-			#if Global.posD_array[text] == "NONE":
-				#get_node("../%s" % Global.charD_array[text]).set_position(Vector2(650, 300))
-			#else:
-				#get_node("../%s" % Global.charD_array[text]).set_position(Vector2(Global.posD_array[text]))
-			#if Global.oriD_array[text] == "right":
-				#get_node("../%s" % Global.charD_array[text]).set_scale(Vector2(10, 10))
-			#else:
-				#get_node("../%s" % Global.charD_array[text]).set_scale(Vector2(-10, 10))
-
+						get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_scale(Vector2(-10, 10))
+			#makes character visible
+				get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).visible = true
+			#makes character play correct animation
+				get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).play(Global.get("anim" + Global.allchartypes_array[p] + "_array")[text])
+					
 		visible_text_tween = create_tween()
 		visible_text_tween.tween_property(dialogue, "visible_ratio", 1.0, textspeed)
 	
