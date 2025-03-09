@@ -51,7 +51,8 @@
 		"charC5": "Goober",
 		"animA5": "BlooberIdle",
 		"animB5": "DominicIdle",
-		"animC5": "Gooberhappy",
+		"animC5": "GooberHappy",
+		"oriC5": "left",
 		"yapper5": "Goober",
 		"str5": "I lobe lego ninjgagno"
 	}
