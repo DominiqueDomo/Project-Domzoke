@@ -28,7 +28,6 @@ position = Vector2(587, 543)
 
 [node name="Goober" parent="." instance=ExtResource("4_nhhot")]
 position = Vector2(560, 539)
-animation = &"GooberHappy"
 
 [node name="DialogueReader" parent="." instance=ExtResource("2_me0ay")]
 offset_left = 8.0

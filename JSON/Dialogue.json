@@ -26,7 +26,7 @@
 		"animA1": "Samsonite",
 		"animB1": "DominicSurprised",
 		"yapper1": "Samsonite",
-		"str1": "Wassup guys it's me, Uncle Samsonite! xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+		"str1": "Wassup guys it's me, Uncle Samsonite!",
 
 		"charA2": "Misc",
 		"charB2": "Dominic",
@@ -43,6 +43,8 @@
 		"charA4": "Bloober",
 		"animA4": "BlooberTalking",
 		"animB4": "DominicIdle",
+		"charB4": "Goober",
+		"animB4": "GooberIdle",
 		"yapper4": "Bloober",
 		"oriA4": "left",
 		"str4": "wooowww this wall is so cool",

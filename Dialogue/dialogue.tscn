@@ -71,6 +71,7 @@ theme_override_font_sizes/font_size = 45
 autowrap_mode = 3
 
 [node name="NameTag" type="Label" parent="."]
+layout_mode = 0
 offset_left = 64.0
 offset_right = 960.0
 offset_bottom = 24.0
