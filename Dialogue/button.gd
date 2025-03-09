@@ -6,7 +6,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	button.text = "Click me"
+	button.text = "Click"
 
 func _on_button_pressed() -> void:
 	if Global.gatekeeping == false:
