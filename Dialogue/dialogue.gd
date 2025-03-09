@@ -1,7 +1,7 @@
 extends Control
 
 @onready var dialogue = $Dialogue
-#@onready var Goober = $"../Goober"
+@onready var NameTag = $NameTag
 
 var visible_text_tween;
 var text := 0
@@ -77,6 +77,7 @@ func display_label_text():
 	
 	Global.gatekeeping = true
 	if text < Global.text_array.size():
+		NameTag.text = Global.yapper_array[text] + ":"
 		dialogue.text = Global.text_array[text]
 		var string = Global.text_array[text]
 		var length = string.length()
@@ -126,6 +127,7 @@ func display_label_text():
 		await get_tree().create_timer(textspeed).timeout
 		Global.gatekeeping = false
 	else:
+		NameTag.text = ""
 		Global.text_array = []
 		
 	#print(Global.gatekeeping)

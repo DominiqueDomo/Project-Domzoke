@@ -12,7 +12,7 @@
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_xfwt3")
 
-[node name="TileMapLayer" parent="." instance=ExtResource("2_55f4m")]
+[node name="FieldBackground" parent="." instance=ExtResource("2_55f4m")]
 
 [node name="Dominic" parent="." instance=ExtResource("5_rkmlg")]
 position = Vector2(629, 539)
