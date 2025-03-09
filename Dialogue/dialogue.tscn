@@ -38,7 +38,7 @@ tile_set = SubResource("TileSet_b1ny1")
 [node name="Dialogue" type="Label" parent="."]
 layout_mode = 0
 offset_left = 64.0
-offset_right = 1088.0
+offset_right = 896.0
 offset_bottom = 69.0
 theme_override_fonts/font = ExtResource("2_tsnxo")
 theme_override_font_sizes/font_size = 50

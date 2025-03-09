@@ -15,15 +15,15 @@ script = ExtResource("1_xfwt3")
 [node name="TileMapLayer" parent="." instance=ExtResource("2_55f4m")]
 
 [node name="DialogueReader" parent="." instance=ExtResource("2_me0ay")]
-offset_top = 448.0
-offset_right = 192.0
-offset_bottom = 512.0
+offset_top = 488.0
+offset_right = 206.0
+offset_bottom = 551.0
 
 [node name="Button" parent="." instance=ExtResource("1_vmceb")]
-offset_left = 418.0
-offset_top = 211.0
-offset_right = 517.0
-offset_bottom = 274.0
+offset_left = 936.0
+offset_top = 504.0
+offset_right = 1035.0
+offset_bottom = 567.0
 
 [node name="Dominic" parent="." instance=ExtResource("5_rkmlg")]
 position = Vector2(1047, 52)
