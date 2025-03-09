@@ -14,29 +14,30 @@ script = ExtResource("1_xfwt3")
 
 [node name="TileMapLayer" parent="." instance=ExtResource("2_55f4m")]
 
-[node name="DialogueReader" parent="." instance=ExtResource("2_me0ay")]
-offset_top = 488.0
-offset_right = 206.0
-offset_bottom = 551.0
-
-[node name="Button" parent="." instance=ExtResource("1_vmceb")]
-offset_left = 936.0
-offset_top = 504.0
-offset_right = 1035.0
-offset_bottom = 567.0
-
 [node name="Dominic" parent="." instance=ExtResource("5_rkmlg")]
-position = Vector2(1047, 52)
+position = Vector2(629, 539)
 scale = Vector2(0.687501, 0.687501)
 animation = &"DominicIdle"
 
 [node name="Bloober" parent="." instance=ExtResource("6_h6x8r")]
-position = Vector2(1072, 54)
+position = Vector2(654, 541)
 scale = Vector2(1.2422, 1.2422)
 
 [node name="Misc" parent="." instance=ExtResource("7_eriic")]
-position = Vector2(1005, 56)
+position = Vector2(587, 543)
 
 [node name="Goober" parent="." instance=ExtResource("4_nhhot")]
-position = Vector2(978, 52)
+position = Vector2(560, 539)
 animation = &"GooberHappy"
+
+[node name="DialogueReader" parent="." instance=ExtResource("2_me0ay")]
+offset_left = 8.0
+offset_top = 480.0
+offset_right = 214.0
+offset_bottom = 543.0
+
+[node name="Button" parent="." instance=ExtResource("1_vmceb")]
+offset_left = 984.0
+offset_top = 512.0
+offset_right = 1083.0
+offset_bottom = 575.0
