@@ -6,12 +6,11 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	button.text = "Click"
+	button.text = "option B"
 
 func _on_button_pressed() -> void:
-	if Global.gatekeeping == false:
-		Global.display_label_text.emit()
-		print("signal gets sent")
+	if Global.dialogue_running == false:
+		Global.setup_convo.emit("AAAB")
 	#else:
 		#print("woop")
 

@@ -49,8 +49,7 @@ var yapperValue = []
 var textValue = []
 var gatekeeping = false
 
-var left = Vector2(10, 10)
-var right = Vector2(-10, 10)
+var dialogue_running = false
 
 signal display_label_text
 

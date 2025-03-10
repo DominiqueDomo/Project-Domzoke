@@ -12,6 +12,9 @@ func _ready() -> void:
 	
 func setup_convo(convo):
 	var file = FileAccess.open("res://JSON/Dialogue.json", FileAccess.READ)
+	text = 0
+	Global.gatekeeping = false
+	Global.dialogue_running = true
 	if file:
 	# Read the file's content
 		var json_data = file.get_as_text()
@@ -129,6 +132,7 @@ func display_label_text():
 	else:
 		NameTag.text = ""
 		Global.text_array = []
+		Global.dialogue_running = false
 		for t in range (0, Global.allvars_array.size()):
 			Global.set(Global.allvars_array[t] + "_array", [])
 			print(Global.get(Global.allvars_array[t] + "_array"))
