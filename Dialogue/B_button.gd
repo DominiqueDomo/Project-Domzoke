@@ -11,6 +11,7 @@ func _ready():
 func _on_button_pressed() -> void:
 	if Global.dialogue_running == false:
 		Global.setup_convo.emit("AAAB")
+		Global.display_label_text.emit()
 	#else:
 		#print("woop")
 

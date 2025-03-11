@@ -44,10 +44,10 @@
 
 		"charA4": "Bloober",
 		"animA4": "BlooberTalking",
-		"animB4": "DominicIdle",
-		"charB4": "Goober",
-		"animB4": "GooberIdle",
+		"charC4": "Goober",
+		"animC4": "GooberIdle",
 		"yapper4": "Bloober",
+		"oriC4": "left",
 		"oriA4": "left",
 		"str4": "wooowww this wall is so cool",
 
@@ -62,8 +62,26 @@
 	},
 	"AAAB": {
 		"charA1": "Dominic",
-		"animA1": "DominicIdle",
-		"str1": "Hey, AAAB works, that's pretty cool"
+		"animA1": "DominicTalking",
+		"yapper1": "Dominic",
+		"str1": "Hey, Goober, have you heard the news?",
+		"charB1": "Goober",
+		"animB1": "GooberIdle",
+		
+	 	"charA2": "Dominic",
+		"charB2": "Goober",
+		"animA2": "DominicIdle",
+		"animB2": "GooberHappy",
+		"yapper2": "Goober",
+		"str2": "Wahoahwao??! You have newsies?!",
+		
+		
+	 	"charA3": "Dominic",
+		"charB3": "Goober",
+		"animA3": "DominicSurprisedTalking",
+		"animB3": "GooberIdle",
+		"yapper3": "Dominic",
+		"str3": "DOMO FIXED AAAB! WE HAVE A LIFE HERE NOW!"
 	}
   }
 }

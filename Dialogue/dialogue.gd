@@ -15,6 +15,9 @@ func setup_convo(convo):
 	text = 0
 	Global.gatekeeping = false
 	Global.dialogue_running = true
+	#makes all the dialogue buttons invisible
+	#$"../A_button".visible = false
+	#$"../B_button".visible = false
 	if file:
 	# Read the file's content
 		var json_data = file.get_as_text()
@@ -23,6 +26,7 @@ func setup_convo(convo):
 	# Parse the JSON data
 		var json = JSON.new()
 		var parse_result = json.parse(json_data)
+		Global.convlengthfound = false
 
 		if parse_result == OK:
 			var data = json.get_data()  # Use `get_data()` to access the parsed JSON object
@@ -130,6 +134,15 @@ func display_label_text():
 		await get_tree().create_timer(textspeed).timeout
 		Global.gatekeeping = false
 	else:
+	#makes all the dialogue buttons visible
+		#$"../button_optionA".visible = true
+		#$"../button_optionB".visible = true
+	#when strings in the conversation run out, makes all remaining characters disappear
+		for r in range(0, 3):
+			if Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1] != "NONE": 
+				get_node("../%s" % Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1]).visible = false
+				
+	#resets all variables necessary for displaying the text
 		NameTag.text = ""
 		Global.text_array = []
 		Global.dialogue_running = false
