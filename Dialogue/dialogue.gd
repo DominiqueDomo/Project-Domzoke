@@ -16,8 +16,8 @@ func setup_convo(convo):
 	Global.gatekeeping = false
 	Global.dialogue_running = true
 	#makes all the dialogue buttons invisible
-	#$"../A_button".visible = false
-	#$"../B_button".visible = false
+	$"../A_button".visible = false
+	$"../B_button".visible = false
 	if file:
 	# Read the file's content
 		var json_data = file.get_as_text()
@@ -135,8 +135,8 @@ func display_label_text():
 		Global.gatekeeping = false
 	else:
 	#makes all the dialogue buttons visible
-		#$"../button_optionA".visible = true
-		#$"../button_optionB".visible = true
+		$"../A_button".visible = true
+		$"../B_button".visible = true
 	#when strings in the conversation run out, makes all remaining characters disappear
 		for r in range(0, 3):
 			if Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1] != "NONE": 

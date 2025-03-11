@@ -1,19 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://chpu1lqd8e0xo"]
+[gd_scene load_steps=2 format=3 uid="uid://dtldcx1gosi4r"]
 
-[ext_resource type="Script" path="res://Dialogue/A_button.gd" id="1_fk7p4"]
+[ext_resource type="Script" path="res://Dialogue/buttons/C_button.gd" id="1_ldf5o"]
 
-[node name="button_optionA" type="Control"]
+[node name="C_button" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_fk7p4")
+script = ExtResource("1_ldf5o")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_right = 120.0
-offset_bottom = 62.0
+offset_right = 117.0
+offset_bottom = 63.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

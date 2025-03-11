@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://csvb65k22b4my"]
 
-[ext_resource type="Script" path="res://Dialogue/button.gd" id="1_gn8e0"]
+[ext_resource type="Script" path="res://Dialogue/buttons/button.gd" id="1_gn8e0"]
 [ext_resource type="FontFile" uid="uid://c21qvmnxmr0oq" path="res://Assets/Fonts/monogram/monogram-extended.ttf" id="2_xgroy"]
 
 [node name="NextDialButton" type="Control"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ok3yvwlokqwq"]
 
-[ext_resource type="Script" path="res://Dialogue/B_button.gd" id="1_t5t3s"]
+[ext_resource type="Script" path="res://Dialogue/buttons/B_button.gd" id="1_t5t3s"]
 
 [node name="B_button" type="Control"]
 layout_mode = 3
