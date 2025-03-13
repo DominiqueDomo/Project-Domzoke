@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s345hjaj6jin"
-path="res://.godot/imported/General Background.png-14441468ac7635c9497e804899ebe276.ctex"
+uid="uid://c0m2eyfk07jfo"
+path="res://.godot/imported/Stars.png-a1af67f5ce072ad6750153b7db035ecd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TileMaps/General Background.png"
-dest_files=["res://.godot/imported/General Background.png-14441468ac7635c9497e804899ebe276.ctex"]
+source_file="res://Assets/TileMaps/Field-Night/Stars.png"
+dest_files=["res://.godot/imported/Stars.png-a1af67f5ce072ad6750153b7db035ecd.ctex"]
 
 [params]
 

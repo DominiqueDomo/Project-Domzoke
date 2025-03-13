@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://csvb65k22b4my" path="res://Dialogue/buttons/button.tscn" id="1_vmceb"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_xfwt3"]
-[ext_resource type="PackedScene" uid="uid://dmen5rco2qgbk" path="res://TileMaps/Background.tscn" id="2_55f4m"]
+[ext_resource type="PackedScene" uid="uid://dmen5rco2qgbk" path="res://TileMaps/FieldDay.tscn" id="2_55f4m"]
 [ext_resource type="PackedScene" uid="uid://dt0l50sfesi7e" path="res://Dialogue/dialogue.tscn" id="2_me0ay"]
 [ext_resource type="PackedScene" uid="uid://pacolmlbxgx4" path="res://Characters/Goober.tscn" id="4_nhhot"]
 [ext_resource type="PackedScene" uid="uid://cpjbu7xlg1adj" path="res://Characters/Dominic.tscn" id="5_rkmlg"]
@@ -15,7 +15,7 @@
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_xfwt3")
 
-[node name="FieldBackground" parent="." instance=ExtResource("2_55f4m")]
+[node name="FieldDay" parent="." instance=ExtResource("2_55f4m")]
 
 [node name="Dominic" parent="." instance=ExtResource("5_rkmlg")]
 position = Vector2(629, 539)
@@ -47,20 +47,20 @@ offset_bottom = 575.0
 tooltip_text = "aaaa"
 
 [node name="A_button" parent="." instance=ExtResource("9_l84jl")]
-offset_left = 850.0
-offset_top = 470.0
-offset_right = 850.0
-offset_bottom = 470.0
+offset_left = 856.0
+offset_top = 488.0
+offset_right = 856.0
+offset_bottom = 488.0
 
 [node name="B_button" parent="." instance=ExtResource("10_4tm4f")]
-offset_left = 985.0
-offset_top = 469.0
-offset_right = 985.0
-offset_bottom = 469.0
+offset_left = 976.0
+offset_top = 488.0
+offset_right = 976.0
+offset_bottom = 488.0
 metadata/visible = false
 
 [node name="C_button" parent="." instance=ExtResource("11_7j7ui")]
-offset_left = 850.0
-offset_top = 547.0
-offset_right = 850.0
-offset_bottom = 547.0
+offset_left = 856.0
+offset_top = 552.0
+offset_right = 856.0
+offset_bottom = 552.0
