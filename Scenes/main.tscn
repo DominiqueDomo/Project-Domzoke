@@ -39,6 +39,7 @@ offset_right = 214.0
 offset_bottom = 543.0
 
 [node name="NextDialButton" parent="." instance=ExtResource("1_vmceb")]
+visible = false
 offset_left = 984.0
 offset_top = 512.0
 offset_right = 1083.0
@@ -46,20 +47,20 @@ offset_bottom = 575.0
 tooltip_text = "aaaa"
 
 [node name="A_button" parent="." instance=ExtResource("9_l84jl")]
-offset_left = 733.0
-offset_top = 379.0
-offset_right = 733.0
-offset_bottom = 379.0
+offset_left = 850.0
+offset_top = 470.0
+offset_right = 850.0
+offset_bottom = 470.0
 
 [node name="B_button" parent="." instance=ExtResource("10_4tm4f")]
-offset_left = 586.0
-offset_top = 380.0
-offset_right = 586.0
-offset_bottom = 380.0
+offset_left = 985.0
+offset_top = 469.0
+offset_right = 985.0
+offset_bottom = 469.0
 metadata/visible = false
 
 [node name="C_button" parent="." instance=ExtResource("11_7j7ui")]
-offset_left = 867.0
-offset_top = 358.0
-offset_right = 867.0
-offset_bottom = 358.0
+offset_left = 850.0
+offset_top = 547.0
+offset_right = 850.0
+offset_bottom = 547.0

@@ -49,6 +49,25 @@ var yapperValue = []
 var textValue = []
 var gatekeeping = false
 
+var charAqvalue = ""
+var charBqvalue = ""
+var charCqvalue = ""
+var charDqvalue = ""
+var animAqvalue = ""
+var animBqvalue = ""
+var animCqvalue = ""
+var animDqvalue = ""
+var oriAqvalue = ""
+var oriBqvalue = ""
+var oriCqvalue = ""
+var oriDqvalue = ""
+var posAqvalue = ""
+var posBqvalue = ""
+var posCqvalue = ""
+var posDqvalue = ""
+var yapperqValue = ""
+var textqValue = ""
+
 var dialogue_running = false
 
 signal display_label_text

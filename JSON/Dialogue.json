@@ -40,6 +40,7 @@
 		"yapper3": "Bloober",
 		"charC3": "Goober",
 		"animC3": "GooberSleepDeprived",
+		"oriC3": "left",
 		"str3": "Wauwi! I'm going to stare at the wall now weeee",
 
 		"charA4": "Bloober",
@@ -75,13 +76,30 @@
 		"yapper2": "Goober",
 		"str2": "Wahoahwao??! You have newsies?!",
 		
-		
-	 	"charA3": "Dominic",
+		"charA3": "Dominic",
 		"charB3": "Goober",
 		"animA3": "DominicSurprisedTalking",
 		"animB3": "GooberIdle",
 		"yapper3": "Dominic",
-		"str3": "DOMO FIXED AAAB! WE HAVE A LIFE HERE NOW!"
+		"str3": "DOMO FIXED AAAB! WE HAVE A LIFE HERE NOW!",
+		
+	 	"charA4": "Dominic",
+		"charB4": "Goober",
+		"animA4": "DominicSurprised",
+		"animB4": "GooberRainbowTalking",
+		"yapper4": "Goober",
+		"str4": "I am so happy about this information!",
+		
+		"charAq": "Goober",
+		"animAq": "GooberSad",
+		"strq": "Do you like lego Ninjago?",
+		"yapperq": "Goober",
+		"buttonA": "AABA",
+		"buttonB": "AACA",
+		"buttonC": "AADE",
+		"optionA": "Omg, me too!",
+		"optionB": "Nah, I don't like it that much",
+		"optionC": "*kill him*",
 	}
   }
 }
