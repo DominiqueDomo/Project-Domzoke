@@ -65,7 +65,7 @@ var posAqvalue = ""
 var posBqvalue = ""
 var posCqvalue = ""
 var posDqvalue = ""
-var yapperqValue = ""
+var yapperqvalue = ""
 var textqValue = ""
 
 var dialogue_running = false
