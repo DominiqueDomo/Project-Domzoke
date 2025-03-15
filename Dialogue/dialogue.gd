@@ -70,7 +70,11 @@ func setup_convo(convo):
 								#sets buttonXvalue
 								for p in range (0,4):
 									if Conversation.has("option" + Global.allchartypes_array[p]):
-										Global.set("button" + Global.allchartypes_array[p] + "value", Conversation[("option" + Global.allchartypes_array[p])])
+										Global.set("button" + Global.allchartypes_array[p] + "value", Conversation[("button" + Global.allchartypes_array[p])])
+										Global.set("option" + Global.allchartypes_array[p] + "value", Conversation[("option" + Global.allchartypes_array[p])])
+									else:
+										Global.set("button" + Global.allchartypes_array[p] + "value", "NONE")
+										Global.set("option" + Global.allchartypes_array[p] + "value", "NONE")
 								print(Global.textqValue)
 							#repeats this loop for every variable in the "allvars" array
 							for p in range(0, Global.allvars_array.size()):
@@ -97,7 +101,7 @@ func setup_convo(convo):
 	else:
 		print("File not found: res://JSON/Dialogue.json")
 	pass
-	
+#This function will read through the dialogue arrays one by one, with each click of the button
 func display_label_text():
 	Global.gatekeeping = true
 	if text < Global.text_array.size():
@@ -224,12 +228,7 @@ func enddialogue():
 	$".".visible = false
 	$"../NextDialButton".visible = false
 #resets all variables necessary for displaying the text
-	NameTag.text = ""
-	Global.text_array = []
-	dialogue.text = ""
-	Global.dialogue_running = false
-	for t in range (0, Global.allvars_array.size()):
-		Global.set(Global.allvars_array[t] + "_array", [])
+	resetdialogue()
 pass
 		
 	#print(Global.gatekeeping)

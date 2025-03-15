@@ -2,6 +2,7 @@ extends Control
 
 @onready var button = $Button
 @onready var D_button = $"."
+var D_option = "AAAB"
 #signal display_label_text
 
 
@@ -12,13 +13,15 @@ func _ready():
 
 func _on_button_pressed() -> void:
 	if Global.dialogue_running == false:
-		Global.setup_convo.emit("AAAB")
+		Global.setup_convo.emit(D_option)
 		Global.display_label_text.emit()
 	#else:
 		#print("woop")
 func buttonsappear():
 	if Global.buttonDvalue != "NONE":
 		button.text = Global.buttonDvalue
+		#option is what ensues upon being pressed
+		D_option = Global.optionDvalue
 		D_button.visible = true
 		
 

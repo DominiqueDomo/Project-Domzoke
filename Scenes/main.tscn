@@ -48,22 +48,22 @@ offset_bottom = 575.0
 tooltip_text = "aaaa"
 
 [node name="A_button" parent="." instance=ExtResource("9_l84jl")]
-offset_left = 850.0
-offset_top = 470.0
-offset_right = 850.0
-offset_bottom = 470.0
-
-[node name="B_button" parent="." instance=ExtResource("10_4tm4f")]
-offset_left = 982.0
+offset_left = 848.0
 offset_top = 471.0
-offset_right = 982.0
+offset_right = 848.0
 offset_bottom = 471.0
 
-[node name="C_button" parent="." instance=ExtResource("11_7j7ui")]
+[node name="B_button" parent="." instance=ExtResource("10_4tm4f")]
 offset_left = 850.0
-offset_top = 547.0
+offset_top = 548.0
 offset_right = 850.0
-offset_bottom = 547.0
+offset_bottom = 548.0
+
+[node name="C_button" parent="." instance=ExtResource("11_7j7ui")]
+offset_left = 982.0
+offset_top = 472.0
+offset_right = 982.0
+offset_bottom = 472.0
 
 [node name="D_button" parent="." instance=ExtResource("12_w5ng7")]
 offset_left = 981.0

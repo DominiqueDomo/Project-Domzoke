@@ -70,6 +70,10 @@ var buttonAvalue = ""
 var buttonBvalue = ""
 var buttonCvalue = ""
 var buttonDvalue = ""
+var optionAvalue = ""
+var optionBvalue = ""
+var optionCvalue = ""
+var optionDvalue = ""
 var textqValue = ""
 
 var dialogue_running = false
