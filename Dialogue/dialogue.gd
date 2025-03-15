@@ -15,15 +15,17 @@ var Conversation = ""
 func _ready() -> void:
 	Global.display_label_text.connect(display_label_text)
 	Global.setup_convo.connect(setup_convo)
+	Global.resetdialogue.connect(resetdialogue)
+	Global.enddialogue.connect(enddialogue)
 	
 func setup_convo(convo):
+	resetdialogue()
 	var file = FileAccess.open("res://JSON/Dialogue.json", FileAccess.READ)
 	text = 0
 	Global.gatekeeping = false
 	Global.dialogue_running = true
 	#makes all the dialogue buttons invisible
 	for p in range(0, 4):
-		print("the button is named " + Global.allchartypes_array[p] + "_button")
 		get_node("../%s" % Global.allchartypes_array[p] + "_button").visible = false
 	NextDialButton.visible = true
 	if file:
@@ -65,6 +67,10 @@ func setup_convo(convo):
 							if Conversation.has("strq"):
 								print("strq found")
 								Global.textqValue = Conversation["strq"]
+								#sets buttonXvalue
+								for p in range (0,4):
+									if Conversation.has("option" + Global.allchartypes_array[p]):
+										Global.set("button" + Global.allchartypes_array[p] + "value", Conversation[("option" + Global.allchartypes_array[p])])
 								print(Global.textqValue)
 							#repeats this loop for every variable in the "allvars" array
 							for p in range(0, Global.allvars_array.size()):
@@ -145,6 +151,7 @@ func display_label_text():
 		await get_tree().create_timer(textspeed).timeout
 		Global.gatekeeping = false
 	else:
+		Global.dialogue_running = false
 		if Conversation.has("strq"):
 			dialogue.visible_ratio = 0
 			NameTag.text = Global.yapperqvalue + ":"
@@ -152,9 +159,9 @@ func display_label_text():
 			var string = Global.textqValue
 			var length = string.length()
 			var textspeed = length * 0.06
-			for p in range(0, 3):
-					get_node(Global.allchartypes_array[p] + "_button").visible = true
-					NextDialButton.visible = false
+			for p in range(0, 4):
+				Global.buttonsappear.emit()
+			NextDialButton.visible = false
 		#makes all the dialogue buttons visible
 			for p in range(0, 3):
 					#checks if previous character matches ANY of the current characters; if they don't match, then removes previous character
@@ -191,14 +198,14 @@ func display_label_text():
 			visible_text_tween = create_tween()
 			visible_text_tween.tween_property(dialogue, "visible_ratio", 1.0, textspeed)
 		else: 
-			return resetdialogue()
-	
+			return enddialogue()
+#this function will reset the dialogue, it will allow the conversation to continue after a question is answered
 func resetdialogue():
 #when strings in the conversation run out, makes all remaining characters disappear
-	for r in range(0, 3):
-		if Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1] != "NONE": 
-			get_node("../%s" % Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1]).visible = false
-			
+	if text != 0:
+		for r in range(0, 3):
+			if Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1] != "NONE": 
+				get_node("../%s" % Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1]).visible = false
 #resets all variables necessary for displaying the text
 	NameTag.text = ""
 	Global.text_array = []
@@ -206,7 +213,24 @@ func resetdialogue():
 	Global.dialogue_running = false
 	for t in range (0, Global.allvars_array.size()):
 		Global.set(Global.allvars_array[t] + "_array", [])
-	pass
+pass
+
+#this function will end the dialogue, it triggers if no question is asked at all
+func enddialogue():
+#when strings in the conversation run out, makes all remaining characters disappear
+	for r in range(0, 3):
+		if Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1] != "NONE": 
+			get_node("../%s" % Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1]).visible = false
+	$".".visible = false
+	$"../NextDialButton".visible = false
+#resets all variables necessary for displaying the text
+	NameTag.text = ""
+	Global.text_array = []
+	dialogue.text = ""
+	Global.dialogue_running = false
+	for t in range (0, Global.allvars_array.size()):
+		Global.set(Global.allvars_array[t] + "_array", [])
+pass
 		
 	#print(Global.gatekeeping)
 	

@@ -66,10 +66,17 @@ var posBqvalue = ""
 var posCqvalue = ""
 var posDqvalue = ""
 var yapperqvalue = ""
+var buttonAvalue = ""
+var buttonBvalue = ""
+var buttonCvalue = ""
+var buttonDvalue = ""
 var textqValue = ""
 
 var dialogue_running = false
 
 signal display_label_text
-
+signal resetdialogue
+signal enddialogue
 signal setup_convo
+
+signal buttonsappear
