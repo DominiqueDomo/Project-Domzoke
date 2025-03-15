@@ -74,6 +74,5 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_7bjrp")
-animation = &"BeeberIdle"
-frame = 2
-frame_progress = 0.0925329
+animation = &"BeeberTalking"
+frame_progress = 0.65245
