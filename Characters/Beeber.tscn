@@ -1,0 +1,79 @@
+[gd_scene load_steps=12 format=3 uid="uid://bwo60i6pdu3dv"]
+
+[ext_resource type="Texture2D" uid="uid://do2m1vyh21o2c" path="res://Assets/CharacterSprites/Beeber/Beeber-Idle.png" id="1_f3yg3"]
+[ext_resource type="Texture2D" uid="uid://4unmrvseen7d" path="res://Assets/CharacterSprites/Beeber/Beeber-Talking.png" id="2_ra2t0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbdy5"]
+atlas = ExtResource("1_f3yg3")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2n2et"]
+atlas = ExtResource("1_f3yg3")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8h5q"]
+atlas = ExtResource("1_f3yg3")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_suidw"]
+atlas = ExtResource("1_f3yg3")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8y7d"]
+atlas = ExtResource("2_ra2t0")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsfqc"]
+atlas = ExtResource("2_ra2t0")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p778r"]
+atlas = ExtResource("2_ra2t0")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljbio"]
+atlas = ExtResource("2_ra2t0")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7bjrp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbdy5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2n2et")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k8h5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_suidw")
+}],
+"loop": true,
+"name": &"BeeberIdle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8y7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsfqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p778r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljbio")
+}],
+"loop": true,
+"name": &"BeeberTalking",
+"speed": 6.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_7bjrp")
+animation = &"BeeberIdle"
+frame = 2
+frame_progress = 0.0925329
