@@ -19,18 +19,23 @@ script = ExtResource("1_xfwt3")
 [node name="FieldBackground" parent="." instance=ExtResource("2_55f4m")]
 
 [node name="Dominic" parent="." instance=ExtResource("5_rkmlg")]
+visible = false
 position = Vector2(629, 539)
 scale = Vector2(0.687501, 0.687501)
 animation = &"DominicIdle"
 
 [node name="Bloober" parent="." instance=ExtResource("6_h6x8r")]
+visible = false
 position = Vector2(654, 541)
 scale = Vector2(1.2422, 1.2422)
 
 [node name="Misc" parent="." instance=ExtResource("7_eriic")]
+visible = false
 position = Vector2(587, 543)
+animation = &"DominicTinyIdle"
 
 [node name="Goober" parent="." instance=ExtResource("4_nhhot")]
+visible = false
 position = Vector2(560, 539)
 
 [node name="DialogueReader" parent="." instance=ExtResource("2_me0ay")]
