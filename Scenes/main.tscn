@@ -40,6 +40,7 @@ visible = false
 position = Vector2(560, 539)
 
 [node name="Beeber" parent="." instance=ExtResource("7_dywtp")]
+visible = false
 position = Vector2(332, 157)
 scale = Vector2(10, 10)
 
