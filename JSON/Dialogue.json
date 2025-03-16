@@ -99,6 +99,39 @@
 		"optionA": "AAAA",
 		"optionB": "AAAC",
 	},
+	"AAAC": {
+		"charA1": "Goober",
+		"animA1": "GooberCorpse",
+		"str1": "Holy shit, you... you actually killed Goober",
+		"yapper1": "Narrator",
+		
+		"charA2": "Goober",
+		"animA2": "GooberCorpse",
+		"str2": "You are a monster.",
+		"yapper2": "Narrator",
+		
+		"charA3": "Goober",
+		"animA3": "GooberCorpse",
+		"str3": "Domzoke's retribution will rain down upon you for the despicable act you have commited.",
+		"yapper3": "Narrator",
+
+		"charA4": "Goober",
+		"animA4": "GooberGhostTalking",
+		"str4": "Hey guys it's me, Goober! And I'm a ghost now!",
+		"yapper4": "Goober",
+		
+		"charA5": "Goober",
+		"animA5": "GooberGhostIdle",
+		"str5": "You will be spared this time. Do not repeat your actions here today, or you shall face the consequences",
+		"yapper5": "Narrator",
+		
+		"charAq": "Goober",
+		"animAq": "GooberGhostTalking",
+		"strq": "I wish I could meet a bee sometime",
+		"yapperq": "Goober",
+		"buttonA": "Summon a bee for Goober",
+		"optionA": "AAAD",
+	},
 	"AAAD": {
 		"charA1": "Goober",
 		"animA1": "GooberGhostIdle",
@@ -134,39 +167,6 @@
 		"animB5": "BeeberTalking",
 		"str5": "Wellzzz, now you havez! Bzz bzzz zzz- zz-!",
 		"yapper5": "Beeber",
-		},
-	"AAAC": {
-		"charA1": "Goober",
-		"animA1": "GooberCorpse",
-		"str1": "Holy shit, you... you actually killed Goober",
-		"yapper1": "Narrator",
-		
-		"charA2": "Goober",
-		"animA2": "GooberCorpse",
-		"str2": "You are a monster.",
-		"yapper2": "Narrator",
-		
-		"charA3": "Goober",
-		"animA3": "GooberCorpse",
-		"str3": "Domzoke's retribution will rain down upon you for the despicable act you have commited.",
-		"yapper3": "Narrator",
-
-		"charA4": "Goober",
-		"animA4": "GooberGhostTalking",
-		"str4": "Hey guys it's me, Goober! And I'm a ghost now!",
-		"yapper4": "Goober",
-		
-		"charA5": "Goober",
-		"animA5": "GooberGhostIdle",
-		"str5": "You will be spared this time. Do not repeat your actions here today, or you shall face the consequences",
-		"yapper5": "Narrator",
-		
-		"charAq": "Goober",
-		"animAq": "GooberGhostTalking",
-		"strq": "I wish I could meet a bee sometime",
-		"yapperq": "Goober",
-		"buttonA": "Summon a bee for Goober",
-		"optionA": "AAAD",
 	}
   }
 }
