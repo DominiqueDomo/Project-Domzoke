@@ -1,11 +1,62 @@
-[gd_scene load_steps=38 format=3 uid="uid://pacolmlbxgx4"]
+[gd_scene load_steps=53 format=3 uid="uid://pacolmlbxgx4"]
 
+[ext_resource type="Texture2D" uid="uid://0tj78uy3euq" path="res://Assets/CharacterSprites/Goober/GooberCorpse.png" id="1_o1yjv"]
+[ext_resource type="Texture2D" uid="uid://cnhqami00cvcu" path="res://Assets/CharacterSprites/Goober/GooberGhostIdle.png" id="2_847pi"]
 [ext_resource type="Texture2D" uid="uid://c34lgvdfgqvxh" path="res://Assets/CharacterSprites/Goober/GooberIdle.png" id="2_jytx0"]
+[ext_resource type="Texture2D" uid="uid://cqpp8syfeb32c" path="res://Assets/CharacterSprites/Goober/GooberGhostTalking.png" id="3_ltpig"]
 [ext_resource type="Texture2D" uid="uid://bob25k8yptbvu" path="res://Assets/CharacterSprites/Goober/GooberRainbow.png" id="3_oub2l"]
 [ext_resource type="Texture2D" uid="uid://dmkvg1inko705" path="res://Assets/CharacterSprites/Goober/GooberHappy.png" id="4_jhi74"]
 [ext_resource type="Texture2D" uid="uid://bul36vnig2udc" path="res://Assets/CharacterSprites/Goober/GooberRainbowTalking.png" id="4_nxc7n"]
 [ext_resource type="Texture2D" uid="uid://bsis2fqqumk7k" path="res://Assets/CharacterSprites/Goober/GooberSad.png" id="5_615rr"]
 [ext_resource type="Texture2D" uid="uid://dew1o0do6vl68" path="res://Assets/CharacterSprites/Goober/GooberSleepdeprived.png" id="6_6grsi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sqgn"]
+atlas = ExtResource("1_o1yjv")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vg2kg"]
+atlas = ExtResource("1_o1yjv")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdmrb"]
+atlas = ExtResource("1_o1yjv")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_md7wr"]
+atlas = ExtResource("1_o1yjv")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djri0"]
+atlas = ExtResource("2_847pi")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3t2w"]
+atlas = ExtResource("2_847pi")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pkl2"]
+atlas = ExtResource("2_847pi")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqmpr"]
+atlas = ExtResource("2_847pi")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frsgs"]
+atlas = ExtResource("3_ltpig")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knaq3"]
+atlas = ExtResource("3_ltpig")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyqqt"]
+atlas = ExtResource("3_ltpig")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gj2i"]
+atlas = ExtResource("3_ltpig")
+region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pxhos"]
 atlas = ExtResource("4_jhi74")
@@ -129,6 +180,57 @@ region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lce6u"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0sqgn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vg2kg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdmrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_md7wr")
+}],
+"loop": true,
+"name": &"GooberCorpse",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djri0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3t2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5pkl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqmpr")
+}],
+"loop": true,
+"name": &"GooberGhostIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frsgs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knaq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nyqqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gj2i")
+}],
+"loop": true,
+"name": &"GooberGhostTalking",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pxhos")
@@ -261,4 +363,4 @@ animations = [{
 
 [node name="Goober" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_lce6u")
-animation = &"GooberRainbowTalking"
+animation = &"GooberGhostIdle"
