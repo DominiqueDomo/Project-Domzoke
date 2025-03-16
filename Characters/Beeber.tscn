@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bwo60i6pdu3dv"]
+[gd_scene load_steps=12 format=3 uid="uid://b81vpymttn7f2"]
 
 [ext_resource type="Texture2D" uid="uid://do2m1vyh21o2c" path="res://Assets/CharacterSprites/Beeber/Beeber-Idle.png" id="1_f3yg3"]
 [ext_resource type="Texture2D" uid="uid://4unmrvseen7d" path="res://Assets/CharacterSprites/Beeber/Beeber-Talking.png" id="2_ra2t0"]
@@ -72,7 +72,6 @@ animations = [{
 "speed": 6.0
 }]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+[node name="Beeber" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_7bjrp")
 animation = &"BeeberTalking"
-frame_progress = 0.65245

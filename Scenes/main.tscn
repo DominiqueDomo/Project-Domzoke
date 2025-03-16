@@ -1,38 +1,47 @@
-[gd_scene load_steps=13 format=3 uid="uid://y3tgdyxvyw4t"]
+[gd_scene load_steps=14 format=3 uid="uid://y3tgdyxvyw4t"]
 
 [ext_resource type="PackedScene" uid="uid://csvb65k22b4my" path="res://Dialogue/buttons/button.tscn" id="1_vmceb"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_xfwt3"]
-[ext_resource type="PackedScene" uid="uid://dmen5rco2qgbk" path="res://TileMaps/FieldDay.tscn" id="2_55f4m"]
+[ext_resource type="PackedScene" path="res://TileMaps/FieldDay.tscn" id="2_55f4m"]
 [ext_resource type="PackedScene" uid="uid://dt0l50sfesi7e" path="res://Dialogue/dialogue.tscn" id="2_me0ay"]
 [ext_resource type="PackedScene" uid="uid://pacolmlbxgx4" path="res://Characters/Goober.tscn" id="4_nhhot"]
 [ext_resource type="PackedScene" uid="uid://cpjbu7xlg1adj" path="res://Characters/Dominic.tscn" id="5_rkmlg"]
-[ext_resource type="PackedScene" uid="uid://ccgd3pmhalvr8" path="res://Characters/Bloober.tscn" id="6_h6x8r"]
-[ext_resource type="PackedScene" uid="uid://bwo60i6pdu3dv" path="res://Characters/Beeber.tscn" id="7_ckmb6"]
+[ext_resource type="PackedScene" uid="uid://ccgd3pmhalvr8" path="res://Characters/bloober.tscn" id="6_h6x8r"]
+[ext_resource type="PackedScene" uid="uid://b81vpymttn7f2" path="res://Characters/Beeber.tscn" id="7_dywtp"]
 [ext_resource type="PackedScene" uid="uid://7qm54nl3na07" path="res://Characters/Misc.tscn" id="7_eriic"]
 [ext_resource type="PackedScene" uid="uid://chpu1lqd8e0xo" path="res://Dialogue/buttons/A_button.tscn" id="9_l84jl"]
-[ext_resource type="PackedScene" uid="uid://ok3yvwlokqwq" path="res://Dialogue/buttons/B_button.tscn" id="10_4tm4f"]
+[ext_resource type="PackedScene" uid="uid://4qam3wmq1o4a" path="res://Dialogue/buttons/B_button.tscn" id="10_4tm4f"]
 [ext_resource type="PackedScene" uid="uid://dtldcx1gosi4r" path="res://Dialogue/buttons/C_button.tscn" id="11_7j7ui"]
+[ext_resource type="PackedScene" uid="uid://satjv0k1cjvw" path="res://Dialogue/buttons/D_button.tscn" id="12_w5ng7"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_xfwt3")
 
-[node name="FieldDay" parent="." instance=ExtResource("2_55f4m")]
+[node name="FieldBackground" parent="." instance=ExtResource("2_55f4m")]
 
 [node name="Dominic" parent="." instance=ExtResource("5_rkmlg")]
+visible = false
 position = Vector2(629, 539)
+scale = Vector2(0.687501, 0.687501)
 animation = &"DominicIdle"
 
 [node name="Bloober" parent="." instance=ExtResource("6_h6x8r")]
+visible = false
 position = Vector2(654, 541)
+scale = Vector2(1.2422, 1.2422)
 
 [node name="Misc" parent="." instance=ExtResource("7_eriic")]
+visible = false
 position = Vector2(587, 543)
+animation = &"DominicTinyIdle"
 
 [node name="Goober" parent="." instance=ExtResource("4_nhhot")]
+visible = false
 position = Vector2(560, 539)
 
-[node name="AnimatedSprite2D" parent="." instance=ExtResource("7_ckmb6")]
-position = Vector2(673, 541)
+[node name="Beeber" parent="." instance=ExtResource("7_dywtp")]
+position = Vector2(332, 157)
+scale = Vector2(10, 10)
 
 [node name="DialogueReader" parent="." instance=ExtResource("2_me0ay")]
 offset_left = 8.0
@@ -49,20 +58,25 @@ offset_bottom = 575.0
 tooltip_text = "aaaa"
 
 [node name="A_button" parent="." instance=ExtResource("9_l84jl")]
-offset_left = 768.0
-offset_top = 488.0
-offset_right = 768.0
-offset_bottom = 488.0
+offset_left = 848.0
+offset_top = 471.0
+offset_right = 848.0
+offset_bottom = 471.0
 
 [node name="B_button" parent="." instance=ExtResource("10_4tm4f")]
-offset_left = 936.0
-offset_top = 488.0
-offset_right = 936.0
-offset_bottom = 488.0
-metadata/visible = false
+offset_left = 850.0
+offset_top = 548.0
+offset_right = 850.0
+offset_bottom = 548.0
 
 [node name="C_button" parent="." instance=ExtResource("11_7j7ui")]
-offset_left = 768.0
-offset_top = 552.0
-offset_right = 768.0
-offset_bottom = 552.0
+offset_left = 982.0
+offset_top = 472.0
+offset_right = 982.0
+offset_bottom = 472.0
+
+[node name="D_button" parent="." instance=ExtResource("12_w5ng7")]
+offset_left = 981.0
+offset_top = 542.0
+offset_right = 981.0
+offset_bottom = 542.0
