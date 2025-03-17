@@ -2,17 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://csvb65k22b4my" path="res://Dialogue/buttons/button.tscn" id="1_vmceb"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_xfwt3"]
-[ext_resource type="PackedScene" path="res://TileMaps/FieldDay.tscn" id="2_55f4m"]
+[ext_resource type="PackedScene" uid="uid://dmen5rco2qgbk" path="res://TileMaps/FieldDay.tscn" id="2_55f4m"]
 [ext_resource type="PackedScene" uid="uid://dt0l50sfesi7e" path="res://Dialogue/dialogue.tscn" id="2_me0ay"]
 [ext_resource type="PackedScene" uid="uid://pacolmlbxgx4" path="res://Characters/Goober.tscn" id="4_nhhot"]
 [ext_resource type="PackedScene" uid="uid://cpjbu7xlg1adj" path="res://Characters/Dominic.tscn" id="5_rkmlg"]
-[ext_resource type="PackedScene" uid="uid://ccgd3pmhalvr8" path="res://Characters/bloober.tscn" id="6_h6x8r"]
+[ext_resource type="PackedScene" uid="uid://ccgd3pmhalvr8" path="res://Characters/Bloober.tscn" id="6_h6x8r"]
 [ext_resource type="PackedScene" uid="uid://b81vpymttn7f2" path="res://Characters/Beeber.tscn" id="7_dywtp"]
 [ext_resource type="PackedScene" uid="uid://7qm54nl3na07" path="res://Characters/Misc.tscn" id="7_eriic"]
 [ext_resource type="PackedScene" uid="uid://chpu1lqd8e0xo" path="res://Dialogue/buttons/A_button.tscn" id="9_l84jl"]
 [ext_resource type="PackedScene" uid="uid://4qam3wmq1o4a" path="res://Dialogue/buttons/B_button.tscn" id="10_4tm4f"]
 [ext_resource type="PackedScene" uid="uid://dtldcx1gosi4r" path="res://Dialogue/buttons/C_button.tscn" id="11_7j7ui"]
-[ext_resource type="PackedScene" uid="uid://satjv0k1cjvw" path="res://Dialogue/buttons/D_button.tscn" id="12_w5ng7"]
+[ext_resource type="PackedScene" uid="uid://0h3ki50w3qky" path="res://Dialogue/buttons/D_button.tscn" id="12_w5ng7"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_xfwt3")
@@ -52,32 +52,32 @@ offset_bottom = 543.0
 
 [node name="NextDialButton" parent="." instance=ExtResource("1_vmceb")]
 visible = false
-offset_left = 984.0
-offset_top = 512.0
-offset_right = 1083.0
-offset_bottom = 575.0
+offset_left = 968.0
+offset_top = 520.0
+offset_right = 968.0
+offset_bottom = 520.0
 tooltip_text = "aaaa"
 
 [node name="A_button" parent="." instance=ExtResource("9_l84jl")]
-offset_left = 848.0
-offset_top = 471.0
-offset_right = 848.0
-offset_bottom = 471.0
+offset_left = 832.0
+offset_top = 480.0
+offset_right = 832.0
+offset_bottom = 480.0
 
 [node name="B_button" parent="." instance=ExtResource("10_4tm4f")]
-offset_left = 850.0
-offset_top = 548.0
-offset_right = 850.0
-offset_bottom = 548.0
+offset_left = 968.0
+offset_top = 480.0
+offset_right = 968.0
+offset_bottom = 480.0
 
 [node name="C_button" parent="." instance=ExtResource("11_7j7ui")]
-offset_left = 982.0
-offset_top = 472.0
-offset_right = 982.0
-offset_bottom = 472.0
+offset_left = 832.0
+offset_top = 560.0
+offset_right = 832.0
+offset_bottom = 560.0
 
 [node name="D_button" parent="." instance=ExtResource("12_w5ng7")]
-offset_left = 981.0
-offset_top = 542.0
-offset_right = 981.0
-offset_bottom = 542.0
+offset_left = 968.0
+offset_top = 560.0
+offset_right = 968.0
+offset_bottom = 560.0

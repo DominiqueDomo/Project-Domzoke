@@ -1,25 +1,22 @@
 [gd_scene load_steps=3 format=3 uid="uid://csvb65k22b4my"]
 
 [ext_resource type="Script" path="res://Dialogue/buttons/button.gd" id="1_gn8e0"]
-[ext_resource type="FontFile" uid="uid://c21qvmnxmr0oq" path="res://Assets/Fonts/monogram/monogram-extended.ttf" id="2_xgroy"]
+[ext_resource type="Theme" uid="uid://bd3a4s2vbaltu" path="res://Assets/Fonts/DefaultButton.tres" id="2_c878g"]
 
 [node name="NextDialButton" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -704.0
-offset_bottom = -392.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gn8e0")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
-offset_right = 104.0
+offset_right = 128.0
 offset_bottom = 48.0
 mouse_default_cursor_shape = 2
-theme_override_fonts/font = ExtResource("2_xgroy")
-theme_override_font_sizes/font_size = 50
+theme = ExtResource("2_c878g")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

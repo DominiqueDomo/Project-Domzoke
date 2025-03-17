@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://4qam3wmq1o4a"]
+[gd_scene load_steps=3 format=3 uid="uid://4qam3wmq1o4a"]
 
 [ext_resource type="Script" path="res://Dialogue/buttons/B_button.gd" id="1_t5t3s"]
+[ext_resource type="Theme" uid="uid://bd3a4s2vbaltu" path="res://Assets/Fonts/DefaultButton.tres" id="2_yymcs"]
 
 [node name="B_button" type="Control"]
 layout_mode = 3
@@ -13,7 +14,10 @@ script = ExtResource("1_t5t3s")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_right = 120.0
-offset_bottom = 62.0
+offset_right = 128.0
+offset_bottom = 48.0
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_yymcs")
+autowrap_mode = 3
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

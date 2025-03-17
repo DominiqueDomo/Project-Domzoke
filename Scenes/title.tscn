@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/title.gd" id="1_uaaym"]
 [ext_resource type="FontFile" uid="uid://c21qvmnxmr0oq" path="res://Assets/Fonts/monogram/monogram-extended.ttf" id="2_r8usr"]
 [ext_resource type="FontFile" uid="uid://b1p2blf36jefh" path="res://Assets/Fonts/monogram/monogram-extended-italic.ttf" id="3_x77vv"]
-[ext_resource type="FontFile" uid="uid://cdksyt0yokppl" path="res://Assets/Fonts/monogram/monogram.ttf" id="4_2c03n"]
+[ext_resource type="Theme" uid="uid://bd3a4s2vbaltu" path="res://Assets/Fonts/DefaultButton.tres" id="5_ctc8t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s0pv5"]
 texture = ExtResource("1_mjhq6")
@@ -128,21 +128,19 @@ text = "How to Dating Sim"
 horizontal_alignment = 1
 
 [node name="Start" type="Button" parent="."]
-offset_left = 520.0
+offset_left = 416.0
 offset_top = 424.0
-offset_right = 632.0
+offset_right = 560.0
 offset_bottom = 473.0
-theme_override_fonts/font = ExtResource("4_2c03n")
-theme_override_font_sizes/font_size = 50
+theme = ExtResource("5_ctc8t")
 text = "Start"
 
 [node name="Credits" type="Button" parent="."]
-offset_left = 504.0
-offset_top = 496.0
-offset_right = 648.0
-offset_bottom = 545.0
-theme_override_fonts/font = ExtResource("2_r8usr")
-theme_override_font_sizes/font_size = 50
+offset_left = 592.0
+offset_top = 424.0
+offset_right = 736.0
+offset_bottom = 473.0
+theme = ExtResource("5_ctc8t")
 text = "Credits"
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
