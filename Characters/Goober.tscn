@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://pacolmlbxgx4"]
+[gd_scene load_steps=68 format=3 uid="uid://pacolmlbxgx4"]
 
 [ext_resource type="Texture2D" uid="uid://0tj78uy3euq" path="res://Assets/CharacterSprites/Goober/GooberCorpse.png" id="1_o1yjv"]
 [ext_resource type="Texture2D" uid="uid://cnhqami00cvcu" path="res://Assets/CharacterSprites/Goober/GooberGhostIdle.png" id="2_847pi"]
@@ -9,7 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bul36vnig2udc" path="res://Assets/CharacterSprites/Goober/GooberRainbowTalking.png" id="4_nxc7n"]
 [ext_resource type="Texture2D" uid="uid://bsis2fqqumk7k" path="res://Assets/CharacterSprites/Goober/GooberSad.png" id="5_615rr"]
 [ext_resource type="Texture2D" uid="uid://dew1o0do6vl68" path="res://Assets/CharacterSprites/Goober/GooberSleepdeprived.png" id="6_6grsi"]
+[ext_resource type="Texture2D" uid="uid://c4h816q37vtvu" path="res://Assets/CharacterSprites/Goober/GooberSadIdle.png" id="9_5n5sa"]
 [ext_resource type="Texture2D" uid="uid://bqr0ms7ay6kof" path="res://Assets/CharacterSprites/Goober/GooberTalking.png" id="10_mk7w8"]
+[ext_resource type="Texture2D" uid="uid://dgsqx7hlx7qe1" path="res://Assets/CharacterSprites/Goober/GooberTinycKiss.png" id="11_xyf4b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0sqgn"]
 atlas = ExtResource("1_o1yjv")
@@ -163,6 +165,22 @@ region = Rect2(32, 0, 16, 16)
 atlas = ExtResource("5_615rr")
 region = Rect2(48, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_p47to"]
+atlas = ExtResource("9_5n5sa")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yd6j"]
+atlas = ExtResource("9_5n5sa")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrylh"]
+atlas = ExtResource("9_5n5sa")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbkp1"]
+atlas = ExtResource("9_5n5sa")
+region = Rect2(48, 0, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_yqsso"]
 atlas = ExtResource("6_6grsi")
 region = Rect2(0, 0, 16, 16)
@@ -194,6 +212,22 @@ region = Rect2(32, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_skb4g"]
 atlas = ExtResource("10_mk7w8")
 region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0bch"]
+atlas = ExtResource("11_xyf4b")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fx1b"]
+atlas = ExtResource("11_xyf4b")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ybt4"]
+atlas = ExtResource("11_xyf4b")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ov7ut"]
+atlas = ExtResource("11_xyf4b")
+region = Rect2(96, 0, 32, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lce6u"]
 animations = [{
@@ -353,6 +387,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_p47to")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yd6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrylh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbkp1")
+}],
+"loop": true,
+"name": &"GooberSadIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_yqsso")
 }, {
 "duration": 1.0,
@@ -393,8 +444,25 @@ animations = [{
 "loop": true,
 "name": &"GooberTalking",
 "speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0bch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fx1b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ybt4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ov7ut")
+}],
+"loop": true,
+"name": &"GooberTinycKissing",
+"speed": 5.0
 }]
 
 [node name="Goober" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_lce6u")
-animation = &"GooberTalking"
+animation = &"GooberSadIdle"

@@ -74,7 +74,6 @@ func setup_convo(convo):
 									else:
 										Global.set("button" + Global.allchartypes_array[p] + "value", "NONE")
 										Global.set("option" + Global.allchartypes_array[p] + "value", "NONE")
-								print(Global.textqValue)
 							#repeats this loop for every variable in the "allvars" array
 							for p in range(0, Global.allvars_array.size()):
 								#checks if this variable is present in the JSON file at position i
@@ -132,11 +131,8 @@ func display_label_text():
 				else:
 					#fetch position from the JSON file
 					var posstring = Global.get("pos" + Global.allchartypes_array[p] + "_array")[text]
-					print(("pos" + Global.allchartypes_array[p] + "_array"))
-					print(posstring)
 					#split position into x and y variables
 					var posstringsplit = posstring.split(",")
-					print(posstringsplit)
 					var posx = int(posstringsplit[0])
 					var posy = int(posstringsplit[1])
 					#use those variables to set the position

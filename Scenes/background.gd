@@ -8,7 +8,6 @@ func _ready() -> void:
 	pass # Replace with function body.
 	
 func loadbackground(bgloaded):
-	print(bgloaded)
 	if is_instance_valid(instance):
 		instance.queue_free()
 	background = load(bgloaded)
