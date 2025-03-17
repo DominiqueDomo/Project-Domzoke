@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://pacolmlbxgx4"]
+[gd_scene load_steps=58 format=3 uid="uid://pacolmlbxgx4"]
 
 [ext_resource type="Texture2D" uid="uid://0tj78uy3euq" path="res://Assets/CharacterSprites/Goober/GooberCorpse.png" id="1_o1yjv"]
 [ext_resource type="Texture2D" uid="uid://cnhqami00cvcu" path="res://Assets/CharacterSprites/Goober/GooberGhostIdle.png" id="2_847pi"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bul36vnig2udc" path="res://Assets/CharacterSprites/Goober/GooberRainbowTalking.png" id="4_nxc7n"]
 [ext_resource type="Texture2D" uid="uid://bsis2fqqumk7k" path="res://Assets/CharacterSprites/Goober/GooberSad.png" id="5_615rr"]
 [ext_resource type="Texture2D" uid="uid://dew1o0do6vl68" path="res://Assets/CharacterSprites/Goober/GooberSleepdeprived.png" id="6_6grsi"]
+[ext_resource type="Texture2D" uid="uid://bqr0ms7ay6kof" path="res://Assets/CharacterSprites/Goober/GooberTalking.png" id="10_mk7w8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0sqgn"]
 atlas = ExtResource("1_o1yjv")
@@ -176,6 +177,22 @@ region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_41lvb"]
 atlas = ExtResource("6_6grsi")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aees2"]
+atlas = ExtResource("10_mk7w8")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4tey"]
+atlas = ExtResource("10_mk7w8")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rp3c2"]
+atlas = ExtResource("10_mk7w8")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skb4g"]
+atlas = ExtResource("10_mk7w8")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lce6u"]
@@ -359,8 +376,25 @@ animations = [{
 "loop": true,
 "name": &"GooberSleepDeprived",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aees2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4tey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rp3c2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skb4g")
+}],
+"loop": true,
+"name": &"GooberTalking",
+"speed": 4.0
 }]
 
 [node name="Goober" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_lce6u")
-animation = &"GooberGhostIdle"
+animation = &"GooberTalking"

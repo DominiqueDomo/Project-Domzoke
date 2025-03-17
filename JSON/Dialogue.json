@@ -20,7 +20,7 @@
 		"yapper": "",
 		"str": ""
 	},
-	"AAAA": {
+	"xxxA": {
 		"charA1": "Misc",
 		"charB1": "Dominic",
 		"animA1": "Samsonite",
@@ -61,7 +61,7 @@
 		"yapper5": "Goober",
 		"str5": "I lobe lego ninjgagno"
 	},
-	"AAAB": {
+	"xxxB": {
 		"charA1": "Bloober",
 		"animA1": "BlooberTalking",
 		"yapper1": "Bloober",
@@ -81,33 +81,33 @@
 		"animA3": "BlooberTalking",
 		"animB3": "GooberIdle",
 		"yapper3": "Bloober",
-		"str3": "DOMO FIXED AAAB! WE HAVE A LIFE HERE NOW!",
+		"str3": "Domo ruined the background, all that surrounds us is darkness",
 		
 		"charA4": "Bloober",
 		"charB4": "Goober",
 		"animA4": "BlooberIdle",
-		"animB4": "GooberRainbowTalking",
+		"animB4": "GooberSad",
 		"yapper4": "Goober",
-		"str4": "I am so happy about this information!",
+		"str4": "I am so sad about this information",
 		
 		"charAq": "Goober",
-		"animAq": "GooberSad",
-		"strq": "Do you like lego Ninjago?",
+		"animAq": "GooberSleepDeprived",
+		"strq": "What point is there to live in the darkness? Never again will I see the light of day.",
 		"yapperq": "Goober",
-		"buttonA": "Omg I love!",
-		"buttonB": "*kill him*",
-		"optionA": "AAAA",
-		"optionB": "AAAC",
+		"buttonA": "Let him suffer",
+		"buttonB": "*End his suffering*",
+		"optionA": "xxxB",
+		"optionB": "xxBB",
 	},
-	"AAAC": {
+	"xxBB": {
 		"charA1": "Goober",
 		"animA1": "GooberCorpse",
-		"str1": "Holy shit, you... you actually killed Goober",
+		"str1": "You are a kind soul",
 		"yapper1": "Narrator",
 		
 		"charA2": "Goober",
 		"animA2": "GooberCorpse",
-		"str2": "You are a monster.",
+		"str2": "Yet, he did not deserve to die.",
 		"yapper2": "Narrator",
 		
 		"charA3": "Goober",
@@ -130,9 +130,9 @@
 		"strq": "I wish I could meet a bee sometime",
 		"yapperq": "Goober",
 		"buttonA": "Summon a bee for Goober",
-		"optionA": "AAAD",
+		"optionA": "xABB",
 	},
-	"AAAD": {
+	"xABB": {
 		"charA1": "Goober",
 		"animA1": "GooberGhostIdle",
 		"charB1": "Beeber",
@@ -167,6 +167,75 @@
 		"animB5": "BeeberTalking",
 		"str5": "Wellzzz, now you havez! Bzz bzzz zzz- zz-!",
 		"yapper5": "Beeber",
-	}
+	},
+	"xxxC": {
+		"charA1": "Goober",
+		"animA1": "GooberSleepDeprived",
+		"charB1": "Misc",
+		"animB1": "DominicTinyIdle",
+		"str1": "I wish I could see the light just one more time",
+		"background1": "res://TileMaps/FieldNight.tscn",
+		"yapper1": "Goober",
+		
+		"charA2": "Goober",
+		"animA2": "GooberSleepDeprived",
+		"charB2": "Misc",
+		"animB2": "DominicTinyIdle",
+		"str2": "But Goober, look up. Don't you see? Gaze upon the beauty of the moonlight",
+		"yapper2": "Dominic",
+		
+		"charA3": "Goober",
+		"animA3": "GooberSad",
+		"charB3": "Misc",
+		"animB3": "DominicTinyIdle",
+		"str3": "The... the moon?",
+		"yapper3": "Goober",
+
+		"charA4": "Goober",
+		"animA4": "GooberSad",
+		"charB4": "Misc",
+		"animB4": "DominicTinyIdle",
+		"str4": "Yes, Goober. Everyone is safe now",
+		"yapper4": "Dominic",
+		
+		"charA5": "Goober",
+		"animA5": "GooberTalking",
+		"charB5": "Misc",
+		"animB5": "DominicTinyIdle",
+		"str5": "Can we... can we stay here a little longer?",
+		"yapper5": "Goober",
+		
+		"charA6": "Goober",
+		"animA6": "GooberIdle",
+		"charB6": "Misc",
+		"animB6": "DominicTinyIdle",
+		"posB6": "400,300",
+		"str6": "That's a good idea",
+		"yapper6": "Dominic",
+		
+		"charA7": "Goober",
+		"animA7": "GooberTalking",
+		"charB7": "Misc",
+		"animB7": "DominicTinyIdle",
+		"posB7": "400,300",
+		"str7": "I love you",
+		"yapper7": "Goober",
+		
+		"charA8": "Goober",
+		"animA8": "GooberIdle",
+		"charB8": "Misc",
+		"animB8": "DominicTinyIdle",
+		"posB8": "400,300",
+		"str8": "I love you too",
+		"background8": "res://TileMaps/FieldNight.tscn",
+		"yapper8": "Dominic",
+		
+		"charAq": "Goober",
+		"animAq": "GooberGhostTalking",
+		"strq": "I wish I could meet a bee sometime",
+		"yapperq": "Goober",
+		"buttonA": "Summon a bee for Goober",
+		"optionA": "xABB",
+	},
   }
 }

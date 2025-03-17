@@ -1,7 +1,7 @@
 extends Node
 
 # all dialogue arrays
-var allvars_array = ["charA", "charB", "charC", "charD", "animA", "animB", "animC", "animD", "oriA", "oriB", "oriC", "oriD", "posA", "posB", "posC", "posD", "yapper"]
+var allvars_array = ["charA", "charB", "charC", "charD", "animA", "animB", "animC", "animD", "oriA", "oriB", "oriC", "oriD", "posA", "posB", "posC", "posD", "yapper", "background"]
 var alldefaultpos_array = [Vector2(250,300), Vector2(900, 300), Vector2(500, 300), Vector2(650, 300)]
 var alldefaultscale_array = [Vector2(10, 10), Vector2(-10, 10), Vector2(10, 10), Vector2(-10, 10)]
 var allchartypes_array = ["A", "B", "C", "D"]
@@ -24,6 +24,7 @@ var posB_array = []
 var posC_array = []
 var posD_array = []
 var yapper_array = []
+var background_array = []
 var text_array = []
 
 # all dialogue vars
@@ -46,6 +47,7 @@ var posBvalue = []
 var posCvalue = []
 var posDvalue = []
 var yapperValue = []
+var backgroundvalue = []
 var textValue = []
 var gatekeeping = false
 
@@ -66,6 +68,7 @@ var posBqvalue = ""
 var posCqvalue = ""
 var posDqvalue = ""
 var yapperqvalue = ""
+var backgroundqvalue = ""
 var buttonAvalue = ""
 var buttonBvalue = ""
 var buttonCvalue = ""
@@ -78,9 +81,11 @@ var textqValue = ""
 
 var dialogue_running = false
 
+var loadedbackground = null
+
 signal display_label_text
 signal resetdialogue
 signal enddialogue
 signal setup_convo
-
+signal loadbackground
 signal buttonsappear

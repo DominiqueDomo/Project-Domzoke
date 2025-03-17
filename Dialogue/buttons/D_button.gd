@@ -2,7 +2,7 @@ extends Control
 
 @onready var button = $Button
 @onready var D_button = $"."
-var D_option = "AAAB"
+var D_option = "xxxD"
 #signal display_label_text
 
 

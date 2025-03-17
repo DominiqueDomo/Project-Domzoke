@@ -65,7 +65,6 @@ func setup_convo(convo):
 							var stringvalue = Conversation[string]
 							Global.text_array.push_back(stringvalue)
 							if Conversation.has("strq"):
-								print("strq found")
 								Global.textqValue = Conversation["strq"]
 								#sets buttonXvalue
 								for p in range (0,4):
@@ -111,7 +110,9 @@ func display_label_text():
 		var string = Global.text_array[text]
 		var length = string.length()
 		var textspeed = length * 0.06
-		#Change position by replacing the entire vector  
+		#if a background is given, set the background to that variable
+		if Global.background_array[text] != "NONE":
+			Global.loadbackground.emit(Global.background_array[text])
 		#checks if there's a character at this spot in the conversation
 		for p in range(0, 3):
 			#checks if previous character matches ANY of the current characters; if they don't match, then removes previous character
@@ -130,7 +131,16 @@ func display_label_text():
 					get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_position(Global.alldefaultpos_array[p])
 				else:
 					#fetch position from the JSON file
-					get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_position(Vector2(Global.get("pos" + Global.allchartypes_array[p] + "_array")[text]))
+					var posstring = Global.get("pos" + Global.allchartypes_array[p] + "_array")[text]
+					print(("pos" + Global.allchartypes_array[p] + "_array"))
+					print(posstring)
+					#split position into x and y variables
+					var posstringsplit = posstring.split(",")
+					print(posstringsplit)
+					var posx = int(posstringsplit[0])
+					var posy = int(posstringsplit[1])
+					#use those variables to set the position
+					get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_position(Vector2(posx, posy))
 			#sets the orientation
 				#if the orientation doesn't exist
 				if Global.get("ori" + Global.allchartypes_array[p] + "_array")[text] == "NONE":
@@ -187,8 +197,11 @@ func display_label_text():
 						get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")).set_position(Global.alldefaultpos_array[p])
 					else:
 						#fetch position from the JSON file
-						get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")).set_position(Vector2(Global.get("pos" + Global.allchartypes_array[p] + "qvalue")))
-				#sets the orientation
+						var posstring = ("pos" + Global.allchartypes_array[p] + "_array")[text]
+						var posstringsplit = posstring.split(",")
+						var posx = int(posstringsplit[0])
+						var posy = int(posstringsplit[0])
+						get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_position(Vector2(posx, posy))				#sets the orientation
 					#if the orientation doesn't exist
 					if Global.get("ori" + Global.allchartypes_array[p] + "qvalue") == "NONE":
 						#set to default orientation

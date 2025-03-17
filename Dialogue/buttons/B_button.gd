@@ -2,7 +2,7 @@ extends Control
 
 @onready var button = $Button
 @onready var B_button = $"."
-var B_option = "AAAB"
+var B_option = "xxxB"
 #signal display_label_text
 
 # Called when the node enters the scene tree for the first time.
