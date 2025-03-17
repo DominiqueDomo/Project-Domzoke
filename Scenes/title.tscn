@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://denctntp78g8w"]
+[gd_scene load_steps=10 format=4 uid="uid://b07mqh4jc5k22"]
 
 [ext_resource type="Texture2D" uid="uid://bgax8155v34dn" path="res://Assets/TileMaps/textbox.png" id="1_mjhq6"]
 [ext_resource type="Script" path="res://Scenes/title.gd" id="1_uaaym"]
