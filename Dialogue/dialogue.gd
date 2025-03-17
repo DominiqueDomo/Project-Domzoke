@@ -17,6 +17,7 @@ func _ready() -> void:
 	Global.setup_convo.connect(setup_convo)
 	Global.resetdialogue.connect(resetdialogue)
 	Global.enddialogue.connect(enddialogue)
+	Global.skipdialogue.connect(skipdialogue)
 	
 func setup_convo(convo):
 	resetdialogue()
@@ -108,15 +109,15 @@ func display_label_text():
 		dialogue.text = Global.text_array[text]
 		var string = Global.text_array[text]
 		var length = string.length()
-		var textspeed = length * 0.06
+		Global.textspeed = length * 0.06
 		#if a background is given, set the background to that variable
 		if Global.background_array[text] != "NONE":
 			Global.loadbackground.emit(Global.background_array[text])
 		#checks if there's a character at this spot in the conversation
-		for p in range(0, 3):
+		for p in range(0, 4):
 			#checks if previous character matches ANY of the current characters; if they don't match, then removes previous character
 			#it also just doesn't activate if it's on line 0, because there is no value -1
-			if text != 0:
+			if text != 0 and (Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != "NONE":
 				if get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != get_node("../%s" % Global.charA_array[text]) and get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != get_node("../%s" % Global.charB_array[text]) and get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != get_node("../%s" % Global.charC_array[text]) and get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != get_node("../%s" % Global.charD_array[text]):
 				#if there is no current character on this position, the previous character should disappear
 				#AND the previous character doesn't match ANY of the current characters
@@ -147,18 +148,28 @@ func display_label_text():
 					if Global.get("ori" + Global.allchartypes_array[p] + "_array")[text] == "right":
 						get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_scale(Vector2(10, 10))
 					else:
-						get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_scale(Vector2(-10, 10))
+						if Global.get("ori" + Global.allchartypes_array[p] + "_array")[text] == "left":
+							get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_scale(Vector2(-10, 10))
+						else:
+						#fetch scale from the JSON file
+							var oristring = Global.get("ori" + Global.allchartypes_array[p] + "_array")[text]
+						#split scale into x and y variables
+							var oristringsplit = oristring.split(",")
+							var orix = int(oristringsplit[0])
+							var oriy = int(oristringsplit[1])
+							#use those variables to set the ori
+							get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_scale(Vector2(orix, oriy))
 			#makes character visible
 				get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).visible = true
 			#makes character play correct animation
 				get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).play(Global.get("anim" + Global.allchartypes_array[p] + "_array")[text])
-					
+		
 		visible_text_tween = create_tween()
-		visible_text_tween.tween_property(dialogue, "visible_ratio", 1.0, textspeed)
+		visible_text_tween.tween_property(dialogue, "visible_ratio", 1.0, Global.textspeed)
 	
 		text += 1
 		
-		await get_tree().create_timer(textspeed).timeout
+		await get_tree().create_timer(Global.textspeed).timeout
 		Global.gatekeeping = false
 	else:
 		Global.dialogue_running = false
@@ -168,12 +179,12 @@ func display_label_text():
 			dialogue.text = Global.textqValue
 			var string = Global.textqValue
 			var length = string.length()
-			var textspeed = length * 0.06
+			Global.textspeed = length * 0.06
 			for p in range(0, 4):
 				Global.buttonsappear.emit()
 			NextDialButton.visible = false
 		#makes all the dialogue buttons visible
-			for p in range(0, 3):
+			for p in range(0, 4):
 					#checks if previous character matches ANY of the current characters; if they don't match, then removes previous character
 					#it also just doesn't activate if it's on line 0, because there is no value -1
 				if text != 0:
@@ -193,11 +204,13 @@ func display_label_text():
 						get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")).set_position(Global.alldefaultpos_array[p])
 					else:
 						#fetch position from the JSON file
-						var posstring = ("pos" + Global.allchartypes_array[p] + "_array")[text]
+						var posstring = Global.get("pos" + Global.allchartypes_array[p] + "qvalue")
+						#split position into x and y variables
 						var posstringsplit = posstring.split(",")
 						var posx = int(posstringsplit[0])
-						var posy = int(posstringsplit[0])
-						get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_position(Vector2(posx, posy))				#sets the orientation
+						var posy = int(posstringsplit[1])
+						#use those variables to set the position
+						get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")).set_position(Vector2(posx, posy))
 					#if the orientation doesn't exist
 					if Global.get("ori" + Global.allchartypes_array[p] + "qvalue") == "NONE":
 						#set to default orientation
@@ -207,11 +220,27 @@ func display_label_text():
 						if Global.get("ori" + Global.allchartypes_array[p] + "qvalue") == "right":
 							get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")).set_scale(Vector2(10, 10))
 						else:
-							get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")).set_scale(Vector2(-10, 10))
+							if Global.get("ori" + Global.allchartypes_array[p] + "qvalue")[text] == "left":
+								get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")[text]).set_scale(Vector2(-10, 10))
+							else:
+						#fetch scale from the JSON file
+								var oristring = Global.get("ori" + Global.allchartypes_array[p] + "qvalue")[text]
+							#split scale into x and y variables
+								var oristringsplit = oristring.split(",")
+								var orix = int(oristringsplit[0])
+								var oriy = int(oristringsplit[1])
+								#use those variables to set the ori
+								get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")[text]).set_scale(Vector2(orix, oriy))
 			visible_text_tween = create_tween()
-			visible_text_tween.tween_property(dialogue, "visible_ratio", 1.0, textspeed)
+			visible_text_tween.tween_property(dialogue, "visible_ratio", 1.0, Global.textspeed)
 		else: 
 			return enddialogue()
+
+func skipdialogue():
+	Global.gatekeeping = false
+	dialogue.visible_ratio = 1.0
+pass
+
 #this function will reset the dialogue, it will allow the conversation to continue after a question is answered
 func resetdialogue():
 #when strings in the conversation run out, makes all remaining characters disappear
@@ -227,7 +256,6 @@ func resetdialogue():
 	for t in range (0, Global.allvars_array.size()):
 		Global.set(Global.allvars_array[t] + "_array", [])
 pass
-
 #this function will end the dialogue, it triggers if no question is asked at all
 func enddialogue():
 #when strings in the conversation run out, makes all remaining characters disappear

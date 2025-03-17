@@ -80,7 +80,7 @@ var optionDvalue = ""
 var textqValue = ""
 
 var dialogue_running = false
-
+var textspeed
 var loadedbackground = null
 
 signal display_label_text
@@ -89,3 +89,4 @@ signal enddialogue
 signal setup_convo
 signal loadbackground
 signal buttonsappear
+signal skipdialogue

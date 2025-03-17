@@ -13,6 +13,8 @@ func _on_button_pressed() -> void:
 		Global.display_label_text.emit()
 		print("signal gets sent")
 	#else:
+		#Global.skipdialogue.emit()
+	#else:
 		#print("woop")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

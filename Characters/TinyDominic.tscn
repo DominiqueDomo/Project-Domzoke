@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://cvew0h61v7ujs"]
+
+[ext_resource type="Texture2D" uid="uid://du04atyu3okmj" path="res://Assets/CharacterSprites/Other/TinyDominic.png" id="1_2hjcn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40s6n"]
+atlas = ExtResource("1_2hjcn")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8i0o"]
+atlas = ExtResource("1_2hjcn")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eruvt"]
+atlas = ExtResource("1_2hjcn")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g11le"]
+atlas = ExtResource("1_2hjcn")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4g2b"]
+atlas = ExtResource("1_2hjcn")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4noa8"]
+atlas = ExtResource("1_2hjcn")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e82hj"]
+atlas = ExtResource("1_2hjcn")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6cwt"]
+atlas = ExtResource("1_2hjcn")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3s02k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40s6n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8i0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eruvt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g11le")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4g2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4noa8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e82hj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6cwt")
+}],
+"loop": true,
+"name": &"TinyDominicIdle",
+"speed": 4.0
+}]
+
+[node name="TinyDominic" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_3s02k")
+animation = &"TinyDominicIdle"

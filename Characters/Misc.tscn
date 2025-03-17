@@ -1,8 +1,9 @@
-[gd_scene load_steps=28 format=3 uid="uid://7qm54nl3na07"]
+[gd_scene load_steps=40 format=3 uid="uid://7qm54nl3na07"]
 
 [ext_resource type="Texture2D" uid="uid://du04atyu3okmj" path="res://Assets/CharacterSprites/Other/TinyDominic.png" id="1_jxruo"]
 [ext_resource type="Texture2D" uid="uid://k5s0pbhwjmr0" path="res://Assets/CharacterSprites/Other/Kitty.png" id="2_6hqf6"]
 [ext_resource type="Texture2D" uid="uid://cjruconwv5v5d" path="res://Assets/CharacterSprites/Other/samsonite.png" id="3_dpyam"]
+[ext_resource type="Texture2D" uid="uid://cf3nw8tq2n8v6" path="res://Assets/CharacterSprites/Other/samsonitesmoochin.png" id="4_245yn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q1rwp"]
 atlas = ExtResource("1_jxruo")
@@ -96,6 +97,50 @@ region = Rect2(64, 0, 32, 32)
 atlas = ExtResource("3_dpyam")
 region = Rect2(32, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwgnr"]
+atlas = ExtResource("4_245yn")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlvld"]
+atlas = ExtResource("4_245yn")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jy3i2"]
+atlas = ExtResource("4_245yn")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnmvm"]
+atlas = ExtResource("4_245yn")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iq8pn"]
+atlas = ExtResource("4_245yn")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwm80"]
+atlas = ExtResource("4_245yn")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enl51"]
+atlas = ExtResource("4_245yn")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcayb"]
+atlas = ExtResource("4_245yn")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8rrt"]
+atlas = ExtResource("4_245yn")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgn30"]
+atlas = ExtResource("4_245yn")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5jyg"]
+atlas = ExtResource("4_245yn")
+region = Rect2(32, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_y7ia3"]
 animations = [{
 "frames": [{
@@ -181,8 +226,46 @@ animations = [{
 "loop": true,
 "name": &"Samsonite",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwgnr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlvld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jy3i2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gnmvm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iq8pn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwm80")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enl51")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcayb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8rrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgn30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5jyg")
+}],
+"loop": true,
+"name": &"SamsoniteSmoochin",
+"speed": 5.0
 }]
 
 [node name="Misc" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_y7ia3")
-animation = &"Samsonite"
+animation = &"SamsoniteSmoochin"
