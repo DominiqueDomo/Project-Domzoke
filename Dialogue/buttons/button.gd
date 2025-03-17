@@ -12,8 +12,8 @@ func _on_button_pressed() -> void:
 	if Global.gatekeeping == false:
 		Global.display_label_text.emit()
 		print("signal gets sent")
-	#else:
-		#Global.skipdialogue.emit()
+	else:
+		Global.skipdialogue.emit()
 	#else:
 		#print("woop")
 

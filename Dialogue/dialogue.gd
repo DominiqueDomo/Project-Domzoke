@@ -104,7 +104,7 @@ func setup_convo(convo):
 func display_label_text():
 	Global.gatekeeping = true
 	if text < Global.text_array.size():
-		dialogue.visible_ratio = 0
+		dialogue.set_visible_characters(0)
 		NameTag.text = Global.yapper_array[text] + ":"
 		dialogue.text = Global.text_array[text]
 		var string = Global.text_array[text]
@@ -163,16 +163,17 @@ func display_label_text():
 				get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).visible = true
 			#makes character play correct animation
 				get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).play(Global.get("anim" + Global.allchartypes_array[p] + "_array")[text])
-		
-		visible_text_tween = create_tween()
-		visible_text_tween.tween_property(dialogue, "visible_ratio", 1.0, Global.textspeed)
+		Global.displayrange = Global.text_array[text].length() + 1
+		for displaying in range (0, Global.displayrange):
+			if displaying <= Global.displayrange:
+				dialogue.set_visible_characters(displaying)
+				await get_tree().create_timer(0.05).timeout
+		pass
 	
 		text += 1
 		
-		await get_tree().create_timer(Global.textspeed).timeout
 		Global.gatekeeping = false
 	else:
-		Global.dialogue_running = false
 		if Conversation.has("strq"):
 			dialogue.visible_ratio = 0
 			NameTag.text = Global.yapperqvalue + ":"
@@ -231,19 +232,24 @@ func display_label_text():
 								var oriy = int(oristringsplit[1])
 								#use those variables to set the ori
 								get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")[text]).set_scale(Vector2(orix, oriy))
-			visible_text_tween = create_tween()
-			visible_text_tween.tween_property(dialogue, "visible_ratio", 1.0, Global.textspeed)
+			Global.displayrange = Global.textqValue.length() + 1
+			for displaying in range (0, Global.displayrange):
+				if displaying <= Global.displayrange:
+					dialogue.set_visible_characters(displaying)
+					await get_tree().create_timer(0.05).timeout
+			Global.dialogue_running = false
 		else: 
 			return enddialogue()
 
 func skipdialogue():
-	Global.gatekeeping = false
-	dialogue.visible_ratio = 1.0
+	dialogue.set_visible_characters(Global.displayrange)
+	Global.displayrange = 0
 pass
 
 #this function will reset the dialogue, it will allow the conversation to continue after a question is answered
 func resetdialogue():
 #when strings in the conversation run out, makes all remaining characters disappear
+	dialogue.set_visible_characters(0)
 	if text != 0:
 		for r in range(0, 3):
 			if Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1] != "NONE": 

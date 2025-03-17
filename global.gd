@@ -81,6 +81,7 @@ var textqValue = ""
 
 var dialogue_running = false
 var textspeed
+var displayrange
 var loadedbackground = null
 
 signal display_label_text

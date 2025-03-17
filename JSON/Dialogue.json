@@ -111,6 +111,7 @@
 		"animB3": "GooberIdle",
 		"yapper3": "Bloober",
 		"str3": "Domo ruined the background, all that surrounds us is darkness",
+		"background3": "void",
 		
 		"charA4": "Bloober",
 		"charB4": "Goober",
@@ -124,8 +125,8 @@
 		"strq": "What point is there to live in the darkness? Never again will I see the light of day.",
 		"yapperq": "Goober",
 		"buttonA": "Let him suffer",
-		"buttonB": "*End his suffering*",
-		"optionA": "xxxB",
+		"buttonB": "End his suffering",
+		"optionA": "xxxC",
 		"optionB": "xxBB",
 	},
 	"xxxC": {
