@@ -88,3 +88,10 @@ offset_left = 968.0
 offset_top = 560.0
 offset_right = 968.0
 offset_bottom = 560.0
+
+[node name="Title" type="Button" parent="."]
+offset_right = 182.0
+offset_bottom = 89.0
+text = "Go back"
+
+[connection signal="pressed" from="Title" to="." method="_on_title_pressed"]

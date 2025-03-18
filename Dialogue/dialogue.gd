@@ -104,12 +104,6 @@ func setup_convo(convo):
 func display_label_text():
 	Global.gatekeeping = true
 	if text < Global.text_array.size():
-		dialogue.set_visible_characters(0)
-		NameTag.text = Global.yapper_array[text] + ":"
-		dialogue.text = Global.text_array[text]
-		var string = Global.text_array[text]
-		var length = string.length()
-		Global.textspeed = length * 0.06
 		#if a background is given, set the background to that variable
 		if Global.background_array[text] != "NONE":
 			Global.loadbackground.emit(Global.background_array[text])
@@ -163,6 +157,9 @@ func display_label_text():
 				get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).visible = true
 			#makes character play correct animation
 				get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).play(Global.get("anim" + Global.allchartypes_array[p] + "_array")[text])
+		dialogue.set_visible_characters(0)
+		NameTag.text = Global.yapper_array[text] + ":"
+		dialogue.text = Global.text_array[text]
 		Global.displayrange = Global.text_array[text].length() + 1
 		for displaying in range (0, Global.displayrange):
 			if displaying <= Global.displayrange:
@@ -175,12 +172,6 @@ func display_label_text():
 		Global.gatekeeping = false
 	else:
 		if Conversation.has("strq"):
-			dialogue.visible_ratio = 0
-			NameTag.text = Global.yapperqvalue + ":"
-			dialogue.text = Global.textqValue
-			var string = Global.textqValue
-			var length = string.length()
-			Global.textspeed = length * 0.06
 			for p in range(0, 4):
 				Global.buttonsappear.emit()
 			NextDialButton.visible = false
@@ -232,6 +223,9 @@ func display_label_text():
 								var oriy = int(oristringsplit[1])
 								#use those variables to set the ori
 								get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")[text]).set_scale(Vector2(orix, oriy))
+			dialogue.visible_ratio = 0
+			NameTag.text = Global.yapperqvalue + ":"
+			dialogue.text = Global.textqValue
 			Global.displayrange = Global.textqValue.length() + 1
 			for displaying in range (0, Global.displayrange):
 				if displaying <= Global.displayrange:
