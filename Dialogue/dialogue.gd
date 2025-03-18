@@ -118,7 +118,7 @@ func display_label_text():
 			#checks if previous character matches ANY of the current characters; if they don't match, then removes previous character
 			#it also just doesn't activate if it's on line 0, because there is no value -1
 			if text != 0 and (Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != "NONE":
-				if get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != get_node("../%s" % Global.charA_array[text]) and get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != get_node("../%s" % Global.charB_array[text]) and get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != get_node("../%s" % Global.charC_array[text]) and get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != get_node("../%s" % Global.charD_array[text]):
+				if Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charA_array[text] and Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charB_array[text] and Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charC_array[text] and Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charD_array[text]:
 				#if there is no current character on this position, the previous character should disappear
 				#AND the previous character doesn't match ANY of the current characters
 					get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]).visible = false
@@ -190,7 +190,7 @@ func display_label_text():
 					#it also just doesn't activate if it's on line 0, because there is no value -1
 				if text != 0:
 			#most instances of [text] have been removed, as the question falls outside of the [text] range. [text-1] remains, because that does fall within the range
-					if get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != get_node("../%s" % Global.charAqvalue) and get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != get_node("../%s" % Global.charBqvalue) and get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != get_node("../%s" % Global.charCqvalue) and get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != get_node("../%s" % Global.charDqvalue):
+					if Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charAqvalue and Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charBqvalue and Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charCqvalue and Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charDqvalue:
 					#if there is no current character on this position, the previous character should disappear
 					#AND the previous character doesn't match ANY of the current characters
 						get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]).visible = false
