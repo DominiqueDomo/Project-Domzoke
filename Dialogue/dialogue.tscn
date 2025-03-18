@@ -64,17 +64,17 @@ tile_set = SubResource("TileSet_b1ny1")
 layout_mode = 0
 offset_left = 64.0
 offset_top = 40.0
-offset_right = 896.0
-offset_bottom = 109.0
+offset_right = 832.0
+offset_bottom = 120.0
 theme_override_fonts/font = ExtResource("2_tsnxo")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 35
 autowrap_mode = 3
 
 [node name="NameTag" type="Label" parent="."]
 layout_mode = 0
 offset_left = 64.0
-offset_right = 960.0
-offset_bottom = 24.0
+offset_right = 832.0
+offset_bottom = 36.0
 theme_override_fonts/font = ExtResource("2_tsnxo")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 45
 autowrap_mode = 3
