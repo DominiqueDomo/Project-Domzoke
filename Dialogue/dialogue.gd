@@ -239,7 +239,7 @@ func skipdialogue():
 	dialogue.set_visible_characters(Global.displayrange)
 	Global.displayrange = 0
 pass
-
+	
 #this function will reset the dialogue, it will allow the conversation to continue after a question is answered
 func resetdialogue():
 #when strings in the conversation run out, makes all remaining characters disappear

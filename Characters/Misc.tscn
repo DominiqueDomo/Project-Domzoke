@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://7qm54nl3na07"]
+[gd_scene load_steps=38 format=3 uid="uid://7qm54nl3na07"]
 
 [ext_resource type="Texture2D" uid="uid://du04atyu3okmj" path="res://Assets/CharacterSprites/Other/TinyDominic.png" id="1_jxruo"]
 [ext_resource type="Texture2D" uid="uid://k5s0pbhwjmr0" path="res://Assets/CharacterSprites/Other/Kitty.png" id="2_6hqf6"]
@@ -125,17 +125,9 @@ region = Rect2(32, 32, 32, 32)
 atlas = ExtResource("4_245yn")
 region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qcayb"]
-atlas = ExtResource("4_245yn")
-region = Rect2(32, 32, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_l8rrt"]
 atlas = ExtResource("4_245yn")
 region = Rect2(96, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sgn30"]
-atlas = ExtResource("4_245yn")
-region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n5jyg"]
 atlas = ExtResource("4_245yn")
@@ -250,13 +242,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_enl51")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qcayb")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_l8rrt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sgn30")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_n5jyg")
