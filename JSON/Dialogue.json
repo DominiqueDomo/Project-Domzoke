@@ -18,7 +18,16 @@
 		"posC": "",
 		"posD": "",
 		"yapper": "",
-		"str": ""
+		"str": "",
+		
+		"buttonA": "",
+		"buttonB": "",
+		"buttonC": "",
+		"buttonD": "",
+		"optionA": "",
+		"optionB": "",
+		"optionC": "",
+		"optionD": "",
 	},
 	"xxxA": {
 		"charA1": "Misc",
@@ -203,6 +212,21 @@
 		"strq": "And they kept kissing for a long, long time",
 		"posAq": "315,350",
 		"yapperq": "Narrator",
+	},
+	"xxxD": {
+		"charA1": "Goober",
+		"animA1": "GooberHappy",
+		"yapper1": "Goober",
+		"str1": "Can I please have an apple?",
+		
+		"charAq": "Goober",
+		"animAq": "GooberIdle",
+		"yapperq": "Goober",
+		"strq": "Can I please have an apple?",
+		"buttonA": "Give Goober an apple",
+		"buttonB": "Give Goober a pear",
+		"optionA": "xxAD",
+		"optionB": "xxBD",
 	},
 	"xxBB": {
 		"charA1": "Goober",
