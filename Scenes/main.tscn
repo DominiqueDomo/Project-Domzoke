@@ -4,17 +4,17 @@
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_xfwt3"]
 [ext_resource type="PackedScene" uid="uid://dt0l50sfesi7e" path="res://Dialogue/dialogue.tscn" id="2_me0ay"]
 [ext_resource type="Script" path="res://Scenes/background.gd" id="2_w87u1"]
-[ext_resource type="PackedScene" path="res://Characters/TinyDominic.tscn" id="3_rma2m"]
+[ext_resource type="PackedScene" uid="uid://cvew0h61v7ujs" path="res://Characters/Tinic.tscn" id="3_rma2m"]
 [ext_resource type="PackedScene" uid="uid://pacolmlbxgx4" path="res://Characters/Goober.tscn" id="4_nhhot"]
 [ext_resource type="PackedScene" uid="uid://cpjbu7xlg1adj" path="res://Characters/Dominic.tscn" id="5_rkmlg"]
 [ext_resource type="PackedScene" uid="uid://ccgd3pmhalvr8" path="res://Characters/bloober.tscn" id="6_h6x8r"]
-[ext_resource type="PackedScene" path="res://Characters/Beeber.tscn" id="7_dywtp"]
+[ext_resource type="PackedScene" uid="uid://b81vpymttn7f2" path="res://Characters/Beeber.tscn" id="7_dywtp"]
 [ext_resource type="PackedScene" uid="uid://7qm54nl3na07" path="res://Characters/Misc.tscn" id="7_eriic"]
 [ext_resource type="PackedScene" uid="uid://chpu1lqd8e0xo" path="res://Dialogue/buttons/A_button.tscn" id="9_l84jl"]
 [ext_resource type="PackedScene" uid="uid://4qam3wmq1o4a" path="res://Dialogue/buttons/B_button.tscn" id="10_4tm4f"]
 [ext_resource type="PackedScene" uid="uid://dtldcx1gosi4r" path="res://Dialogue/buttons/C_button.tscn" id="11_7j7ui"]
 [ext_resource type="PackedScene" uid="uid://0h3ki50w3qky" path="res://Dialogue/buttons/D_button.tscn" id="12_w5ng7"]
-[ext_resource type="PackedScene" uid="uid://d0qseq4caiksc" path="res://Characters/Susan.tscn" id="15_x1vfn"]
+[ext_resource type="PackedScene" uid="uid://dp7b08lt5p16v" path="res://Characters/Susan.tscn" id="15_x1vfn"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_xfwt3")
@@ -23,7 +23,7 @@ script = ExtResource("1_xfwt3")
 position = Vector2(0, 6.10352e-05)
 script = ExtResource("2_w87u1")
 
-[node name="TinyDominic" parent="." instance=ExtResource("3_rma2m")]
+[node name="Tinic" parent="." instance=ExtResource("3_rma2m")]
 visible = false
 position = Vector2(507, 255)
 

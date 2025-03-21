@@ -1,8 +1,9 @@
-[gd_scene load_steps=35 format=3 uid="uid://d0qseq4caiksc"]
+[gd_scene load_steps=46 format=3 uid="uid://dp7b08lt5p16v"]
 
 [ext_resource type="Texture2D" uid="uid://cfwvtc1vfr1fe" path="res://Assets/CharacterSprites/Susan/Susan.png" id="1_567cq"]
 [ext_resource type="Texture2D" uid="uid://balg8ymba2uk0" path="res://Assets/CharacterSprites/Susan/SusanTalking.png" id="2_h0xb7"]
 [ext_resource type="Texture2D" uid="uid://bed0h22m54gv1" path="res://Assets/CharacterSprites/Susan/SusanThief.png" id="3_buplt"]
+[ext_resource type="Texture2D" uid="uid://bu1gdrwrcm1xu" path="res://Assets/CharacterSprites/Susan/SusanThiefFez.png" id="4_rq6u7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tsmtr"]
 atlas = ExtResource("1_567cq")
@@ -83,6 +84,46 @@ region = Rect2(48, 16, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_yfkh3"]
 atlas = ExtResource("2_h0xb7")
 region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4s5u"]
+atlas = ExtResource("4_rq6u7")
+region = Rect2(0, 0, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wnsq"]
+atlas = ExtResource("4_rq6u7")
+region = Rect2(16, 0, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ok542"]
+atlas = ExtResource("4_rq6u7")
+region = Rect2(32, 0, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5vj3"]
+atlas = ExtResource("4_rq6u7")
+region = Rect2(48, 0, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5s2hx"]
+atlas = ExtResource("4_rq6u7")
+region = Rect2(64, 0, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5qma"]
+atlas = ExtResource("4_rq6u7")
+region = Rect2(0, 15, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwjdi"]
+atlas = ExtResource("4_rq6u7")
+region = Rect2(16, 15, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wv1in"]
+atlas = ExtResource("4_rq6u7")
+region = Rect2(32, 15, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrg7p"]
+atlas = ExtResource("4_rq6u7")
+region = Rect2(48, 15, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uv0gj"]
+atlas = ExtResource("4_rq6u7")
+region = Rect2(64, 15, 16, 15)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_avdbx"]
 atlas = ExtResource("3_buplt")
@@ -198,6 +239,41 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_o4s5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wnsq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ok542")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5vj3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5s2hx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5qma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwjdi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wv1in")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrg7p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uv0gj")
+}],
+"loop": true,
+"name": &"SusanThiefFez",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_avdbx")
 }, {
 "duration": 1.0,
@@ -228,10 +304,10 @@ animations = [{
 "texture": SubResource("AtlasTexture_hkumx")
 }],
 "loop": true,
-"name": &"SusanThief",
+"name": &"SusanThiefIdle",
 "speed": 6.0
 }]
 
 [node name="Susan" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_nm7hl")
-animation = &"SusanThief"
+animation = &"SusanThiefIdle"

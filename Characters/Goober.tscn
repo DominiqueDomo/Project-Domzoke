@@ -383,7 +383,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"GooberSad",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -465,4 +465,4 @@ animations = [{
 
 [node name="Goober" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_lce6u")
-animation = &"GooberTinycKissing"
+animation = &"GooberSad"
