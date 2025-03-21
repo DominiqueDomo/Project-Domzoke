@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://dy7pl7gl3oetd"]
+[gd_scene load_steps=21 format=4 uid="uid://syu6a5niqi3s"]
 
 [ext_resource type="Texture2D" uid="uid://ucfp5sfpah7q" path="res://Assets/TileMaps/Field-Night/General Background.png" id="1_e5hdh"]
 [ext_resource type="Texture2D" uid="uid://c0m2eyfk07jfo" path="res://Assets/TileMaps/Field-Night/Stars.png" id="1_pk1l3"]

@@ -29,6 +29,15 @@
 		"optionC": "",
 		"optionD": "",
 	},
+	"intro": {
+		"charA1": "Misc",
+		"charB1": "Dominic",
+		"animA1": "Samsonite",
+		"animB1": "DominicSurprised",
+		"yapper1": "Narrator",
+		"str1": "Wassup guys it's me, Uncle Samsonite!",
+		"background1": "res://TileMaps/FieldDay.tscn",	
+	},
 	"xxxA": {
 		"charA1": "Misc",
 		"charB1": "Dominic",
@@ -216,11 +225,15 @@
 	"xxxD": {
 		"charA1": "Goober",
 		"animA1": "GooberHappy",
+		"charB1": "Susan",
+		"animB1": "SusanIdle",
 		"yapper1": "Goober",
 		"str1": "Can I please have an apple?",
 		
 		"charAq": "Goober",
 		"animAq": "GooberIdle",
+		"charBq": "Susan",
+		"animBq": "SusanIdle",
 		"yapperq": "Goober",
 		"strq": "Can I please have an apple?",
 		"buttonA": "Give Goober an apple",
@@ -298,6 +311,21 @@
 		"animB5": "BeeberTalking",
 		"str5": "Wellzzz, now you havez! Bzz bzzz zzz- zz-!",
 		"yapper5": "Beeber",
+	},
+	"xxAD": {
+		"charA1": "Goober",
+		"animA1": "GooberHappy",
+		"charB1": "Susan",
+		"animB1": "SusanIdle",
+		"str1": "Oh my golly gee! Thanks for the apple!",
+		"yapper1": "Goober",
+		
+		"charA2": "Goober",
+		"animA2": "GooberIdle",
+		"charB2": "Susan",
+		"animB2": "SusanTalking",
+		"str2": "Hello friends, I'm Susan the flying hedgehog",
+		"yapper2": "Susan",
 	},
   }
 }

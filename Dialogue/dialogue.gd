@@ -7,6 +7,7 @@ extends Control
 @onready var C_button = $"../C_button"
 @onready var D_button = $"../D_button"
 @onready var NextDialButton = $"../NextDialButton"
+@onready var Sans = $SansAudio
 
 var visible_text_tween;
 var text := 0
@@ -164,6 +165,7 @@ func display_label_text():
 		for displaying in range (0, Global.displayrange):
 			if displaying <= Global.displayrange:
 				dialogue.set_visible_characters(displaying)
+				Sans.play()
 				await get_tree().create_timer(0.05).timeout
 		pass
 	
@@ -230,6 +232,7 @@ func display_label_text():
 			for displaying in range (0, Global.displayrange):
 				if displaying <= Global.displayrange:
 					dialogue.set_visible_characters(displaying)
+					Sans.play()
 					await get_tree().create_timer(0.05).timeout
 			Global.dialogue_running = false
 		else: 

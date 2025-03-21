@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dt0l50sfesi7e"]
+[gd_scene load_steps=7 format=4 uid="uid://dt0l50sfesi7e"]
 
 [ext_resource type="Script" path="res://Dialogue/dialogue.gd" id="1_tt57t"]
 [ext_resource type="FontFile" uid="uid://c21qvmnxmr0oq" path="res://Assets/Fonts/monogram/monogram-extended.ttf" id="2_tsnxo"]
 [ext_resource type="Texture2D" uid="uid://bgax8155v34dn" path="res://Assets/TileMaps/textbox.png" id="3_yw2do"]
+[ext_resource type="AudioStream" uid="uid://c85xemwiqo5x0" path="res://Assets/Audio/voice_sans.mp3" id="4_7ybcr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e7axy"]
 texture = ExtResource("3_yw2do")
@@ -78,3 +79,6 @@ offset_bottom = 36.0
 theme_override_fonts/font = ExtResource("2_tsnxo")
 theme_override_font_sizes/font_size = 45
 autowrap_mode = 3
+
+[node name="SansAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_7ybcr")
