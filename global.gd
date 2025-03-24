@@ -1,11 +1,12 @@
 extends Node
 
 # all dialogue arrays
-var allvars_array = ["charA", "charB", "charC", "charD", "animA", "animB", "animC", "animD", "oriA", "oriB", "oriC", "oriD", "posA", "posB", "posC", "posD", "yapper", "background"]
+var allvars_array = ["charA", "charB", "charC", "charD", "animA", "animB", "animC", "animD", "oriA", "oriB", "oriC", "oriD", "posA", "posB", "posC", "posD", "yapper", "background", "voice"]
 var alldefaultpos_array = [Vector2(250,350), Vector2(900, 350), Vector2(500, 350), Vector2(650, 350)]
 var alldefaultscale_array = [Vector2(10, 10), Vector2(-10, 10), Vector2(10, 10), Vector2(-10, 10)]
 var allchartypes_array = ["A", "B", "C", "D"]
 var allcharanim_array = ["animA", "animB", "animC", "animD"]
+var voicedchars_array = ["Goober", "Domo", "Bloober"]
 
 var charA_array = []
 var charB_array = []
@@ -26,6 +27,7 @@ var posD_array = []
 var yapper_array = []
 var background_array = []
 var text_array = []
+var voice_array = []
 
 # all dialogue vars
 var convlengthfound = false
@@ -49,6 +51,7 @@ var posDvalue = []
 var yapperValue = []
 var backgroundvalue = []
 var textValue = []
+var voiceValue = []
 var gatekeeping = false
 
 var charAqvalue = ""
@@ -78,6 +81,7 @@ var optionBvalue = ""
 var optionCvalue = ""
 var optionDvalue = ""
 var textqValue = ""
+var voiceqvalue = ""
 
 var dialogue_running = false
 var textspeed

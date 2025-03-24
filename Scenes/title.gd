@@ -13,6 +13,8 @@ func _process(_delta: float) -> void:
 
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
+	Global.setup_convo.emit("xxxA")
+	Global.display_label_text.emit()
 
 
 func _on_credits_pressed() -> void:

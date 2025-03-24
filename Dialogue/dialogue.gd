@@ -7,7 +7,10 @@ extends Control
 @onready var C_button = $"../C_button"
 @onready var D_button = $"../D_button"
 @onready var NextDialButton = $"../NextDialButton"
-@onready var Sans = $SansAudio
+@onready var DefaultAudio = $DefaultAudio
+@onready var DomoAudio = $DomoAudio
+@onready var BlooberAudio = $BlooberAudio
+@onready var GooberAudio = $GooberAudio
 
 var visible_text_tween;
 var text := 0
@@ -158,15 +161,27 @@ func display_label_text():
 				get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).visible = true
 			#makes character play correct animation
 				get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).play(Global.get("anim" + Global.allchartypes_array[p] + "_array")[text])
+		var voiceplaying = ""
+		if Global.voice_array[text] != "NONE":
+			voiceplaying = Global.voice_array[text]
+		else:
+			if Global.voicedchars_array.has(Global.yapper_array[text]):
+				voiceplaying = Global.yapper_array[text] + "Audio"
+			else:
+				voiceplaying = "DefaultAudio"
 		dialogue.set_visible_characters(0)
 		NameTag.text = Global.yapper_array[text] + ":"
 		dialogue.text = Global.text_array[text]
 		Global.displayrange = Global.text_array[text].length() + 1
+		var stringchars = Global.text_array[text].split("")
 		for displaying in range (0, Global.displayrange):
 			if displaying <= Global.displayrange:
 				dialogue.set_visible_characters(displaying)
-				Sans.play()
-				await get_tree().create_timer(0.05).timeout
+				if stringchars[text-1] != ".":
+					get_node(voiceplaying).play()
+					await get_tree().create_timer(0.05).timeout
+				else:
+					await get_tree().create_timer(0.5).timeout
 		pass
 	
 		text += 1
@@ -225,6 +240,14 @@ func display_label_text():
 								var oriy = int(oristringsplit[1])
 								#use those variables to set the ori
 								get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")[text]).set_scale(Vector2(orix, oriy))
+			var voiceplaying = ""
+			if Global.voiceqvalue != "NONE":
+				voiceplaying = Global.voiceqvalue
+			else:
+				if Global.voicedchars_array.has(Global.yapperqvalue):
+					voiceplaying = Global.yapperqvalue + "Audio"
+				else:
+					voiceplaying = "DefaultAudio"
 			dialogue.visible_ratio = 0
 			NameTag.text = Global.yapperqvalue + ":"
 			dialogue.text = Global.textqValue
@@ -232,7 +255,7 @@ func display_label_text():
 			for displaying in range (0, Global.displayrange):
 				if displaying <= Global.displayrange:
 					dialogue.set_visible_characters(displaying)
-					Sans.play()
+					get_node(voiceplaying).play()
 					await get_tree().create_timer(0.05).timeout
 			Global.dialogue_running = false
 		else: 
@@ -256,6 +279,9 @@ func resetdialogue():
 	Global.text_array = []
 	dialogue.text = ""
 	Global.dialogue_running = false
+	visible_text_tween;
+	text = 0
+	Conversation = ""
 	for t in range (0, Global.allvars_array.size()):
 		Global.set(Global.allvars_array[t] + "_array", [])
 pass

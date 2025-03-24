@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbnolxlwd8uxx"
+path="res://.godot/imported/GooberVoice ‐ Gemaakt met Clipchamp (1).mp3-f178556404b56e5672247f3ec1a2075a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Goober/GooberVoice ‐ Gemaakt met Clipchamp (1).mp3"
+dest_files=["res://.godot/imported/GooberVoice ‐ Gemaakt met Clipchamp (1).mp3-f178556404b56e5672247f3ec1a2075a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

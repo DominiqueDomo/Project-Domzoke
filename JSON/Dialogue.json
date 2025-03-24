@@ -18,6 +18,7 @@
 		"posC": "",
 		"posD": "",
 		"yapper": "",
+		"voice": "",
 		"str": "",
 		
 		"buttonA": "",
@@ -30,13 +31,15 @@
 		"optionD": "",
 	},
 	"intro": {
-		"charA1": "Misc",
-		"charB1": "Dominic",
-		"animA1": "Samsonite",
-		"animB1": "DominicSurprised",
 		"yapper1": "Narrator",
-		"str1": "Wassup guys it's me, Uncle Samsonite!",
-		"background1": "res://TileMaps/FieldDay.tscn",	
+		"str1": "In far away lands",
+		
+		"yapper2": "Narrator",
+		"str2": "Way past the shores you know and love",
+		
+		"yapper3": "Narrator",
+		"str3": "Lies a mystical island",
+		"background3": "res://TileMaps/FieldNight.tscn"
 	},
 	"xxxA": {
 		"charA1": "Misc",
@@ -115,6 +118,7 @@
 		"str1": "Hey, Goober, have you heard the news?",
 		"charB1": "Goober",
 		"animB1": "GooberIdle",
+		"voice1": "BlooberAudio",
 		"background1": "res://TileMaps/FieldDay.tscn",
 		
 		"charA2": "Bloober",
@@ -122,6 +126,7 @@
 		"animA2": "BlooberIdle",
 		"animB2": "GooberHappy",
 		"yapper2": "Goober",
+		"voice2": "GooberAudio",
 		"str2": "Wahoahwao??! You have newsies?!",
 		
 		"charA3": "Bloober",
@@ -130,6 +135,7 @@
 		"animB3": "GooberIdle",
 		"yapper3": "Bloober",
 		"str3": "Domo ruined the background, all that surrounds us is darkness",
+		"voice3": "BlooberAudio",
 		"background3": "void",
 		
 		"charA4": "Bloober",
@@ -137,11 +143,13 @@
 		"animA4": "BlooberIdle",
 		"animB4": "GooberSad",
 		"yapper4": "Goober",
+		"voice4": "GooberAudio",
 		"str4": "I am so sad about this information",
 		
 		"charAq": "Goober",
 		"animAq": "GooberSleepDeprived",
 		"strq": "What point is there to live in the darkness? Never again will I see the light of day.",
+		"voiceq": "GooberAudio",
 		"yapperq": "Goober",
 		"buttonA": "Let him suffer",
 		"buttonB": "End his suffering",
@@ -343,15 +351,15 @@
 		"animA1": "GooberIdle",
 		"charB1": "Susan",
 		"animB1": "SusanThiefTalking",
-		"str1": "Rumor has it that Bloober wears a fez now, I'm going to steal it.",
+		"str1": "Teehee I'm a thief now",
 		"yapper1": "Susan",
 		
-		"charA1": "Goober",
-		"animA1": "GooberIdle",
-		"charB1": "Susan",
-		"animB1": "SusanThiefTalking",
-		"str1": "Rumor has it that Bloober wears a fez now, I'm going to steal it.",
-		"yapper1": "Susan",
+		"charA2": "Goober",
+		"animA2": "GooberIdle",
+		"charB2": "Susan",
+		"animB2": "SusanThiefTalking",
+		"str2": "Criminal",
+		"yapper2": "Susan",
 		
 		"charAq": "Goober",
 		"animAq": "GooberTalking",

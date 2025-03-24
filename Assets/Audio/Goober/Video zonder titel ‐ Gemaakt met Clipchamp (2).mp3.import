@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://180q5tdmag1m"
+path="res://.godot/imported/Video zonder titel ‐ Gemaakt met Clipchamp (2).mp3-2adf5021a7c7fa610dc5d08034eedeb6.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Goober/Video zonder titel ‐ Gemaakt met Clipchamp (2).mp3"
+dest_files=["res://.godot/imported/Video zonder titel ‐ Gemaakt met Clipchamp (2).mp3-2adf5021a7c7fa610dc5d08034eedeb6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
