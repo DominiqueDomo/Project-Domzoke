@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://pacolmlbxgx4"]
+[gd_scene load_steps=70 format=3 uid="uid://pacolmlbxgx4"]
 
 [ext_resource type="Texture2D" uid="uid://0tj78uy3euq" path="res://Assets/CharacterSprites/Goober/GooberCorpse.png" id="1_o1yjv"]
 [ext_resource type="Texture2D" uid="uid://cnhqami00cvcu" path="res://Assets/CharacterSprites/Goober/GooberGhostIdle.png" id="2_847pi"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c4h816q37vtvu" path="res://Assets/CharacterSprites/Goober/GooberSadIdle.png" id="9_5n5sa"]
 [ext_resource type="Texture2D" uid="uid://bqr0ms7ay6kof" path="res://Assets/CharacterSprites/Goober/GooberTalking.png" id="10_mk7w8"]
 [ext_resource type="Texture2D" uid="uid://dgsqx7hlx7qe1" path="res://Assets/CharacterSprites/Goober/GooberTinycKiss.png" id="11_xyf4b"]
+[ext_resource type="Script" path="res://Characters/area_2d.gd" id="13_x78bw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0sqgn"]
 atlas = ExtResource("1_o1yjv")
@@ -463,6 +464,18 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_remy7"]
+size = Vector2(17, 16)
+
 [node name="Goober" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_lce6u")
 animation = &"GooberSad"
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("13_x78bw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_remy7")
+
+[connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]

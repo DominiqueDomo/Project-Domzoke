@@ -169,7 +169,7 @@ func display_label_text():
 		if Global.func_array[text] != "NONE":
 			Global.localfunc_array = Global.func_array[text].rsplit(",", false, 0)
 			print(Global.localfunc_array[0])
-			Global.localfunc_array[0].call()
+			call(Global.localfunc_array[0])
 		var voiceplaying = ""
 		if Global.voice_array[text] != "NONE":
 			voiceplaying = Global.voice_array[text]
@@ -188,7 +188,7 @@ func display_label_text():
 				dialogue.set_visible_characters(displaying)
 				if stringchars[text-1] != ".":
 					get_node(voiceplaying).play()
-					await get_tree().create_timer(0.05).timeout
+					await get_tree().create_timer(0.08).timeout
 				else:
 					await get_tree().create_timer(0.5).timeout
 		pass
