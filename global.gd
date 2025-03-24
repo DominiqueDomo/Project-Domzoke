@@ -1,7 +1,6 @@
 extends Node
-
 # all dialogue arrays
-var allvars_array = ["charA", "charB", "charC", "charD", "animA", "animB", "animC", "animD", "oriA", "oriB", "oriC", "oriD", "posA", "posB", "posC", "posD", "yapper", "background", "voice"]
+var allvars_array = ["charA", "charB", "charC", "charD", "animA", "animB", "animC", "animD", "oriA", "oriB", "oriC", "oriD", "posA", "posB", "posC", "posD", "yapper", "background", "voice", "func"]
 var alldefaultpos_array = [Vector2(250,350), Vector2(900, 350), Vector2(500, 350), Vector2(650, 350)]
 var alldefaultscale_array = [Vector2(10, 10), Vector2(-10, 10), Vector2(10, 10), Vector2(-10, 10)]
 var allchartypes_array = ["A", "B", "C", "D"]
@@ -28,6 +27,7 @@ var yapper_array = []
 var background_array = []
 var text_array = []
 var voice_array = []
+var func_array = []
 
 # all dialogue vars
 var convlengthfound = false
@@ -52,6 +52,7 @@ var yapperValue = []
 var backgroundvalue = []
 var textValue = []
 var voiceValue = []
+var funcvalue = []
 var gatekeeping = false
 
 var charAqvalue = ""
@@ -82,11 +83,14 @@ var optionCvalue = ""
 var optionDvalue = ""
 var textqValue = ""
 var voiceqvalue = ""
+var funcqvalue = ""
 
+var localfunc_array = []
 var dialogue_running = false
 var textspeed
 var displayrange
 var loadedbackground = null
+var introplayed = false
 
 signal display_label_text
 signal resetdialogue
@@ -95,3 +99,5 @@ signal setup_convo
 signal loadbackground
 signal buttonsappear
 signal skipdialogue
+
+signal testfunc

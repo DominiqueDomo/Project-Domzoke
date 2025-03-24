@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://d0qseq4caiksc"]
+[gd_scene load_steps=46 format=3 uid="uid://dp7b08lt5p16v"]
 
 [ext_resource type="Texture2D" uid="uid://cfwvtc1vfr1fe" path="res://Assets/CharacterSprites/Susan/Susan.png" id="1_567cq"]
 [ext_resource type="Texture2D" uid="uid://balg8ymba2uk0" path="res://Assets/CharacterSprites/Susan/SusanTalking.png" id="2_h0xb7"]

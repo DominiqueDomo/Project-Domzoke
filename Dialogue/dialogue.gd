@@ -22,6 +22,11 @@ func _ready() -> void:
 	Global.resetdialogue.connect(resetdialogue)
 	Global.enddialogue.connect(enddialogue)
 	Global.skipdialogue.connect(skipdialogue)
+	Global.testfunc.connect(testfunc)
+	if Global.introplayed == false:
+		setup_convo("intro")
+		display_label_text()
+		Global.introplayed = true
 	
 func setup_convo(convo):
 	resetdialogue()
@@ -161,6 +166,10 @@ func display_label_text():
 				get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).visible = true
 			#makes character play correct animation
 				get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).play(Global.get("anim" + Global.allchartypes_array[p] + "_array")[text])
+		if Global.func_array[text] != "NONE":
+			Global.localfunc_array = Global.func_array[text].rsplit(",", false, 0)
+			print(Global.localfunc_array[0])
+			Global.localfunc_array[0].call()
 		var voiceplaying = ""
 		if Global.voice_array[text] != "NONE":
 			voiceplaying = Global.voice_array[text]
@@ -288,7 +297,7 @@ pass
 #this function will end the dialogue, it triggers if no question is asked at all
 func enddialogue():
 #when strings in the conversation run out, makes all remaining characters disappear
-	for r in range(0, 3):
+	for r in range(0, 4):
 		if Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1] != "NONE": 
 			get_node("../%s" % Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1]).visible = false
 	$".".visible = false
@@ -298,6 +307,8 @@ func enddialogue():
 pass
 		
 	#print(Global.gatekeeping)
+func testfunc():
+	print("Omg it works! Awesome!!")
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

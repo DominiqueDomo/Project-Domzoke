@@ -39,7 +39,18 @@
 		
 		"yapper3": "Narrator",
 		"str3": "Lies a mystical island",
-		"background3": "res://TileMaps/FieldNight.tscn"
+		"background3": "res://TileMaps/FieldNight.tscn",
+		
+		"strq": "What do you want to watch?",
+		"yapperq": "Narrator",
+		"buttonA": "Make out XL",
+		"buttonB": "Breaking News",
+		"buttonC": "Fez Party",
+		"buttonD": "Susan",
+		"optionA": "xxxA",
+		"optionB": "xxxB",
+		"optionC": "xxxE",
+		"optionD": "xxxD",
 	},
 	"xxxA": {
 		"charA1": "Misc",
@@ -372,5 +383,62 @@
 		"optionA": "xAAD",
 		"optionB": "xxxA",
 	},
-  }
+	"xxxE": {
+		"str1": "Hey Beeber, hey Goober, I wanna show you something",
+		"charA1": "Bloober",
+		"animA1": "BlooberTalking",
+		"charB1": "Beeber",
+		"animB1": "BeeberIdle",
+		"charD1": "Goober",
+		"animD1": "GooberIdle",
+		"func1": "testfunc, test2, test3",
+		"yapper1": "Bloober",
+		
+		"str2": "Oooh you got a newzzz thingy?",
+		"charA2": "Bloober",
+		"animA2": "BlooberIdle",
+		"charB2": "Beeber",
+		"animB2": "BeeberTalking",
+		"charD2": "Goober",
+		"animD2": "GooberIdle",
+		"func2": "testfunc, test2, test3",
+		"yapper2": "Beeber",
+		
+		"str3": "FUTURE DOMO, it's me, past Domo, and I'm here to tell you what to do.",
+		"charA3": "Bloober",
+		"animA3": "BlooberIdle",
+		"charB3": "Beeber",
+		"animB3": "BeeberIdle",
+		"charD3": "Goober",
+		"animD3": "GooberTalking",
+		"yapper3": "Goober",
+		
+		"str4": "You need to make a new scene called map.tscn, and put all the regions in as buttons that light up when you hover over them. This scene is brought into main.tscn and is invisible by default. A player can press the map button (currently the go back button) and use that to open the map.",
+		"charA4": "Bloober",
+		"animA4": "BlooberIdle",
+		"charB4": "Beeber",
+		"animB4": "BeeberIdle",
+		"charD4": "Goober",
+		"animD4": "GooberTalking",
+		"yapper4": "Goober",
+		
+		"str5": "also you need to add the option for dialogue.gd to play additional functions, add something like func1, func2 etc. This way, you can make things occur that aren't usually in the game, like a screen fading out or a character shaking. Make sure that you use a string split, letting you store multiple functions.",
+		"charA5": "Bloober",
+		"animA5": "BlooberIdle",
+		"charB5": "Beeber",
+		"animB5": "BeeberIdle",
+		"charD5": "Goober",
+		"animD5": "GooberTalking",
+		"yapper5": "Goober",
+		
+		"str6": "This has been past Domo. Thanks for listening",
+		"charA6": "Bloober",
+		"animA6": "BlooberIdle",
+		"charB6": "Beeber",
+		"animB6": "BeeberIdle",
+		"charD6": "Goober",
+		"animD6": "GooberTalking",
+		"yapper6": "Goober",
+	}
+  		}
 }
