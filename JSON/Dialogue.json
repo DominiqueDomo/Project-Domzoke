@@ -248,6 +248,7 @@
 		"animB1": "SusanIdle",
 		"yapper1": "Goober",
 		"str1": "Can I please have an apple?",
+		"background1": "res://TileMaps/BeachDay.tscn",
 		
 		"charAq": "Goober",
 		"animAq": "GooberIdle",
@@ -411,6 +412,7 @@
 		"animB3": "BeeberIdle",
 		"charD3": "Goober",
 		"animD3": "GooberTalking",
+		"voice3": "DomoAudio",
 		"yapper3": "Goober",
 		
 		"str4": "You need to make a new scene called map.tscn, and put all the regions in as buttons that light up when you hover over them. This scene is brought into main.tscn and is invisible by default. A player can press the map button (currently the go back button) and use that to open the map.",
@@ -439,6 +441,17 @@
 		"charD6": "Goober",
 		"animD6": "GooberTalking",
 		"yapper6": "Goober",
+	},
+	"xxxF": {
+		"str1": "Hey Beeber, hey Goober, I wanna show you something",
+		"charA1": "Bloober",
+		"animA1": "BlooberTalking",
+		"charB1": "Beeber",
+		"animB1": "BeeberIdle",
+		"charD1": "Goober",
+		"animD1": "GooberIdle",
+		"yapper1": "Bloober",
+		"background1": "res://TileMaps/BeachDay.tscn",
 	}
-  		}
+  }
 }

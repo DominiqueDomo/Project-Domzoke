@@ -1,0 +1,95 @@
+[gd_scene load_steps=13 format=3 uid="uid://delp8k0tl266g"]
+
+[ext_resource type="Texture2D" uid="uid://csmab83mxrxaa" path="res://Assets/Map/DomzokeMap.png" id="1_a3elw"]
+[ext_resource type="Script" path="res://Scenes/Map/island_map.gd" id="1_supba"]
+[ext_resource type="Texture2D" uid="uid://cn3ukmvcml2lk" path="res://Assets/Map/SouthWestIsland.png" id="2_8322l"]
+[ext_resource type="Texture2D" uid="uid://3ecs36ujppep" path="res://Assets/Map/SouthWestIslandSelected.png" id="3_8yf1n"]
+[ext_resource type="Texture2D" uid="uid://4acum1u78ymk" path="res://Assets/Map/SouthEastBeach.png" id="3_fifg2"]
+[ext_resource type="Texture2D" uid="uid://qqahp07p30rv" path="res://Assets/Map/SouthEastBeachSelected.png" id="5_80whm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qo43i"]
+atlas = ExtResource("3_fifg2")
+region = Rect2(0, 0, 29, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mitjj"]
+atlas = ExtResource("5_80whm")
+region = Rect2(0, 0, 29, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fcvrl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qo43i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mitjj")
+}],
+"loop": true,
+"name": &"selected",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rl1re"]
+atlas = ExtResource("2_8322l")
+region = Rect2(0, 0, 25, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lg7a"]
+atlas = ExtResource("3_8yf1n")
+region = Rect2(0, 0, 25, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2kxmt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rl1re")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lg7a")
+}],
+"loop": true,
+"name": &"selected",
+"speed": 5.0
+}]
+
+[node name="IslandMap" type="Node2D"]
+z_index = 1
+scale = Vector2(8, 8)
+script = ExtResource("1_supba")
+
+[node name="Map" type="Sprite2D" parent="."]
+texture = ExtResource("1_a3elw")
+
+[node name="SouthEastBeach" type="AnimatedSprite2D" parent="Map"]
+position = Vector2(39.5, 29)
+sprite_frames = SubResource("SpriteFrames_fcvrl")
+
+[node name="SouthEastBeachArea" type="Area2D" parent="Map/SouthEastBeach"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/SouthEastBeach/SouthEastBeachArea"]
+polygon = PackedVector2Array(9.5, -9.5, 10.5, -9.5, 10.5, -10.5, 13.5, -10.5, 13.5, -4.5, 14.5, -4.5, 14.5, -0.5, 13.5, -0.5, 13.5, 4.5, 13.5, 4.5, 12.5, 4.5, 12.5, 6.5, 11.5, 6.5, 11.5, 7.5, 10.5, 7.5, 10.5, 8.5, 7.5, 8.5, 7.5, 9.5, 4.5, 9.5, 4.5, 10.5, -3.5, 10.5, -3.5, 9.5, -7.5, 9.5, -7.5, 8.5, -9.5, 8.5, -9.5, 7.5, -11.5, 7.5, -11.5, 6.5, -12.5, 6.5, -12.5, 5.5, -13.5, 5.5, -13.5, 4.5, -14.5, 4.5, -14.5, -0.5, -13.5, -0.5, -13.5, -1.5, -12.5, -1.5, -12.5, -2.5, -6.5, -2.5, -6.5, -3.5, -1.5, -3.5, -1.5, -4.5, 2.5, -4.5, 2.5, -5.5, 3.5, -5.5, 3.5, -6.5, 4.5, -6.5, 4.5, -7.5, 6.5, -7.5, 6.5, -9.5)
+
+[node name="SouthWestIsland" type="AnimatedSprite2D" parent="Map"]
+position = Vector2(-53.5, 25)
+sprite_frames = SubResource("SpriteFrames_2kxmt")
+
+[node name="SouthWestIslandArea" type="Area2D" parent="Map/SouthWestIsland"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/SouthWestIsland/SouthWestIslandArea"]
+polygon = PackedVector2Array(-7.5, -7.5, -7.5, -8.5, -1.5, -8.5, -1.5, -7.5, -0.625, -7.5, -0.375, -6.375, 0.5, -6.375, 7.625, 0.375, 12.5, 2.5, 12.5, 7.375, 11.375, 8.5, 4.375, 8.375, 1.25, 7.625, -3.375, 7.5, -7.375, 6.5, -10.375, 4.5, -11.5, 2.5, -11.5, -2.625, -12.75, -2.875, -12.5, -5.375, -10.375, -7.375)
+
+[connection signal="input_event" from="Map/SouthEastBeach/SouthEastBeachArea" to="." method="_on_south_east_beach_area_input_event"]
+[connection signal="mouse_entered" from="Map/SouthEastBeach/SouthEastBeachArea" to="." method="_on_south_east_beach_area_mouse_entered"]
+[connection signal="mouse_exited" from="Map/SouthEastBeach/SouthEastBeachArea" to="." method="_on_south_east_beach_area_mouse_exited"]
+[connection signal="input_event" from="Map/SouthWestIsland/SouthWestIslandArea" to="." method="_on_south_west_island_area_input_event"]
+[connection signal="mouse_entered" from="Map/SouthWestIsland/SouthWestIslandArea" to="." method="_on_south_west_island_area_mouse_entered"]
+[connection signal="mouse_exited" from="Map/SouthWestIsland/SouthWestIslandArea" to="." method="_on_south_west_island_area_mouse_exited"]

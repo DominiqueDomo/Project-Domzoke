@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/title.gd" id="1_uaaym"]
 [ext_resource type="FontFile" uid="uid://c21qvmnxmr0oq" path="res://Assets/Fonts/monogram/monogram-extended.ttf" id="2_r8usr"]
 [ext_resource type="FontFile" uid="uid://b1p2blf36jefh" path="res://Assets/Fonts/monogram/monogram-extended-italic.ttf" id="3_x77vv"]
-[ext_resource type="Theme" path="res://Assets/Fonts/DefaultButton.tres" id="5_ctc8t"]
+[ext_resource type="Theme" uid="uid://bd3a4s2vbaltu" path="res://Assets/Fonts/DefaultButton.tres" id="5_ctc8t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s0pv5"]
 texture = ExtResource("1_mjhq6")

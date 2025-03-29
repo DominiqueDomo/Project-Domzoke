@@ -113,6 +113,7 @@ autowrap_mode = 3
 stream = SubResource("AudioStreamRandomizer_ne8ti")
 
 [node name="DomoAudio" type="AudioStreamPlayer2D" parent="."]
+z_index = -1
 stream = SubResource("AudioStreamRandomizer_yguqa")
 
 [node name="BlooberAudio" type="AudioStreamPlayer2D" parent="."]

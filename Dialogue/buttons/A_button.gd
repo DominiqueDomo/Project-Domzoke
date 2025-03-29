@@ -13,7 +13,6 @@ func _ready():
 func _on_button_pressed() -> void:
 	if Global.dialogue_running == false:
 		Global.setup_convo.emit(A_option)
-		Global.display_label_text.emit()
 	#else:
 		#print("woop")
 func buttonsappear():

@@ -11,7 +11,7 @@ extends Control
 @onready var DomoAudio = $DomoAudio
 @onready var BlooberAudio = $BlooberAudio
 @onready var GooberAudio = $GooberAudio
-
+@onready var MapButton = $"../MapButton"
 var visible_text_tween;
 var text := 0
 var Conversation = ""
@@ -25,13 +25,17 @@ func _ready() -> void:
 	Global.testfunc.connect(testfunc)
 	if Global.introplayed == false:
 		setup_convo("intro")
-		display_label_text()
 		Global.introplayed = true
 	
 func setup_convo(convo):
-	resetdialogue()
+	enddialogue()
+	MapButton.visible = false
+	$"../MapButton".visible = false
+	$"../IslandMap".visible = false
 	var file = FileAccess.open("res://JSON/Dialogue.json", FileAccess.READ)
 	text = 0
+	$".".visible = true
+	$"../NextDialButton".visible = true
 	Global.gatekeeping = false
 	Global.dialogue_running = true
 	#makes all the dialogue buttons invisible
@@ -96,10 +100,12 @@ func setup_convo(convo):
 									Global.get(Global.allvars_array[p] + "_array").push_back(Conversation[(Global.allvars_array[p] + str(i))])
 								else:	
 									#if it's not present, it will push "NONE" into the array instead
+									print("lalala")
 									Global.get(Global.allvars_array[p] + "_array").push_back("NONE")
 							# read through the JSON file, and finds everything with valuex for example
 						else:
 							print("dude you're missing the var string")
+					display_label_text()
 				else:
 					print("'" + str(convo) + "' key not found in 'Conversations'")
 			else:
@@ -268,49 +274,42 @@ func display_label_text():
 					await get_tree().create_timer(0.05).timeout
 			Global.dialogue_running = false
 		else: 
-			return enddialogue()
-
+			return resetdialogue()
+#this function lets the player skip to the end of a string
 func skipdialogue():
 	dialogue.set_visible_characters(Global.displayrange)
 	Global.displayrange = 0
-pass
-	
 #this function will reset the dialogue, it will allow the conversation to continue after a question is answered
 func resetdialogue():
 #when strings in the conversation run out, makes all remaining characters disappear
 	dialogue.set_visible_characters(0)
-	if text != 0:
-		for r in range(0, 3):
-			if Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1] != "NONE": 
-				get_node("../%s" % Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1]).visible = false
 #resets all variables necessary for displaying the text
 	NameTag.text = ""
 	Global.text_array = []
 	dialogue.text = ""
 	Global.dialogue_running = false
 	visible_text_tween;
-	text = 0
 	Conversation = ""
-	for t in range (0, Global.allvars_array.size()):
-		Global.set(Global.allvars_array[t] + "_array", [])
-pass
+
+	$".".visible = false
+	$"../NextDialButton".visible = false
+	MapButton.visible = true
 #this function will end the dialogue, it triggers if no question is asked at all
 func enddialogue():
 #when strings in the conversation run out, makes all remaining characters disappear
-	for r in range(0, 4):
-		if Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1] != "NONE": 
-			get_node("../%s" % Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1]).visible = false
-	$".".visible = false
-	$"../NextDialButton".visible = false
+	if text > 0:
+		for r in range(0, 3):
+			if Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1] != "NONE": 
+				get_node("../%s" % Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1]).visible = false
 #resets all variables necessary for displaying the text
+	text = 0
+	for t in range (0, Global.allvars_array.size()):
+		Global.set(Global.allvars_array[t] + "_array", [])
 	resetdialogue()
-pass
-		
 	#print(Global.gatekeeping)
+#this is the test function
 func testfunc():
 	print("Omg it works! Awesome!!")
-	
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass

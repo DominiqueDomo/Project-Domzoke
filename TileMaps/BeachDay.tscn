@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://vui5vpsut66s"]
+
+[ext_resource type="Texture2D" uid="uid://cir0qbrunir1g" path="res://Assets/TileMaps/Beach-Day/Beach.png" id="1_qvw6x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twr2h"]
+atlas = ExtResource("1_qvw6x")
+region = Rect2(0, 0, 144, 81)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hsuua"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_twr2h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BeachDay" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_hsuua")
