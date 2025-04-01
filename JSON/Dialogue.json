@@ -31,11 +31,15 @@
 		"optionD": "",
 	},
 	"intro": {
-		"yapper1": "Narrator",
-		"str1": "In far away lands",
+		"yapper1": "Bloober",
+		"charB1": "Bloober",
+		"animB1": "BlooberFezTalking",
+		"str1": "Wow! Goober you're cool and 3D now, I wish I were 3D like you",
 		
-		"yapper2": "Narrator",
-		"str2": "Way past the shores you know and love",
+		"yapper2": "Goober",
+		"charB2": "Bloober",
+		"animB2": "BlooberFezIdle",
+		"str2": "Waowaowao! Yessirr!! I am sooper 3d yippiee",
 		
 		"yapper3": "Narrator",
 		"str3": "Lies a mystical island",
@@ -248,7 +252,7 @@
 		"animB1": "SusanIdle",
 		"yapper1": "Goober",
 		"str1": "Can I please have an apple?",
-		"background1": "res://TileMaps/BeachDay.tscn",
+		"background1": "res://TileMaps/FieldDay.tscn",
 		
 		"charAq": "Goober",
 		"animAq": "GooberIdle",
