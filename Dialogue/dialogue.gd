@@ -298,7 +298,7 @@ func resetdialogue():
 func enddialogue():
 #when strings in the conversation run out, makes all remaining characters disappear
 	if text > 0:
-		for r in range(0, 3):
+		for r in range(0, 4):
 			if Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1] != "NONE": 
 				get_node("../%s" % Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1]).visible = false
 #resets all variables necessary for displaying the text

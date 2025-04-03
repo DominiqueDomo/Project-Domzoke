@@ -310,4 +310,4 @@ animations = [{
 
 [node name="Susan" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_nm7hl")
-animation = &"SusanThiefIdle"
+animation = &"SusanIdle"
