@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://vui5vpsut66s"]
+[gd_scene load_steps=5 format=3 uid="uid://vui5vpsut66s"]
 
 [ext_resource type="Texture2D" uid="uid://cllf0tcefk86y" path="res://Assets/TileMaps/Beach-Day/BeachDay.png" id="1_tomaq"]
+[ext_resource type="PackedScene" uid="uid://s0sm4k0hhy6m" path="res://Characters/Plum.tscn" id="2_jsbex"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rnrrp"]
 atlas = ExtResource("1_tomaq")
@@ -23,3 +24,7 @@ animations = [{
 position = Vector2(576, 324)
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_hsuua")
+
+[node name="Plum" parent="." instance=ExtResource("2_jsbex")]
+position = Vector2(264, 344)
+scale = Vector2(8, 8)

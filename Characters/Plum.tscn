@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=3 uid="uid://s0sm4k0hhy6m"]
+
+[ext_resource type="Texture2D" uid="uid://crpndxb0psn30" path="res://Assets/CharacterSprites/Plum/PlumIdle.png" id="1_h4qqd"]
+[ext_resource type="Texture2D" uid="uid://ck6p0yat4j5lt" path="res://Assets/CharacterSprites/Plum/PlumTalking.png" id="2_58aom"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuybn"]
+atlas = ExtResource("1_h4qqd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twml6"]
+atlas = ExtResource("1_h4qqd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmp5m"]
+atlas = ExtResource("1_h4qqd")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3ns4"]
+atlas = ExtResource("1_h4qqd")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36l8p"]
+atlas = ExtResource("2_58aom")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_de54y"]
+atlas = ExtResource("2_58aom")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_andpp"]
+atlas = ExtResource("2_58aom")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqpxs"]
+atlas = ExtResource("2_58aom")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_skcqw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuybn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_twml6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bmp5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3ns4")
+}],
+"loop": true,
+"name": &"PlumIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36l8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_de54y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_andpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqpxs")
+}],
+"loop": true,
+"name": &"PlumTalking",
+"speed": 9.0
+}]
+
+[node name="Plum" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_skcqw")
+animation = &"PlumTalking"

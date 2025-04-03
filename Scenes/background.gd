@@ -4,7 +4,6 @@ var instance = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.loadbackground.connect(loadbackground)
-	loadbackground("res://TileMaps/FieldDay.tscn")
 	pass # Replace with function body.
 	
 func loadbackground(bgloaded):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://y3tgdyxvyw4t"]
+[gd_scene load_steps=18 format=3 uid="uid://y3tgdyxvyw4t"]
 
 [ext_resource type="PackedScene" uid="uid://csvb65k22b4my" path="res://Dialogue/buttons/button.tscn" id="1_vmceb"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_xfwt3"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ccgd3pmhalvr8" path="res://Characters/bloober.tscn" id="6_h6x8r"]
 [ext_resource type="PackedScene" uid="uid://b81vpymttn7f2" path="res://Characters/Beeber.tscn" id="7_dywtp"]
 [ext_resource type="PackedScene" uid="uid://7qm54nl3na07" path="res://Characters/Misc.tscn" id="7_eriic"]
+[ext_resource type="PackedScene" uid="uid://s0sm4k0hhy6m" path="res://Characters/Plum.tscn" id="8_3v0y8"]
 [ext_resource type="PackedScene" uid="uid://chpu1lqd8e0xo" path="res://Dialogue/buttons/A_button.tscn" id="9_l84jl"]
 [ext_resource type="PackedScene" uid="uid://4qam3wmq1o4a" path="res://Dialogue/buttons/B_button.tscn" id="10_4tm4f"]
 [ext_resource type="PackedScene" uid="uid://dtldcx1gosi4r" path="res://Dialogue/buttons/C_button.tscn" id="11_7j7ui"]
@@ -106,5 +107,9 @@ text = "Map
 
 [node name="IslandMap" parent="." instance=ExtResource("16_3mav2")]
 position = Vector2(576, 324)
+
+[node name="Plum" parent="." instance=ExtResource("8_3v0y8")]
+position = Vector2(304, 240)
+scale = Vector2(8, 8)
 
 [connection signal="pressed" from="MapButton" to="." method="_on_title_pressed"]

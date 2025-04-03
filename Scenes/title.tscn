@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=4 uid="uid://denctntp78g8w"]
 
 [ext_resource type="Script" path="res://Scenes/title.gd" id="1_uaaym"]
-[ext_resource type="TileSet" path="res://Assets/TileMaps/Temple-Day/TempleDay.tres" id="2_gu3av"]
+[ext_resource type="TileSet" uid="uid://biekigljliu35" path="res://Assets/TileMaps/Temple-Day/TempleDay.tres" id="2_gu3av"]
 [ext_resource type="FontFile" uid="uid://c21qvmnxmr0oq" path="res://Assets/Fonts/monogram/monogram-extended.ttf" id="2_r8usr"]
 [ext_resource type="FontFile" uid="uid://b1p2blf36jefh" path="res://Assets/Fonts/monogram/monogram-extended-italic.ttf" id="3_x77vv"]
 [ext_resource type="Theme" uid="uid://bd3a4s2vbaltu" path="res://Assets/Fonts/DefaultButton.tres" id="5_ctc8t"]
