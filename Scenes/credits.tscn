@@ -68,7 +68,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"lit",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -149,7 +149,7 @@ autowrap_mode = 3
 position = Vector2(88, 248)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_pkv6a")
-animation = &"lit"
+animation = &"unlit"
 
 [node name="Torch2" type="AnimatedSprite2D" parent="."]
 position = Vector2(408, 248)
