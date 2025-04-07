@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://s0sm4k0hhy6m"]
+[gd_scene load_steps=12 format=3 uid="uid://bgovyt4g11ciq"]
 
 [ext_resource type="Texture2D" uid="uid://crpndxb0psn30" path="res://Assets/CharacterSprites/Plum/PlumIdle.png" id="1_h4qqd"]
 [ext_resource type="Texture2D" uid="uid://ck6p0yat4j5lt" path="res://Assets/CharacterSprites/Plum/PlumTalking.png" id="2_58aom"]

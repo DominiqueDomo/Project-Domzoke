@@ -33,15 +33,15 @@
 	"intro": {
 		"yapper1": "Narrator",
 		"str1": "Domzoke island, far away from the mainland, holds great power, and great mystery",
-		"charA1": "Plum",
-		"animA1": "PlumTalking",
+		"charA1": "Bloober",
+		"animA1": "BlooberFezIdle",
 		"background1": "res://TileMaps/BeachDay.tscn",
 		
 		"yapper2": "Narrator",
 		"charA2": "Goober",
 		"animA2": "GooberIdle",
 		"charB2": "Plum",
-		"animB2": "PlumIdle",
+		"animB2": "PlumTalking",
 		"str2": "Here, you will meet many friends",
 		"background2": "res://TileMaps/BeachDay.tscn",
 		

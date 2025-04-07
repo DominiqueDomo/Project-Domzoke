@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ccgd3pmhalvr8" path="res://Characters/bloober.tscn" id="6_h6x8r"]
 [ext_resource type="PackedScene" uid="uid://b81vpymttn7f2" path="res://Characters/Beeber.tscn" id="7_dywtp"]
 [ext_resource type="PackedScene" uid="uid://7qm54nl3na07" path="res://Characters/Misc.tscn" id="7_eriic"]
-[ext_resource type="PackedScene" uid="uid://s0sm4k0hhy6m" path="res://Characters/Plum.tscn" id="8_3v0y8"]
+[ext_resource type="PackedScene" uid="uid://bgovyt4g11ciq" path="res://Characters/Plum.tscn" id="8_3v0y8"]
 [ext_resource type="PackedScene" uid="uid://chpu1lqd8e0xo" path="res://Dialogue/buttons/A_button.tscn" id="9_l84jl"]
 [ext_resource type="PackedScene" uid="uid://4qam3wmq1o4a" path="res://Dialogue/buttons/B_button.tscn" id="10_4tm4f"]
 [ext_resource type="PackedScene" uid="uid://dtldcx1gosi4r" path="res://Dialogue/buttons/C_button.tscn" id="11_7j7ui"]
@@ -50,6 +50,11 @@ visible = false
 position = Vector2(560, 539)
 animation = &"GooberRainbow"
 
+[node name="Plum" parent="." instance=ExtResource("8_3v0y8")]
+visible = false
+position = Vector2(304, 240)
+scale = Vector2(32, 8)
+
 [node name="Susan" parent="." instance=ExtResource("15_x1vfn")]
 visible = false
 position = Vector2(586, 287)
@@ -86,6 +91,7 @@ offset_right = 968.0
 offset_bottom = 480.0
 
 [node name="C_button" parent="." instance=ExtResource("11_7j7ui")]
+visible = false
 offset_left = 832.0
 offset_top = 560.0
 offset_right = 832.0
@@ -107,9 +113,5 @@ text = "Map
 
 [node name="IslandMap" parent="." instance=ExtResource("16_3mav2")]
 position = Vector2(576, 324)
-
-[node name="Plum" parent="." instance=ExtResource("8_3v0y8")]
-position = Vector2(304, 240)
-scale = Vector2(8, 8)
 
 [connection signal="pressed" from="MapButton" to="." method="_on_title_pressed"]

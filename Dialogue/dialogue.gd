@@ -192,11 +192,12 @@ func display_label_text():
 		for displaying in range (0, Global.displayrange):
 			if displaying <= Global.displayrange:
 				dialogue.set_visible_characters(displaying)
-				if stringchars[text-1] != ".":
+				print(stringchars[displaying-1])
+				if stringchars[displaying-1] != "," and stringchars[displaying-1] != "!" and stringchars[displaying-1] != "." and stringchars[displaying-1] != "?":
 					get_node(voiceplaying).play()
-					await get_tree().create_timer(0.08).timeout
+					await get_tree().create_timer(0.05).timeout
 				else:
-					await get_tree().create_timer(0.5).timeout
+					await get_tree().create_timer(0.08).timeout
 		pass
 	
 		text += 1

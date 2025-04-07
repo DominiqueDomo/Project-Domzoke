@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://delp8k0tl266g"]
+[gd_scene load_steps=24 format=3 uid="uid://delp8k0tl266g"]
 
 [ext_resource type="Texture2D" uid="uid://csmab83mxrxaa" path="res://Assets/Map/DomzokeMap.png" id="1_a3elw"]
 [ext_resource type="Script" path="res://Scenes/Map/island_map.gd" id="1_supba"]
@@ -6,6 +6,84 @@
 [ext_resource type="Texture2D" uid="uid://3ecs36ujppep" path="res://Assets/Map/SouthWestIslandSelected.png" id="3_8yf1n"]
 [ext_resource type="Texture2D" uid="uid://4acum1u78ymk" path="res://Assets/Map/SouthEastBeach.png" id="3_fifg2"]
 [ext_resource type="Texture2D" uid="uid://qqahp07p30rv" path="res://Assets/Map/SouthEastBeachSelected.png" id="5_80whm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsdm5"]
+atlas = ExtResource("1_a3elw")
+region = Rect2(0, 0, 144, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1c3m"]
+atlas = ExtResource("1_a3elw")
+region = Rect2(144, 0, 144, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kyhc"]
+atlas = ExtResource("1_a3elw")
+region = Rect2(0, 81, 144, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gatb"]
+atlas = ExtResource("1_a3elw")
+region = Rect2(144, 81, 144, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5q872"]
+atlas = ExtResource("1_a3elw")
+region = Rect2(0, 162, 144, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xd8i"]
+atlas = ExtResource("1_a3elw")
+region = Rect2(144, 162, 144, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08jq7"]
+atlas = ExtResource("1_a3elw")
+region = Rect2(0, 243, 144, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqeuh"]
+atlas = ExtResource("1_a3elw")
+region = Rect2(144, 243, 144, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1c15"]
+atlas = ExtResource("1_a3elw")
+region = Rect2(0, 324, 144, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02ohd"]
+atlas = ExtResource("1_a3elw")
+region = Rect2(144, 324, 144, 81)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e7mx0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tsdm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1c3m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kyhc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2gatb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5q872")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xd8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08jq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqeuh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1c15")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02ohd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qo43i"]
 atlas = ExtResource("3_fifg2")
@@ -66,8 +144,8 @@ z_index = 1
 scale = Vector2(8, 8)
 script = ExtResource("1_supba")
 
-[node name="Map" type="Sprite2D" parent="."]
-texture = ExtResource("1_a3elw")
+[node name="Map" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_e7mx0")
 
 [node name="SouthEastBeach" type="AnimatedSprite2D" parent="Map"]
 position = Vector2(39.5, 29)

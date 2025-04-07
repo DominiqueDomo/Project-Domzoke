@@ -1,7 +1,7 @@
 extends Node
 # all dialogue arrays
 var allvars_array = ["charA", "charB", "charC", "charD", "animA", "animB", "animC", "animD", "oriA", "oriB", "oriC", "oriD", "posA", "posB", "posC", "posD", "yapper", "background", "voice", "func"]
-var alldefaultpos_array = [Vector2(250,352), Vector2(904, 352), Vector2(504, 352), Vector2(648, 352)]
+var alldefaultpos_array = [Vector2(256,352), Vector2(904, 352), Vector2(504, 352), Vector2(648, 352)]
 var alldefaultscale_array = [Vector2(8, 8), Vector2(-8, 8), Vector2(8, 8), Vector2(-8, 8)]
 var allchartypes_array = ["A", "B", "C", "D"]
 var allcharanim_array = ["animA", "animB", "animC", "animD"]
