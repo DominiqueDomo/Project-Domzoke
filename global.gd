@@ -5,7 +5,7 @@ var alldefaultpos_array = [Vector2(256,352), Vector2(904, 352), Vector2(504, 352
 var alldefaultscale_array = [Vector2(8, 8), Vector2(-8, 8), Vector2(8, 8), Vector2(-8, 8)]
 var allchartypes_array = ["A", "B", "C", "D"]
 var allcharanim_array = ["animA", "animB", "animC", "animD"]
-var voicedchars_array = ["Goober", "Domo", "Bloober"]
+var voicedchars_array = ["Goober", "Domo", "Bloober", "Narrator"]
 
 var charA_array = []
 var charB_array = []

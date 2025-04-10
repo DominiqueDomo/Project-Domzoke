@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=4 uid="uid://rq2nle13korr"]
+[gd_scene load_steps=12 format=4 uid="uid://cxp6oh80rxak2"]
 
-[ext_resource type="TileSet" path="res://Assets/TileMaps/Temple-Day/TempleDay.tres" id="1_fu2x6"]
+[ext_resource type="TileSet" uid="uid://biekigljliu35" path="res://Assets/TileMaps/Temple-Day/TempleDay.tres" id="1_fu2x6"]
 [ext_resource type="Texture2D" uid="uid://dwk1jtootqpuq" path="res://Assets/TileMaps/Temple-Day/FireTorch.png" id="2_1oweq"]
 [ext_resource type="Script" path="res://TileMaps/temple_day.gd" id="2_oxy7n"]
 

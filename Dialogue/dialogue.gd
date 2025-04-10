@@ -1,5 +1,6 @@
 extends Control
 
+#when the scene starts, a bunch of scenes will be linked to variables, so they become easier to recall later on
 @onready var dialogue = $Dialogue
 @onready var NameTag = $NameTag
 @onready var A_button = $"../A_button"
@@ -17,21 +18,25 @@ var text := 0
 var Conversation = ""
 
 func _ready() -> void:
+	#connects to functions to their respective signals, so that other files may call on them
 	Global.display_label_text.connect(display_label_text)
 	Global.setup_convo.connect(setup_convo)
 	Global.resetdialogue.connect(resetdialogue)
 	Global.enddialogue.connect(enddialogue)
 	Global.skipdialogue.connect(skipdialogue)
 	Global.testfunc.connect(testfunc)
+	#the intro will only be played if it has not been played prior
 	if Global.introplayed == false:
 		setup_convo("intro")
 		Global.introplayed = true
 	
 func setup_convo(convo):
+	#in order for the conversation to set up, the previous one is first discontinued
 	enddialogue()
 	MapButton.visible = false
 	$"../MapButton".visible = false
 	$"../IslandMap".visible = false
+	#gets the JSON file
 	var file = FileAccess.open("res://JSON/Dialogue.json", FileAccess.READ)
 	text = 0
 	$".".visible = true
@@ -58,7 +63,7 @@ func setup_convo(convo):
 			if data.has("Conversations"):  # Safely check if "Conversations" exists
 				var conversations = data["Conversations"]
 
-				if conversations.has(convo):  # Safely check if "AAAA" exists
+				if conversations.has(convo):  # Safely check if the conversation called for exists
 					Conversation = conversations[convo]
 				# Extract the strings from Str1 to convlength
 					for i in range(1, Conversation.size()):
@@ -74,7 +79,7 @@ func setup_convo(convo):
 						#for each variable, it checks if it's present in the JSON file.
 						#if it is present, said var gets pushed into the respective array. Else, NULL gets pushed in
 						#pushed var string
-						#it only checks for the other variables if STRING is found
+						#it only checks for the other variables if Strx is found
 						if Conversation.has(string):  # Safely check if the key exists
 							var stringvalue = Conversation[string]
 							Global.text_array.push_back(stringvalue)
@@ -100,7 +105,6 @@ func setup_convo(convo):
 									Global.get(Global.allvars_array[p] + "_array").push_back(Conversation[(Global.allvars_array[p] + str(i))])
 								else:	
 									#if it's not present, it will push "NONE" into the array instead
-									print("lalala")
 									Global.get(Global.allvars_array[p] + "_array").push_back("NONE")
 							# read through the JSON file, and finds everything with valuex for example
 						else:
@@ -174,15 +178,18 @@ func display_label_text():
 				get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).play(Global.get("anim" + Global.allchartypes_array[p] + "_array")[text])
 		if Global.func_array[text] != "NONE":
 			Global.localfunc_array = Global.func_array[text].rsplit(",", false, 0)
-			print(Global.localfunc_array[0])
 			call(Global.localfunc_array[0])
+		#makes sure that the current voice is empty
 		var voiceplaying = ""
+		#if there is a voice given in the JSON, it will take that voice
 		if Global.voice_array[text] != "NONE":
 			voiceplaying = Global.voice_array[text]
 		else:
+			#if no voice is in the JSON, it will check if the Yapper his their exclusive voice
 			if Global.voicedchars_array.has(Global.yapper_array[text]):
 				voiceplaying = Global.yapper_array[text] + "Audio"
 			else:
+				#if the yapper doesn't, it will play default voice
 				voiceplaying = "DefaultAudio"
 		dialogue.set_visible_characters(0)
 		NameTag.text = Global.yapper_array[text] + ":"
@@ -191,13 +198,13 @@ func display_label_text():
 		var stringchars = Global.text_array[text].split("")
 		for displaying in range (0, Global.displayrange):
 			if displaying <= Global.displayrange:
+				#for every symbol (character) that appears, it will play the voice sound and then wait 0.05 seconds, unless the character is a comma, exclamation mark, question mark, or period, in which case it'll wait 0.08 seconds, and not play the sound
 				dialogue.set_visible_characters(displaying)
-				print(stringchars[displaying-1])
 				if stringchars[displaying-1] != "," and stringchars[displaying-1] != "!" and stringchars[displaying-1] != "." and stringchars[displaying-1] != "?":
 					get_node(voiceplaying).play()
 					await get_tree().create_timer(0.05).timeout
 				else:
-					await get_tree().create_timer(0.08).timeout
+					await get_tree().create_timer(0.1).timeout
 		pass
 	
 		text += 1
@@ -256,6 +263,7 @@ func display_label_text():
 								var oriy = int(oristringsplit[1])
 								#use those variables to set the ori
 								get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")[text]).set_scale(Vector2(orix, oriy))
+			#follows the same principal as the other voice variable, except this does it for q instead of x
 			var voiceplaying = ""
 			if Global.voiceqvalue != "NONE":
 				voiceplaying = Global.voiceqvalue
@@ -275,7 +283,7 @@ func display_label_text():
 					await get_tree().create_timer(0.05).timeout
 			Global.dialogue_running = false
 		else: 
-			return resetdialogue()
+			resetdialogue()
 #this function lets the player skip to the end of a string
 func skipdialogue():
 	dialogue.set_visible_characters(Global.displayrange)

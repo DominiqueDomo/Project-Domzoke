@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c75o6hceub4tn"
+path="res://.godot/imported/Undertale_Sound Effect_-_Asgore_Voice_(256_kbps).mp3-891b113dde1a1fea0c54ddb88d7e8893.mp3str"
+
+[deps]
+
+source_file="res://TileMaps/Undertale_Sound Effect_-_Asgore_Voice_(256_kbps).mp3"
+dest_files=["res://.godot/imported/Undertale_Sound Effect_-_Asgore_Voice_(256_kbps).mp3-891b113dde1a1fea0c54ddb88d7e8893.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
