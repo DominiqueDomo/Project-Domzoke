@@ -70,9 +70,10 @@
 		"background1": "res://TileMaps/TempleDay.tscn",
 		
 		"yapper2": "Goober",
-		"str2": "...",
+		"str2": "I AM THREE DIMENSIONAL",
 		"charA2": "Goober",
-		"animA2": "GooberIdle",
+		"animA2": "Goober3D",
+		"oriA2": "1, 1",
 		
 		"yapper3": "Goober",
 		"str3": "Ooooh I'm at the beach now!",

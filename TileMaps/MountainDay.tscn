@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbaj7710eey0s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xeu3"]
+region = Rect2(0, 0, 144, 81)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_07bp7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xeu3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="MountainDay" type="Node2D"]
+
+[node name="Mountain" type="AnimatedSprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_07bp7")
