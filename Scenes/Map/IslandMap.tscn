@@ -85,9 +85,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qo43i"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxbsw"]
 atlas = ExtResource("3_fifg2")
-region = Rect2(0, 0, 29, 21)
+region = Rect2(0, 0, 7, 5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mitjj"]
 atlas = ExtResource("5_80whm")
@@ -97,7 +97,7 @@ region = Rect2(0, 0, 29, 21)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qo43i")
+"texture": SubResource("AtlasTexture_vxbsw")
 }],
 "loop": true,
 "name": &"default",
@@ -148,6 +148,7 @@ script = ExtResource("1_supba")
 sprite_frames = SubResource("SpriteFrames_e7mx0")
 
 [node name="SouthEastBeach" type="AnimatedSprite2D" parent="Map"]
+modulate = Color(1, 1, 1, 0.0862745)
 position = Vector2(39.5, 29)
 sprite_frames = SubResource("SpriteFrames_fcvrl")
 
