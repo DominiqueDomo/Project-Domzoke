@@ -301,11 +301,11 @@
 		"yapper9": "Narrator",
 		"background9": "res://TileMaps/FieldSunrise.tscn",
 		
-		"charAq": "Goober",
-		"animAq": "GooberTinycKissing",
-		"strq": "And they kept kissing for a long, long time",
-		"posAq": "315,350",
-		"yapperq": "Narrator",
+		"charA10": "Goober",
+		"animA10": "GooberTinycKissing",
+		"str10": "And they kept kissing for a long, long time",
+		"posA10": "315,350",
+		"yapper10": "Narrator",
 	},
 	"xxxD": {
 		"charA1": "Goober",
