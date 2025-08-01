@@ -1,7 +1,79 @@
-[gd_scene load_steps=2 format=3 uid="uid://bu687cfwplast"]
+[gd_scene load_steps=12 format=3 uid="uid://bu687cfwplast"]
 
 [ext_resource type="PackedScene" uid="uid://kks3rxwdtdqh" path="res://Characters/player.tscn" id="1_4cbuq"]
+[ext_resource type="Texture2D" uid="uid://bk36fagtsmdxa" path="res://Assets/TileMaps/Testmap2.png" id="2_a844f"]
+[ext_resource type="PackedScene" uid="uid://cpjbu7xlg1adj" path="res://Characters/Dominic.tscn" id="2_jgmmx"]
+[ext_resource type="PackedScene" uid="uid://pacolmlbxgx4" path="res://Characters/Goober.tscn" id="3_abwk6"]
+[ext_resource type="PackedScene" uid="uid://b81vpymttn7f2" path="res://Characters/Beeber.tscn" id="5_2ru1w"]
+[ext_resource type="PackedScene" uid="uid://ccgd3pmhalvr8" path="res://Characters/bloober.tscn" id="5_vu7ie"]
+[ext_resource type="PackedScene" uid="uid://bgovyt4g11ciq" path="res://Characters/Plum.tscn" id="6_4f1tp"]
+[ext_resource type="PackedScene" uid="uid://dp7b08lt5p16v" path="res://Characters/Susan.tscn" id="7_456jl"]
+[ext_resource type="PackedScene" uid="uid://cvew0h61v7ujs" path="res://Characters/Tinic.tscn" id="9_osknk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5el8o"]
+atlas = ExtResource("2_a844f")
+region = Rect2(0, 0, 800, 480)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iv7xt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5el8o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="world" type="Node2D"]
+position = Vector2(32, 48)
+
+[node name="Background" type="Node2D" parent="."]
+z_index = -1
+
+[node name="map" type="StaticBody2D" parent="Background"]
+z_index = -1
+position = Vector2(32, -176)
+
+[node name="map" type="AnimatedSprite2D" parent="Background/map"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_iv7xt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Background/map"]
+position = Vector2(-34.25, 228.277)
+polygon = PackedVector2Array(2.25, 3.72273, -349.75, -12.2773, -349.75, -452.277, 394.25, -460.277, 250.25, -332.277, 290.25, -292.277, 434.25, -388.277, 434.25, 11.7227, 42.25, 11.7227, 58.25, -132.277, 154.25, -252.277, 138.25, -276.277, 58.25, -228.277, 26.25, -156.277, 2.25, -4.27727, 10.25, 3.72273, 34.25, 27.7227, 450.25, 27.7227, 450.25, -500.277, -373.75, -492.277, -373.75, 19.7227, 18.25, 11.7227)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Background/map"]
+position = Vector2(-170.144, 86.0525)
+polygon = PackedVector2Array(0.143799, -0.0525055, 0.143799, 63.9475, -63.8562, 63.9475, -63.8562, -0.0525055, -41.8562, -0.0525055, -41.8562, -1.05251, -40.8562, -1.05251, -40.8562, -4.05251, -39.8562, -4.05251, -39.8562, -0.0525055, -40.8562, -0.0525055, -40.8562, 0.947495, -55.8562, 0.947495, -55.8562, 7.94749, -61.8562, 7.94749, -61.8562, 55.9475, -55.8562, 55.9475, -55.8562, 61.9475, -7.8562, 61.9475, -7.8562, 55.9475, -1.8562, 55.9475, -1.8562, 7.94749, -7.8562, 7.94749, -7.8562, 1.94749, -7.8562, 0.947495, -22.8562, 0.947495, -22.8562, -0.0525055, -23.8562, -0.0525055, -23.8562, -4.05251, -22.8562, -4.05251, -22.8562, -1.05251, -21.8562, -1.05251, -21.8562, -0.0525055)
+
+[node name="Goober" parent="Background" instance=ExtResource("3_abwk6")]
+position = Vector2(138, -34)
+
+[node name="Beeber" parent="Background" instance=ExtResource("5_2ru1w")]
+position = Vector2(216, -85)
+
+[node name="Dominic" parent="Background" instance=ExtResource("2_jgmmx")]
+position = Vector2(122, -4)
+
+[node name="Bloober" parent="Background" instance=ExtResource("5_vu7ie")]
+position = Vector2(156, -52)
+
+[node name="Plum" parent="Background" instance=ExtResource("6_4f1tp")]
+position = Vector2(240, -2)
+scale = Vector2(-1, 1)
+
+[node name="Susan" parent="Background" instance=ExtResource("7_456jl")]
+position = Vector2(90, 45)
 
 [node name="player" parent="." instance=ExtResource("1_4cbuq")]
+z_index = 1
+position = Vector2(-170, -54)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(0, -16)
+zoom = Vector2(5, 5)
+
+[node name="TinyDominic" parent="." instance=ExtResource("9_osknk")]
+position = Vector2(170, 17)
+scale = Vector2(-1, 1)

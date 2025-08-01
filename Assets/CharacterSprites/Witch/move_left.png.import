@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvvdslxaw4l3i"
-path="res://.godot/imported/WitchIdle (1).png-6445d97d6131188f8d50d861e3a5c325.ctex"
+uid="uid://cycuyxyvegptj"
+path="res://.godot/imported/move_left.png-a1e3f01499c8f4ac04ded4b4d1329758.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/CharacterSprites/Witch/WitchIdle (1).png"
-dest_files=["res://.godot/imported/WitchIdle (1).png-6445d97d6131188f8d50d861e3a5c325.ctex"]
+source_file="res://Assets/CharacterSprites/Witch/move_left.png"
+dest_files=["res://.godot/imported/move_left.png-a1e3f01499c8f4ac04ded4b4d1329758.ctex"]
 
 [params]
 

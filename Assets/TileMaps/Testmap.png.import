@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4fv8cxqpivia"
-path="res://.godot/imported/WitchWalking.png-390a7268b6ece96ba8b0226e34f5b83c.ctex"
+uid="uid://be0r00xv07nyk"
+path="res://.godot/imported/Testmap.png-687d40a05575b74a2c1e3baa32338a7a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/CharacterSprites/Witch/WitchWalking.png"
-dest_files=["res://.godot/imported/WitchWalking.png-390a7268b6ece96ba8b0226e34f5b83c.ctex"]
+source_file="res://Assets/TileMaps/Testmap.png"
+dest_files=["res://.godot/imported/Testmap.png-687d40a05575b74a2c1e3baa32338a7a.ctex"]
 
 [params]
 

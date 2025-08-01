@@ -27,7 +27,7 @@ func _process(_delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/main.tscn")
+	get_tree().change_scene_to_file("res://Scenes/world.tscn")
 	Global.setup_convo.emit("xxxA")
 
 

@@ -1,11 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://cvew0h61v7ujs"]
+[gd_scene load_steps=21 format=3 uid="uid://cvew0h61v7ujs"]
 
 [ext_resource type="Texture2D" uid="uid://du04atyu3okmj" path="res://Assets/CharacterSprites/Other/TinyDominic.png" id="1_2hjcn"]
 [ext_resource type="Texture2D" uid="uid://e23i2liywg2" path="res://Assets/CharacterSprites/Other/TinicTalking.png" id="2_ixmr4"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_40s6n"]
-atlas = ExtResource("1_2hjcn")
-region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y8i0o"]
 atlas = ExtResource("1_2hjcn")
@@ -35,8 +31,8 @@ region = Rect2(96, 0, 16, 16)
 atlas = ExtResource("1_2hjcn")
 region = Rect2(112, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q7hwp"]
-atlas = ExtResource("2_ixmr4")
+[sub_resource type="AtlasTexture" id="AtlasTexture_40s6n"]
+atlas = ExtResource("1_2hjcn")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bx7hb"]
@@ -67,12 +63,13 @@ region = Rect2(96, 0, 16, 16)
 atlas = ExtResource("2_ixmr4")
 region = Rect2(112, 0, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_3s02k"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7hwp"]
+atlas = ExtResource("2_ixmr4")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r4fxx"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_40s6n")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_y8i0o")
 }, {
@@ -93,15 +90,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_k6cwt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40s6n")
 }],
 "loop": true,
-"name": &"TinicIdle",
-"speed": 4.0
+"name": &"idle",
+"speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q7hwp")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bx7hb")
 }, {
@@ -122,12 +119,24 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uohrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7hwp")
 }],
 "loop": true,
-"name": &"TinicTalking",
+"name": &"talking",
 "speed": 5.0
 }]
 
-[node name="TinyDominic" type="AnimatedSprite2D"]
-sprite_frames = SubResource("SpriteFrames_3s02k")
-animation = &"TinicTalking"
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b82ac"]
+size = Vector2(13, 16)
+
+[node name="TinyDominic" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_r4fxx")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_b82ac")
