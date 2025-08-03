@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://ccgd3pmhalvr8"]
+[gd_scene load_steps=36 format=3 uid="uid://ccgd3pmhalvr8"]
 
 [ext_resource type="Texture2D" uid="uid://u7s64dctpmak" path="res://Assets/CharacterSprites/Bloober/bloober-idle.png" id="1_1sbjb"]
 [ext_resource type="Texture2D" uid="uid://0qr81cvrx5nb" path="res://Assets/CharacterSprites/Bloober/bloober1.png" id="1_11wi6"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dk24jy7sa1nws" path="res://Assets/CharacterSprites/Bloober/bloober-talking-crying.png" id="2_norun"]
 [ext_resource type="Texture2D" uid="uid://ba67tk48xb70q" path="res://Assets/CharacterSprites/Bloober/bloober-idle-fez.png" id="3_25axd"]
 [ext_resource type="Texture2D" uid="uid://c16ktcildcyea" path="res://Assets/CharacterSprites/Bloober/bloober-talking-fez.png" id="4_i35dk"]
+[ext_resource type="Script" path="res://Characters/interact_area.gd" id="8_c7sdk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4vt0r"]
 radius = 7.0
@@ -212,6 +213,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3si1u"]
+radius = 7.0
+
 [node name="Bloober" type="CharacterBody2D"]
 script = ExtResource("1_137c8")
 
@@ -221,3 +225,12 @@ shape = SubResource("CircleShape2D_4vt0r")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6kmva")
 animation = &"idle_fez"
+
+[node name="InteractArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+monitoring = false
+script = ExtResource("8_c7sdk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+shape = SubResource("CircleShape2D_3si1u")

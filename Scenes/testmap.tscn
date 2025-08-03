@@ -1,0 +1,52 @@
+[gd_scene load_steps=10 format=3 uid="uid://2bpw5q8jd6u3"]
+
+[ext_resource type="PackedScene" uid="uid://pacolmlbxgx4" path="res://Characters/Goober.tscn" id="1_lfege"]
+[ext_resource type="Texture2D" uid="uid://bk36fagtsmdxa" path="res://Assets/TileMaps/Testmap2.png" id="1_r0kfr"]
+[ext_resource type="PackedScene" uid="uid://b81vpymttn7f2" path="res://Characters/Beeber.tscn" id="2_fyvsj"]
+[ext_resource type="PackedScene" uid="uid://cpjbu7xlg1adj" path="res://Characters/Dominic.tscn" id="3_8vki6"]
+[ext_resource type="PackedScene" uid="uid://ccgd3pmhalvr8" path="res://Characters/bloober.tscn" id="4_5x3n3"]
+[ext_resource type="PackedScene" uid="uid://bgovyt4g11ciq" path="res://Characters/Plum.tscn" id="5_ruwpi"]
+[ext_resource type="PackedScene" uid="uid://dp7b08lt5p16v" path="res://Characters/Susan.tscn" id="6_0ngyp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2b5ec"]
+atlas = ExtResource("1_r0kfr")
+region = Rect2(0, 0, 800, 480)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_casm3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2b5ec")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="map" type="StaticBody2D"]
+z_index = -1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(104, -48, 8, 24, -32, 232, -376, 224, -384, -224, 352, -232, 216, -112, 216, -96, 240, -72, 264, -72, 400, -160, 400, 32, 328, 64, 256, 88, 232, 88, 168, 136, 144, 240, 16, 240, 16, 112, 128, -24, 8, 104, 8, 232, 8, 248, 408, 248, 416, -256, -392, -264, -408, 248, -16, 248, 16, 24, 128, -24)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_casm3")
+
+[node name="Goober" parent="." instance=ExtResource("1_lfege")]
+position = Vector2(120, 104)
+
+[node name="Beeber" parent="." instance=ExtResource("2_fyvsj")]
+position = Vector2(192, 96)
+
+[node name="Dominic" parent="." instance=ExtResource("3_8vki6")]
+position = Vector2(80, 128)
+
+[node name="Bloober" parent="." instance=ExtResource("4_5x3n3")]
+position = Vector2(96, 176)
+
+[node name="Plum" parent="." instance=ExtResource("5_ruwpi")]
+position = Vector2(232, 192)
+scale = Vector2(-1, 1)
+
+[node name="Susan" parent="." instance=ExtResource("6_0ngyp")]
+position = Vector2(40, 208)

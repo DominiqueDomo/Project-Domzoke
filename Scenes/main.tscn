@@ -33,7 +33,6 @@ position = Vector2(507, 255)
 visible = false
 position = Vector2(629, 539)
 scale = Vector2(0.687501, 0.687501)
-animation = &"DominicIdle"
 
 [node name="Bloober" parent="." instance=ExtResource("6_h6x8r")]
 visible = false
@@ -48,7 +47,6 @@ animation = &"Samsonite"
 [node name="Goober" parent="." instance=ExtResource("4_nhhot")]
 visible = false
 position = Vector2(560, 539)
-animation = &"GooberRainbow"
 
 [node name="Plum" parent="." instance=ExtResource("8_3v0y8")]
 visible = false

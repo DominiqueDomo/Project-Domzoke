@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://kks3rxwdtdqh"]
+[gd_scene load_steps=63 format=3 uid="uid://kks3rxwdtdqh"]
 
 [ext_resource type="Script" path="res://Characters/player.gd" id="1_7pcwe"]
 [ext_resource type="Texture2D" uid="uid://ldjvch1anv5b" path="res://Assets/CharacterSprites/Witch/idle_down.png" id="2_ta1c8"]
@@ -406,15 +406,40 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ergna"]
 size = Vector2(8, 8)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5bu8k"]
+size = Vector2(12, 10)
+
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_7pcwe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_kpe2p")
-animation = &"move_left"
-frame_progress = 0.553363
+animation = &"move_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_ergna")
+
+[node name="InteractionComponents" type="Node2D" parent="."]
+z_index = 1
+
+[node name="InteractionArea" type="Area2D" parent="InteractionComponents"]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InteractionComponents/InteractionArea"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_5bu8k")
+
+[node name="InteractLabel" type="Label" parent="InteractionComponents"]
+offset_left = -34.0
+offset_top = -53.0
+offset_right = 32.0
+offset_bottom = -30.0
+text = "Wauwie!"
+horizontal_alignment = 1
+vertical_alignment = 1
