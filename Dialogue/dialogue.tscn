@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://dt0l50sfesi7e"]
+[gd_scene load_steps=27 format=4 uid="uid://dt0l50sfesi7e"]
 
 [ext_resource type="Script" path="res://Dialogue/dialogue.gd" id="1_tt57t"]
 [ext_resource type="FontFile" uid="uid://c21qvmnxmr0oq" path="res://Assets/Fonts/monogram/monogram-extended.ttf" id="2_tsnxo"]
@@ -15,6 +15,11 @@
 [ext_resource type="AudioStream" uid="uid://c2bmqpr51jmh3" path="res://Assets/Audio/Bloober/Bloober3.wav" id="13_ad1ke"]
 [ext_resource type="AudioStream" uid="uid://dukugc7ccqlee" path="res://Assets/Audio/text_regular.mp3" id="14_olo8d"]
 [ext_resource type="AudioStream" uid="uid://gjti0kf4egv" path="res://Assets/Audio/narrator/Narrator.mp3" id="15_c0sgi"]
+[ext_resource type="PackedScene" uid="uid://chpu1lqd8e0xo" path="res://Dialogue/buttons/A_button.tscn" id="16_ppe8m"]
+[ext_resource type="PackedScene" uid="uid://4qam3wmq1o4a" path="res://Dialogue/buttons/B_button.tscn" id="17_yqvqe"]
+[ext_resource type="PackedScene" uid="uid://dtldcx1gosi4r" path="res://Dialogue/buttons/C_button.tscn" id="18_ddoit"]
+[ext_resource type="PackedScene" uid="uid://0h3ki50w3qky" path="res://Dialogue/buttons/D_button.tscn" id="19_gqma7"]
+[ext_resource type="PackedScene" uid="uid://csvb65k22b4my" path="res://Dialogue/buttons/button.tscn" id="20_bf2ns"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e7axy"]
 texture = ExtResource("3_yw2do")
@@ -132,3 +137,44 @@ stream = ExtResource("14_olo8d")
 [node name="NarratorAudio" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_na70e")
 volume_db = 2.605
+
+[node name="A_button" parent="." instance=ExtResource("16_ppe8m")]
+layout_mode = 1
+offset_left = 816.0
+offset_right = 816.0
+
+[node name="B_button" parent="." instance=ExtResource("17_yqvqe")]
+layout_mode = 1
+offset_left = 952.0
+offset_right = 952.0
+
+[node name="C_button" parent="." instance=ExtResource("18_ddoit")]
+visible = false
+layout_mode = 1
+offset_left = 832.0
+offset_top = 560.0
+offset_right = 832.0
+offset_bottom = 560.0
+
+[node name="D_button" parent="." instance=ExtResource("19_gqma7")]
+layout_mode = 1
+offset_left = 952.0
+offset_top = 80.0
+offset_right = 952.0
+offset_bottom = 80.0
+
+[node name="MapButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 520.0
+offset_right = 792.0
+offset_bottom = 649.0
+text = "Map
+"
+
+[node name="NextDialButton" parent="." instance=ExtResource("20_bf2ns")]
+layout_mode = 1
+offset_left = 928.0
+offset_top = 40.0
+offset_right = 928.0
+offset_bottom = 40.0

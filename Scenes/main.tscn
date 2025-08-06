@@ -1,6 +1,5 @@
-[gd_scene load_steps=18 format=3 uid="uid://y3tgdyxvyw4t"]
+[gd_scene load_steps=13 format=3 uid="uid://y3tgdyxvyw4t"]
 
-[ext_resource type="PackedScene" uid="uid://csvb65k22b4my" path="res://Dialogue/buttons/button.tscn" id="1_vmceb"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_xfwt3"]
 [ext_resource type="PackedScene" uid="uid://dt0l50sfesi7e" path="res://Dialogue/dialogue.tscn" id="2_me0ay"]
 [ext_resource type="Script" path="res://Scenes/background.gd" id="2_w87u1"]
@@ -11,10 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://b81vpymttn7f2" path="res://Characters/Beeber.tscn" id="7_dywtp"]
 [ext_resource type="PackedScene" uid="uid://7qm54nl3na07" path="res://Characters/Misc.tscn" id="7_eriic"]
 [ext_resource type="PackedScene" uid="uid://bgovyt4g11ciq" path="res://Characters/Plum.tscn" id="8_3v0y8"]
-[ext_resource type="PackedScene" uid="uid://chpu1lqd8e0xo" path="res://Dialogue/buttons/A_button.tscn" id="9_l84jl"]
-[ext_resource type="PackedScene" uid="uid://4qam3wmq1o4a" path="res://Dialogue/buttons/B_button.tscn" id="10_4tm4f"]
-[ext_resource type="PackedScene" uid="uid://dtldcx1gosi4r" path="res://Dialogue/buttons/C_button.tscn" id="11_7j7ui"]
-[ext_resource type="PackedScene" uid="uid://0h3ki50w3qky" path="res://Dialogue/buttons/D_button.tscn" id="12_w5ng7"]
 [ext_resource type="PackedScene" uid="uid://dp7b08lt5p16v" path="res://Characters/Susan.tscn" id="15_x1vfn"]
 [ext_resource type="PackedScene" uid="uid://delp8k0tl266g" path="res://Scenes/Map/IslandMap.tscn" id="16_3mav2"]
 
@@ -68,48 +63,5 @@ offset_top = 480.0
 offset_right = 214.0
 offset_bottom = 543.0
 
-[node name="NextDialButton" parent="." instance=ExtResource("1_vmceb")]
-visible = false
-offset_left = 968.0
-offset_top = 520.0
-offset_right = 968.0
-offset_bottom = 520.0
-tooltip_text = "aaaa"
-
-[node name="A_button" parent="." instance=ExtResource("9_l84jl")]
-offset_left = 832.0
-offset_top = 480.0
-offset_right = 832.0
-offset_bottom = 480.0
-
-[node name="B_button" parent="." instance=ExtResource("10_4tm4f")]
-offset_left = 968.0
-offset_top = 480.0
-offset_right = 968.0
-offset_bottom = 480.0
-
-[node name="C_button" parent="." instance=ExtResource("11_7j7ui")]
-visible = false
-offset_left = 832.0
-offset_top = 560.0
-offset_right = 832.0
-offset_bottom = 560.0
-
-[node name="D_button" parent="." instance=ExtResource("12_w5ng7")]
-offset_left = 968.0
-offset_top = 560.0
-offset_right = 968.0
-offset_bottom = 560.0
-
-[node name="MapButton" type="Button" parent="."]
-offset_left = 478.0
-offset_top = 476.0
-offset_right = 742.0
-offset_bottom = 605.0
-text = "Map
-"
-
 [node name="IslandMap" parent="." instance=ExtResource("16_3mav2")]
 position = Vector2(576, 324)
-
-[connection signal="pressed" from="MapButton" to="." method="_on_title_pressed"]

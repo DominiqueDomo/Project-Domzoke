@@ -3,16 +3,16 @@ extends Control
 #when the scene starts, a bunch of scenes will be linked to variables, so they become easier to recall later on
 @onready var dialogue = $Dialogue
 @onready var NameTag = $NameTag
-@onready var A_button = $"../A_button"
-@onready var B_button = $"../B_button"
-@onready var C_button = $"../C_button"
-@onready var D_button = $"../D_button"
-@onready var NextDialButton = $"../NextDialButton"
+@onready var A_button = $A_button
+@onready var B_button = $B_button
+@onready var C_button = $C_button
+@onready var D_button = $D_button
+@onready var NextDialButton = $NextDialButton
 @onready var DefaultAudio = $DefaultAudio
 @onready var DomoAudio = $DomoAudio
 @onready var BlooberAudio = $BlooberAudio
 @onready var GooberAudio = $GooberAudio
-@onready var MapButton = $"../MapButton"
+@onready var MapButton = $MapButton
 var visible_text_tween;
 var text := 0
 var Conversation = ""
@@ -26,26 +26,26 @@ func _ready() -> void:
 	Global.skipdialogue.connect(skipdialogue)
 	Global.testfunc.connect(testfunc)
 	#the intro will only be played if it has not been played prior
-	if Global.introplayed == false:
-		setup_convo("intro")
-		Global.introplayed = true
+	#I turned it off on 05/08/2025 because I just patched the dialogue system into world.tscn, meaning that everything breaks
+	#if Global.introplayed == false:
+		#setup_convo("intro")
+		#Global.introplayed = true
 	
 func setup_convo(convo):
 	#in order for the conversation to set up, the previous one is first discontinued
 	enddialogue()
 	MapButton.visible = false
-	$"../MapButton".visible = false
-	$"../IslandMap".visible = false
 	#gets the JSON file
 	var file = FileAccess.open("res://JSON/Dialogue.json", FileAccess.READ)
 	text = 0
 	$".".visible = true
-	$"../NextDialButton".visible = true
+	NextDialButton.visible = true
 	Global.gatekeeping = false
-	Global.dialogue_running = true
+	Global.dialogue_running = true	
 	#makes all the dialogue buttons invisible
 	for p in range(0, 4):
-		get_node("../%s" % Global.allchartypes_array[p] + "_button").visible = false
+		$D_button
+		get_node(Global.allchartypes_array[p] + "_button").visible = false
 	NextDialButton.visible = true
 	if file:
 	# Read the file's content
@@ -134,14 +134,14 @@ func display_label_text():
 				if Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charA_array[text] and Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charB_array[text] and Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charC_array[text] and Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charD_array[text]:
 				#if there is no current character on this position, the previous character should disappear
 				#AND the previous character doesn't match ANY of the current characters
-					get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]).visible = false
+					get_node(Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]).visible = false
 			#if the character exists (doesn't not exist)
 			if Global.get("char" + Global.allchartypes_array[p] + "_array")[text] != "NONE": 
 			#sets the position
 				#if the position doesn't exists 
 				if Global.get("pos" + Global.allchartypes_array[p] + "_array")[text] == "NONE":
 					#set position to the default position
-					get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_position(Global.alldefaultpos_array[p])
+					get_node(Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_position(Global.alldefaultpos_array[p])
 				else:
 					#fetch position from the JSON file
 					var posstring = Global.get("pos" + Global.allchartypes_array[p] + "_array")[text]
@@ -150,16 +150,16 @@ func display_label_text():
 					var posx = int(posstringsplit[0])
 					var posy = int(posstringsplit[1])
 					#use those variables to set the position
-					get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_position(Vector2(posx, posy))
+					get_node(Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_position(Vector2(posx, posy))
 			#sets the orientation
 				#if the orientation doesn't exist
 				if Global.get("ori" + Global.allchartypes_array[p] + "_array")[text] == "NONE":
 					#set to default orientation
-					get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_scale(Global.alldefaultscale_array[p])
+					get_node(Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_scale(Global.alldefaultscale_array[p])
 				else:
 					#if the character should not be in the default position, make it face right, or left
 					if Global.get("ori" + Global.allchartypes_array[p] + "_array")[text] == "right":
-						get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_scale(Vector2(10, 10))
+						get_node(Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_scale(Vector2(10, 10))
 					else:
 						if Global.get("ori" + Global.allchartypes_array[p] + "_array")[text] == "left":
 							get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_scale(Vector2(-10, 10))
@@ -301,7 +301,7 @@ func resetdialogue():
 	Conversation = ""
 
 	$".".visible = false
-	$"../NextDialButton".visible = false
+	NextDialButton.visible = false
 	MapButton.visible = true
 #this function will end the dialogue, it triggers if no question is asked at all
 func enddialogue():

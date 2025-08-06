@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://kks3rxwdtdqh"]
+[gd_scene load_steps=64 format=3 uid="uid://kks3rxwdtdqh"]
 
 [ext_resource type="Script" path="res://Characters/player.gd" id="1_7pcwe"]
 [ext_resource type="Texture2D" uid="uid://ldjvch1anv5b" path="res://Assets/CharacterSprites/Witch/idle_down.png" id="2_ta1c8"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cycuyxyvegptj" path="res://Assets/CharacterSprites/Witch/move_left.png" id="7_ipyyi"]
 [ext_resource type="Texture2D" uid="uid://bow0p8oow7bo6" path="res://Assets/CharacterSprites/Witch/move_right.png" id="8_an1os"]
 [ext_resource type="Texture2D" uid="uid://b6ax6eu0rw6pn" path="res://Assets/CharacterSprites/Witch/move_up.png" id="9_xucvv"]
+[ext_resource type="Theme" uid="uid://bd3a4s2vbaltu" path="res://Assets/Fonts/DefaultButton.tres" id="10_0ouyj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uvxxf"]
 atlas = ExtResource("2_ta1c8")
@@ -436,10 +437,13 @@ position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_5bu8k")
 
 [node name="InteractLabel" type="Label" parent="InteractionComponents"]
-offset_left = -34.0
-offset_top = -53.0
-offset_right = 32.0
-offset_bottom = -30.0
+custom_minimum_size = Vector2(1, 1)
+offset_left = -129.0
+offset_top = -65.0
+offset_right = 134.0
+offset_bottom = 15.0
+theme = ExtResource("10_0ouyj")
+theme_override_font_sizes/font_size = 22
 text = "Wauwie!"
 horizontal_alignment = 1
 vertical_alignment = 1
