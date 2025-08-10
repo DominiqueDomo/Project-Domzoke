@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://pacolmlbxgx4"]
+[gd_scene load_steps=69 format=3 uid="uid://pacolmlbxgx4"]
 
 [ext_resource type="Texture2D" uid="uid://0tj78uy3euq" path="res://Assets/CharacterSprites/Goober/GooberCorpse.png" id="1_o1yjv"]
 [ext_resource type="Script" path="res://Characters/goober.gd" id="1_qb3ek"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dmkvg1inko705" path="res://Assets/CharacterSprites/Goober/GooberHappy.png" id="4_jhi74"]
 [ext_resource type="Texture2D" uid="uid://bsis2fqqumk7k" path="res://Assets/CharacterSprites/Goober/GooberSad.png" id="5_615rr"]
 [ext_resource type="Texture2D" uid="uid://dew1o0do6vl68" path="res://Assets/CharacterSprites/Goober/GooberSleepdeprived.png" id="6_6grsi"]
+[ext_resource type="Texture2D" uid="uid://bojjt4btmygql" path="res://Assets/CharacterSprites/Goober/GooberSpin.png" id="7_c1qfj"]
 [ext_resource type="Texture2D" uid="uid://c4h816q37vtvu" path="res://Assets/CharacterSprites/Goober/GooberSadIdle.png" id="9_5n5sa"]
 [ext_resource type="Texture2D" uid="uid://bqr0ms7ay6kof" path="res://Assets/CharacterSprites/Goober/GooberTalking.png" id="10_mk7w8"]
 [ext_resource type="Texture2D" uid="uid://dgsqx7hlx7qe1" path="res://Assets/CharacterSprites/Goober/GooberTinycKiss.png" id="11_xyf4b"]
@@ -92,6 +93,34 @@ region = Rect2(32, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ohlqi"]
 atlas = ExtResource("9_5n5sa")
 region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvfix"]
+atlas = ExtResource("7_c1qfj")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdogf"]
+atlas = ExtResource("7_c1qfj")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgyqp"]
+atlas = ExtResource("7_c1qfj")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jb043"]
+atlas = ExtResource("7_c1qfj")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16fbw"]
+atlas = ExtResource("7_c1qfj")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvcse"]
+atlas = ExtResource("7_c1qfj")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjvfc"]
+atlas = ExtResource("7_c1qfj")
+region = Rect2(0, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8gtyr"]
 atlas = ExtResource("11_xyf4b")
@@ -286,6 +315,32 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_dvfix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdogf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgyqp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jb043")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16fbw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvcse")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjvfc")
+}],
+"loop": true,
+"name": &"idle_spin",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_8gtyr")
 }, {
 "duration": 1.0,
@@ -401,8 +456,7 @@ script = ExtResource("1_qb3ek")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7huwb")
-animation = &"talking"
-frame_progress = 0.688017
+animation = &"idle_spin"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0)

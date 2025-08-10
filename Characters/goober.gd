@@ -1,4 +1,4 @@
 extends CharacterBody2D
 
 func _ready() -> void:
-	$AnimatedSprite2D.play("idle")
+	$AnimatedSprite2D.play("idle_spin")

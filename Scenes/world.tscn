@@ -12,21 +12,22 @@ position = Vector2(32, 48)
 z_index = -1
 
 [node name="map" parent="Background" instance=ExtResource("1_332fi")]
-position = Vector2(-32, -48)
+position = Vector2(-224, -128)
 
 [node name="player" parent="." instance=ExtResource("1_4cbuq")]
 z_index = 1
-position = Vector2(-232, 72)
+position = Vector2(-72, 16)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(0, -16)
 zoom = Vector2(5, 5)
 
 [node name="Control" parent="player/Camera2D" instance=ExtResource("3_uomqb")]
-offset_left = -104.0
-offset_top = -16.0
-offset_right = -64.0
-offset_bottom = 24.0
+offset_left = -115.0
+offset_top = 29.0
+offset_right = -75.0
+offset_bottom = 69.0
+scale = Vector2(0.2, 0.2)
 
 [node name="TinyDominic" parent="." instance=ExtResource("9_osknk")]
 position = Vector2(170, 17)
