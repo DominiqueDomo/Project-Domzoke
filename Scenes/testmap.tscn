@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://2bpw5q8jd6u3"]
+[gd_scene load_steps=15 format=4 uid="uid://2bpw5q8jd6u3"]
 
 [ext_resource type="PackedScene" uid="uid://pacolmlbxgx4" path="res://Characters/Goober.tscn" id="1_lfege"]
 [ext_resource type="TileSet" uid="uid://btltbyi84vj81" path="res://TileMaps/testmap.tres" id="1_ls8qe"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://dp7b08lt5p16v" path="res://Characters/Susan.tscn" id="6_0ngyp"]
 [ext_resource type="PackedScene" uid="uid://cvew0h61v7ujs" path="res://Characters/Tinic.tscn" id="9_23see"]
 [ext_resource type="PackedScene" uid="uid://ctv0rh4g023ep" path="res://Characters/mr_gamblemoney.tscn" id="10_yoyur"]
+[ext_resource type="PackedScene" uid="uid://dasuft67i10ow" path="res://Items/TreasureChest.tscn" id="11_k0huq"]
+[ext_resource type="PackedScene" uid="uid://dhlkp4w65384y" path="res://Characters/interactibleTemplate.tscn" id="12_cwjj1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8njkq"]
 texture = ExtResource("2_hdwn3")
@@ -166,3 +168,9 @@ scale = Vector2(-1, 1)
 
 [node name="MrGamblemoney" parent="." instance=ExtResource("10_yoyur")]
 position = Vector2(700, 367)
+
+[node name="TreasureChest" parent="." instance=ExtResource("11_k0huq")]
+position = Vector2(60, 559)
+
+[node name="template" parent="." instance=ExtResource("12_cwjj1")]
+position = Vector2(4, 471)

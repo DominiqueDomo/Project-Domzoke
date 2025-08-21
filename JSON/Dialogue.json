@@ -24,5 +24,25 @@
 		"yapper3": "You",
 		"str3": "Crazy?",
 	},
+	"AAAA": {
+		"yapper1": "Bloober",
+		"str1": "Yello! I heard the new dialogue system is working?",
+		
+		"yapper2": "Bloober",
+		"str2": "That's crazy",
+		
+		"yapper3": "You",
+		"str3": "Crazy?",
+	},
+	"TreasureChest": {
+		"yapper1": "Narrator",
+		"str1": "It's a treasure chest",
+		
+		"yapper2": "Narrator",
+		"str2": "Hhmm...",
+		
+		"yapper3": "Narrator",
+		"str3": "You can't open it.",
+	},
   }
 }

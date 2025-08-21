@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://pacolmlbxgx4"]
+[gd_scene load_steps=71 format=3 uid="uid://pacolmlbxgx4"]
 
 [ext_resource type="Texture2D" uid="uid://0tj78uy3euq" path="res://Assets/CharacterSprites/Goober/GooberCorpse.png" id="1_o1yjv"]
 [ext_resource type="Script" path="res://Characters/goober.gd" id="1_qb3ek"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c4h816q37vtvu" path="res://Assets/CharacterSprites/Goober/GooberSadIdle.png" id="9_5n5sa"]
 [ext_resource type="Texture2D" uid="uid://bqr0ms7ay6kof" path="res://Assets/CharacterSprites/Goober/GooberTalking.png" id="10_mk7w8"]
 [ext_resource type="Texture2D" uid="uid://dgsqx7hlx7qe1" path="res://Assets/CharacterSprites/Goober/GooberTinycKiss.png" id="11_xyf4b"]
+[ext_resource type="Script" path="res://Characters/interact_area.gd" id="14_oo2l8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_58vbo"]
 atlas = ExtResource("1_o1yjv")
@@ -451,6 +452,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_remy7"]
 size = Vector2(17, 16)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_7jpml"]
+radius = 7.0
+
 [node name="Goober" type="CharacterBody2D"]
 input_pickable = true
 script = ExtResource("1_qb3ek")
@@ -462,5 +466,13 @@ animation = &"idle_spin"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_remy7")
+
+[node name="Interactible" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("14_oo2l8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactible"]
+shape = SubResource("CircleShape2D_7jpml")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

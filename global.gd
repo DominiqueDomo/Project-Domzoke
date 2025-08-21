@@ -50,5 +50,5 @@ signal setup_convo
 signal loadbackground
 signal buttonsappear
 signal skipdialogue
-
+signal interacted
 signal testfunc

@@ -57,21 +57,19 @@ func play_idle_animation(direction):
 	elif direction.y < 0:
 		$AnimatedSprite2D.play("idle_up")
 
-
-
 func _on_interaction_area_area_entered(area):
 	all_interactions.insert(0, area)
 	print(all_interactions)
-	update_interactions()
 
 func _on_interaction_area_area_exited(area):
 	all_interactions.erase(area)
-	update_interactions()
-
-func update_interactions():
-	if all_interactions:
-		interactLabel.text = all_interactions[0].interact_label
-		print(get_node("res://Characters/bloober.tscn"))
-	else:
-		interactLabel.text = ""
 	
+func _input(event):
+	if event.is_action_pressed("interact"):
+		if Global.dialogue_running == true:
+			if Global.gatekeeping == false:
+				Global.display_label_text.emit()
+			else:
+				Global.skipdialogue.emit()
+		elif all_interactions and Global.dialogue_running == false:
+			Global.interacted.emit(all_interactions[0].interact_label)

@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+@export var interact_label = "template" 
+@export var interact_type = "dialogue"
+@export var interact_value = "none"
 @onready var sprite = $AnimatedSprite2D
 
 func _ready() -> void:
@@ -7,6 +10,6 @@ func _ready() -> void:
 	sprite.play("idle")
 	
 func interacted(target):
-	var interact_label = $Interactible.interact_label
 	if target == interact_label:
+		print("hsjafhsaj")
 		Global.setup_convo.emit("NewWorld")

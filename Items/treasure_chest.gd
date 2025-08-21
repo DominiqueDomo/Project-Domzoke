@@ -1,6 +1,6 @@
-extends CharacterBody2D
+extends StaticBody2D
 
-@export var interact_label = "Bloober" 
+@export var interact_label = "TreasureChest" 
 @export var interact_type = "dialogue"
 @export var interact_value = "none"
 @onready var sprite = $AnimatedSprite2D
@@ -11,4 +11,4 @@ func _ready() -> void:
 	
 func interacted(target):
 	if target == interact_label:
-		Global.setup_convo.emit("AAAA")
+		Global.setup_convo.emit("TreasureChest")
