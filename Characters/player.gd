@@ -1,6 +1,8 @@
 extends CharacterBody2D
 @onready var InteractionComponents = $InteractionComponents
 @onready var all_interactions = []
+@onready var interactLabel = $InteractionComponents/InteractLabel
+
 
 var last_direction = Vector2(1, 0)
 const SPEED = 100.0
@@ -60,7 +62,16 @@ func play_idle_animation(direction):
 func _on_interaction_area_area_entered(area):
 	all_interactions.insert(0, area)
 	print(all_interactions)
+	update_interactions()
 
 func _on_interaction_area_area_exited(area):
 	all_interactions.erase(area)
+	update_interactions()
+
+func update_interactions():
+	if all_interactions:
+		interactLabel.text = all_interactions[0].interact_label
+		print(get_node("res://Characters/bloober.tscn"))
+	else:
+		interactLabel.text = ""
 	

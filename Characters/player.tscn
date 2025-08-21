@@ -440,7 +440,6 @@ one_way_collision_margin = 0.0
 debug_color = Color(0.522027, 0.41723, 1, 0.42)
 
 [node name="InteractLabel" type="Label" parent="InteractionComponents"]
-visible = false
 custom_minimum_size = Vector2(1, 1)
 offset_left = -129.0
 offset_top = -65.0
