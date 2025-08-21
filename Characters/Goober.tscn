@@ -452,6 +452,7 @@ animations = [{
 size = Vector2(17, 16)
 
 [node name="Goober" type="CharacterBody2D"]
+input_pickable = true
 script = ExtResource("1_qb3ek")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -461,3 +462,5 @@ animation = &"idle_spin"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_remy7")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

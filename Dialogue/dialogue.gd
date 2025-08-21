@@ -12,7 +12,7 @@ extends Control
 @onready var DomoAudio = $DomoAudio
 @onready var BlooberAudio = $BlooberAudio
 @onready var GooberAudio = $GooberAudio
-@onready var MapButton = $MapButton
+@onready var DialogueReader = $"."
 var visible_text_tween;
 var text := 0
 var Conversation = ""
@@ -34,17 +34,15 @@ func _ready() -> void:
 func setup_convo(convo):
 	#in order for the conversation to set up, the previous one is first discontinued
 	enddialogue()
-	MapButton.visible = false
 	#gets the JSON file
 	var file = FileAccess.open("res://JSON/Dialogue.json", FileAccess.READ)
 	text = 0
-	$".".visible = true
+	DialogueReader.visible = true
 	NextDialButton.visible = true
 	Global.gatekeeping = false
 	Global.dialogue_running = true	
 	#makes all the dialogue buttons invisible
 	for p in range(0, 4):
-		$D_button
 		get_node(Global.allchartypes_array[p] + "_button").visible = false
 	NextDialButton.visible = true
 	if file:
@@ -126,56 +124,7 @@ func display_label_text():
 		#if a background is given, set the background to that variable
 		if Global.background_array[text] != "NONE":
 			Global.loadbackground.emit(Global.background_array[text])
-		#checks if there's a character at this spot in the conversation
-		for p in range(0, 4):
-			#checks if previous character matches ANY of the current characters; if they don't match, then removes previous character
-			#it also just doesn't activate if it's on line 0, because there is no value -1
-			if text != 0 and (Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]) != "NONE":
-				if Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charA_array[text] and Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charB_array[text] and Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charC_array[text] and Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charD_array[text]:
-				#if there is no current character on this position, the previous character should disappear
-				#AND the previous character doesn't match ANY of the current characters
-					get_node(Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]).visible = false
-			#if the character exists (doesn't not exist)
-			if Global.get("char" + Global.allchartypes_array[p] + "_array")[text] != "NONE": 
-			#sets the position
-				#if the position doesn't exists 
-				if Global.get("pos" + Global.allchartypes_array[p] + "_array")[text] == "NONE":
-					#set position to the default position
-					get_node(Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_position(Global.alldefaultpos_array[p])
-				else:
-					#fetch position from the JSON file
-					var posstring = Global.get("pos" + Global.allchartypes_array[p] + "_array")[text]
-					#split position into x and y variables
-					var posstringsplit = posstring.split(",")
-					var posx = int(posstringsplit[0])
-					var posy = int(posstringsplit[1])
-					#use those variables to set the position
-					get_node(Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_position(Vector2(posx, posy))
-			#sets the orientation
-				#if the orientation doesn't exist
-				if Global.get("ori" + Global.allchartypes_array[p] + "_array")[text] == "NONE":
-					#set to default orientation
-					get_node(Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_scale(Global.alldefaultscale_array[p])
-				else:
-					#if the character should not be in the default position, make it face right, or left
-					if Global.get("ori" + Global.allchartypes_array[p] + "_array")[text] == "right":
-						get_node(Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_scale(Vector2(10, 10))
-					else:
-						if Global.get("ori" + Global.allchartypes_array[p] + "_array")[text] == "left":
-							get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_scale(Vector2(-10, 10))
-						else:
-						#fetch scale from the JSON file
-							var oristring = Global.get("ori" + Global.allchartypes_array[p] + "_array")[text]
-						#split scale into x and y variables
-							var oristringsplit = oristring.split(",")
-							var orix = int(oristringsplit[0])
-							var oriy = int(oristringsplit[1])
-							#use those variables to set the ori
-							get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).set_scale(Vector2(orix, oriy))
-			#makes character visible
-				get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).visible = true
-			#makes character play correct animation
-				get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text]).play(Global.get("anim" + Global.allchartypes_array[p] + "_array")[text])
+		#Checks if there's a function given in the dialogue
 		if Global.func_array[text] != "NONE":
 			Global.localfunc_array = Global.func_array[text].rsplit(",", false, 0)
 			call(Global.localfunc_array[0])
@@ -302,14 +251,9 @@ func resetdialogue():
 
 	$".".visible = false
 	NextDialButton.visible = false
-	MapButton.visible = true
 #this function will end the dialogue, it triggers if no question is asked at all
 func enddialogue():
 #when strings in the conversation run out, makes all remaining characters disappear
-	if text > 0:
-		for r in range(0, 4):
-			if Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1] != "NONE": 
-				get_node("../%s" % Global.get("char" + Global.allchartypes_array[r] + "_array")[text-1]).visible = false
 #resets all variables necessary for displaying the text
 	text = 0
 	for t in range (0, Global.allvars_array.size()):

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctv0rh4g023ep"]
+
+[ext_resource type="Texture2D" uid="uid://byahvlxqa6ppu" path="res://Assets/CharacterSprites/MrGamblemoney/idle.png" id="1_t0ci5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qydar"]
+atlas = ExtResource("1_t0ci5")
+region = Rect2(0, 0, 45, 71)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l6s6m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qydar")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="MrGamblemoney" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_l6s6m")
+animation = &"idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-15, 34, 14, 32, 12, -11, 21, -14, 18, -18, 11, -20, 9, -35, -8, -31, -9, -13, -11, 10)

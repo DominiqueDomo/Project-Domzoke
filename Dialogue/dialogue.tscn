@@ -89,7 +89,7 @@ stream_2/stream = ExtResource("13_ad1ke")
 streams_count = 1
 stream_0/stream = ExtResource("15_c0sgi")
 
-[node name="Control" type="Control"]
+[node name="DialogueReader" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -149,12 +149,11 @@ offset_left = 952.0
 offset_right = 952.0
 
 [node name="C_button" parent="." instance=ExtResource("18_ddoit")]
-visible = false
 layout_mode = 1
-offset_left = 832.0
-offset_top = 560.0
-offset_right = 832.0
-offset_bottom = 560.0
+offset_left = 816.0
+offset_top = 80.0
+offset_right = 816.0
+offset_bottom = 80.0
 
 [node name="D_button" parent="." instance=ExtResource("19_gqma7")]
 layout_mode = 1
@@ -162,15 +161,6 @@ offset_left = 952.0
 offset_top = 80.0
 offset_right = 952.0
 offset_bottom = 80.0
-
-[node name="MapButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 528.0
-offset_top = 520.0
-offset_right = 792.0
-offset_bottom = 649.0
-text = "Map
-"
 
 [node name="NextDialButton" parent="." instance=ExtResource("20_bf2ns")]
 layout_mode = 1
