@@ -1,12 +1,11 @@
 extends CharacterBody2D
 
 @onready var sprite = $AnimatedSprite2D
-
+@export var interact_label = "Goober" 
 func _ready() -> void:
 	Global.interacted.connect(interacted)
 	sprite.play("idle")
 	
 func interacted(target):
-	var interact_label = $Interactible.interact_label
 	if target == interact_label:
 		Global.setup_convo.emit("NewWorld")

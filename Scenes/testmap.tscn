@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=4 uid="uid://2bpw5q8jd6u3"]
+[gd_scene load_steps=15 format=4 uid="uid://bfir2e1d5lprg"]
 
 [ext_resource type="PackedScene" uid="uid://pacolmlbxgx4" path="res://Characters/Goober.tscn" id="1_lfege"]
-[ext_resource type="TileSet" uid="uid://btltbyi84vj81" path="res://TileMaps/testmap.tres" id="1_ls8qe"]
+[ext_resource type="TileSet" uid="uid://cfu3qnob5hdby" path="res://TileMaps/testmap.tres" id="1_ls8qe"]
 [ext_resource type="PackedScene" uid="uid://b81vpymttn7f2" path="res://Characters/Beeber.tscn" id="2_fyvsj"]
 [ext_resource type="Texture2D" uid="uid://bkkv7oinytlk5" path="res://Assets/TileMaps/Testmap3/GrassTestSheet.png" id="2_hdwn3"]
 [ext_resource type="PackedScene" uid="uid://cpjbu7xlg1adj" path="res://Characters/Dominic.tscn" id="3_8vki6"]
@@ -9,9 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://bgovyt4g11ciq" path="res://Characters/Plum.tscn" id="5_ruwpi"]
 [ext_resource type="PackedScene" uid="uid://dp7b08lt5p16v" path="res://Characters/Susan.tscn" id="6_0ngyp"]
 [ext_resource type="PackedScene" uid="uid://cvew0h61v7ujs" path="res://Characters/Tinic.tscn" id="9_23see"]
-[ext_resource type="PackedScene" uid="uid://ctv0rh4g023ep" path="res://Characters/mr_gamblemoney.tscn" id="10_yoyur"]
+[ext_resource type="PackedScene" uid="uid://cjggqkk8pfb7u" path="res://Characters/mr_gamblemoney.tscn" id="10_yoyur"]
 [ext_resource type="PackedScene" uid="uid://dasuft67i10ow" path="res://Items/TreasureChest.tscn" id="11_k0huq"]
-[ext_resource type="PackedScene" uid="uid://dhlkp4w65384y" path="res://Characters/interactibleTemplate.tscn" id="12_cwjj1"]
+[ext_resource type="PackedScene" uid="uid://b8g088k7kc4am" path="res://Characters/interactibleTemplate.tscn" id="12_cwjj1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8njkq"]
 texture = ExtResource("2_hdwn3")

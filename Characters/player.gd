@@ -72,4 +72,4 @@ func _input(event):
 			else:
 				Global.skipdialogue.emit()
 		elif all_interactions and Global.dialogue_running == false:
-			Global.interacted.emit(all_interactions[0].interact_label)
+			Global.interacted.emit((all_interactions[0].get_parent()).interact_label)

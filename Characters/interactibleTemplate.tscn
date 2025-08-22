@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dhlkp4w65384y"]
+[gd_scene load_steps=34 format=3 uid="uid://b8g088k7kc4am"]
 
 [ext_resource type="Script" path="res://Characters/interactible_template.gd" id="1_no8dy"]
 [ext_resource type="Texture2D" uid="uid://u7s64dctpmak" path="res://Assets/CharacterSprites/Bloober/bloober-idle.png" id="2_dr5mw"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://0qr81cvrx5nb" path="res://Assets/CharacterSprites/Bloober/bloober1.png" id="5_i0q8g"]
 [ext_resource type="Texture2D" uid="uid://c16ktcildcyea" path="res://Assets/CharacterSprites/Bloober/bloober-talking-fez.png" id="6_acnsv"]
 [ext_resource type="Texture2D" uid="uid://dk24jy7sa1nws" path="res://Assets/CharacterSprites/Bloober/bloober-talking-crying.png" id="7_67xh8"]
-[ext_resource type="Script" path="res://Characters/interact_area.gd" id="8_saykg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1issf"]
 atlas = ExtResource("2_dr5mw")
@@ -226,7 +225,6 @@ shape = SubResource("CircleShape2D_3si1u")
 [node name="Interactible" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("8_saykg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactible"]
 shape = SubResource("CircleShape2D_3si1u")

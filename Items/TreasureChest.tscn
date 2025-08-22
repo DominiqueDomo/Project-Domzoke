@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dasuft67i10ow"]
+[gd_scene load_steps=5 format=3 uid="uid://dasuft67i10ow"]
 
 [ext_resource type="Script" path="res://Items/treasure_chest.gd" id="1_8lefo"]
 [ext_resource type="Texture2D" uid="uid://ob1j33180p65" path="res://Assets/ItemSprites/TreasureChest.png" id="2_m40lg"]
-[ext_resource type="Script" path="res://Characters/interact_area.gd" id="3_0d6if"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_avrdt"]
 atlas = ExtResource("2_m40lg")
@@ -32,7 +31,6 @@ polygon = PackedVector2Array(14, -5, 14, -2, 13, -2, 13, 1, 12, 1, 12, 2, 11, 2,
 [node name="Interactible" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("3_0d6if")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Interactible"]
 polygon = PackedVector2Array(14, -5, 14, -2, 13, -2, 13, 1, 12, 1, 12, 2, 11, 2, 11, 9, 10, 9, 10, 10, -10, 10, -10, 9, -11, 9, -11, 2, -12, 2, -12, 1, -13, 1, -13, -2, -14, -2, -14, -5, -13, -5, -13, -7, -12, -7, -12, -8, -11, -8, -11, -9, -5, -9, -5, -8, 5, -8, 5, -9, 11, -9, 11, -8, 12, -8, 12, -7, 13, -7, 13, -5)
