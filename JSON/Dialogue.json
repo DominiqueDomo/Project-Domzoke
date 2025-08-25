@@ -15,10 +15,10 @@
 		"optionD": "",
 	},
 	"NewWorld": {
-		"yapper1": "Narrator",
-		"str1": "Omg it's working",
+		"yapper1": "Goober",
+		"str1": "Wauwie! it's working",
 		
-		"yapper2": "Narrator",
+		"yapper2": "Goober",
 		"str2": "That's crazy",
 		
 		"yapper3": "You",
@@ -32,8 +32,39 @@
 		"str2": "That's crazy",
 		
 		"yapper3": "You",
-		"str3": "Crazy?",
+		"str3": "Cr-?",
+		
+		"yapperq": "Bloober",
+		"strq": "Please don't do this",
+		"buttonA": "Crazy?",
+		"buttonB": "Stop this nonsense",
+		"optionA": "AAAB",
+		"optionB": "AAAC",
 	},
+	"AAAB": {
+		"yapper1": "You",
+		"str1": "I was crazy once",
+		
+		"yapper2": "You",
+		"str2": "They locked me in a room",
+		
+		"yapper3": "You",
+		"str3": "A rubber room",
+		
+		"yapper4": "You",
+		"str4": "A rubber room with rats",
+		
+		"yapperq": "You",
+		"strq": "And the rats made me crazy!",
+		"buttonA": "Crazy?",
+		"buttonB": "Stop this nonsense",
+		"optionA": "AAAB",
+		"optionB": "AAAC",
+	},
+	"AAAC": {
+		"yapper1": "Bloober",
+		"str1": "Your mercy will not be forgotten",
+		},
 	"TreasureChest": {
 		"yapper1": "Narrator",
 		"str1": "It's a treasure chest",
@@ -43,6 +74,36 @@
 		
 		"yapper3": "Narrator",
 		"str3": "You can't open it.",
+	},
+	"Susan": {
+		"yapper1": "Susan",
+		"str1": "Just you wait until you have a currency",
+		
+		"yapper2": "Susan",
+		"str2": "I will steal everything you love",
+		
+		"yapper3": "Susan",
+		"str3": "Mmhh... Go get some possesions and then come back to me",
+	},
+	"NielsMouwen": {
+		"yapper1": "Niels Mouwen",
+		"str1": "Hey Girrrrllll, weet je hoe het atoom voor cesium eruit ziet.",
+		
+		"yapper2": "Niels Mouwen",
+		"str2": "Ahem! Cesium heeft 55 protonen (en dus electronen) en 78 neutronen!",
+		
+		"yapper3": "You",
+		"str3": "I don't care",
+	},
+	"Egg": {
+		"yapper1": "You",
+		"str1": "Oh boy I'd like to see this egg hatch!",
+		
+		"yapper2": "Narrator",
+		"str2": "The egg isn't hatching yet",
+		
+		"yapper3": "Narrator",
+		"str3": "Come back when Domo figures out how to change animations",
 	},
   }
 }

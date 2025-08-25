@@ -33,6 +33,7 @@ func _ready() -> void:
 	
 func setup_convo(convo):
 	#in order for the conversation to set up, the previous one is first discontinued
+	print(convo + " start setup")
 	enddialogue()
 	#gets the JSON file
 	var file = FileAccess.open("res://JSON/Dialogue.json", FileAccess.READ)
@@ -40,7 +41,7 @@ func setup_convo(convo):
 	DialogueReader.visible = true
 	NextDialButton.visible = true
 	Global.gatekeeping = false
-	Global.dialogue_running = true	
+	Global.dialogue_running = true
 	#makes all the dialogue buttons invisible
 	for p in range(0, 4):
 		get_node(Global.allchartypes_array[p] + "_button").visible = false
@@ -105,9 +106,11 @@ func setup_convo(convo):
 									#if it's not present, it will push "NONE" into the array instead
 									Global.get(Global.allvars_array[p] + "_array").push_back("NONE")
 							# read through the JSON file, and finds everything with valuex for example
+							
 						else:
 							print("dude you're missing the var string")
-					display_label_text()
+					if Global.gatekeeping == false:
+						display_label_text()
 				else:
 					print("'" + str(convo) + "' key not found in 'Conversations'")
 			else:
@@ -116,6 +119,7 @@ func setup_convo(convo):
 			print("JSON parsing error: ", json.get_error_message())
 	else:
 		print("File not found: res://JSON/Dialogue.json")
+	print("setup is done now")
 	pass
 #This function will read through the dialogue arrays one by one, with each click of the button
 func display_label_text():
@@ -161,57 +165,11 @@ func display_label_text():
 		Global.gatekeeping = false
 	else:
 		if Conversation.has("strq"):
+			Global.questionasked = true
 			for p in range(0, 4):
 				Global.buttonsappear.emit()
 			NextDialButton.visible = false
 		#makes all the dialogue buttons visible
-			for p in range(0, 4):
-					#checks if previous character matches ANY of the current characters; if they don't match, then removes previous character
-					#it also just doesn't activate if it's on line 0, because there is no value -1
-				if text != 0:
-			#most instances of [text] have been removed, as the question falls outside of the [text] range. [text-1] remains, because that does fall within the range
-					if Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charAqvalue and Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charBqvalue and Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charCqvalue and Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1] != Global.charDqvalue:
-					#if there is no current character on this position, the previous character should disappear
-					#AND the previous character doesn't match ANY of the current characters
-						get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "_array")[text-1]).visible = false
-				#if the character exists (doesn't not exist)
-				if Global.get("char" + Global.allchartypes_array[p] + "qvalue") != "NONE": 
-					get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")).visible = true
-					get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")).play(Global.get("anim" + Global.allchartypes_array[p] + "qvalue"))
-				#sets the position
-					#if the position doesn't exists 
-					if Global.get("pos" + Global.allchartypes_array[p] + "qvalue") == "NONE":
-						#set position to the default position
-						get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")).set_position(Global.alldefaultpos_array[p])
-					else:
-						#fetch position from the JSON file
-						var posstring = Global.get("pos" + Global.allchartypes_array[p] + "qvalue")
-						#split position into x and y variables
-						var posstringsplit = posstring.split(",")
-						var posx = int(posstringsplit[0])
-						var posy = int(posstringsplit[1])
-						#use those variables to set the position
-						get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")).set_position(Vector2(posx, posy))
-					#if the orientation doesn't exist
-					if Global.get("ori" + Global.allchartypes_array[p] + "qvalue") == "NONE":
-						#set to default orientation
-						get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")).set_scale(Global.alldefaultscale_array[p])
-					else:
-						#if the character should not be in the default position, make it face right, or left
-						if Global.get("ori" + Global.allchartypes_array[p] + "qvalue") == "right":
-							get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")).set_scale(Vector2(10, 10))
-						else:
-							if Global.get("ori" + Global.allchartypes_array[p] + "qvalue")[text] == "left":
-								get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")[text]).set_scale(Vector2(-10, 10))
-							else:
-						#fetch scale from the JSON file
-								var oristring = Global.get("ori" + Global.allchartypes_array[p] + "qvalue")[text]
-							#split scale into x and y variables
-								var oristringsplit = oristring.split(",")
-								var orix = int(oristringsplit[0])
-								var oriy = int(oristringsplit[1])
-								#use those variables to set the ori
-								get_node("../%s" % Global.get("char" + Global.allchartypes_array[p] + "qvalue")[text]).set_scale(Vector2(orix, oriy))
 			#follows the same principal as the other voice variable, except this does it for q instead of x
 			var voiceplaying = ""
 			if Global.voiceqvalue != "NONE":
@@ -230,7 +188,6 @@ func display_label_text():
 					dialogue.set_visible_characters(displaying)
 					get_node(voiceplaying).play()
 					await get_tree().create_timer(0.05).timeout
-			Global.dialogue_running = false
 		else: 
 			resetdialogue()
 #this function lets the player skip to the end of a string
@@ -248,6 +205,7 @@ func resetdialogue():
 	Global.dialogue_running = false
 	visible_text_tween;
 	Conversation = ""
+	Global.questionasked = false
 
 	$".".visible = false
 	NextDialButton.visible = false

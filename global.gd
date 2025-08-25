@@ -23,6 +23,7 @@ var textValue = []
 var voiceValue = []
 var funcvalue = []
 var gatekeeping = false
+var questionasked = false
 
 var buttonAvalue = ""
 var buttonBvalue = ""
@@ -35,6 +36,7 @@ var optionDvalue = ""
 var textqValue = ""
 var voiceqvalue = ""
 var funcqvalue = ""
+var yapperqvalue = ""
 
 var localfunc_array = []
 var dialogue_running = false

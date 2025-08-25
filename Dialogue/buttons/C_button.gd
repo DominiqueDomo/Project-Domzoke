@@ -11,8 +11,7 @@ func _ready():
 	Global.buttonsappear.connect(buttonsappear)
 
 func _on_button_pressed() -> void:
-	if Global.dialogue_running == false:
-		Global.setup_convo.emit(C_option)
+	Global.setup_convo.emit(C_option)
 	#else:
 		#print("woop")
 func buttonsappear():

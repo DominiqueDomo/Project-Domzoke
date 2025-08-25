@@ -1,7 +1,7 @@
-extends CharacterBody2D
+extends StaticBody2D
 
+@export var interact_label = "NielsMouwen" 
 @onready var sprite = $AnimatedSprite2D
-@export var interact_label = "Susan" 
 @onready var selfname = $".".get_name()
 func _ready() -> void:
 	Global.interacted.connect(interacted)
@@ -9,4 +9,4 @@ func _ready() -> void:
 	
 func interacted(target):
 	if target == interact_label:
-		Global.setup_convo.emit("Susan")
+		Global.setup_convo.emit("NielsMouwen")

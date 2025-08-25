@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://kcp36tfmu6a6"]
+
+[ext_resource type="Script" path="res://Characters/niels_mouwen.gd" id="1_21y6h"]
+[ext_resource type="Texture2D" uid="uid://dhpiva8ggdruc" path="res://Assets/CharacterSprites/NielsMouwen/Nielsmouwen.png" id="2_ojfkv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_og7bq"]
+atlas = ExtResource("2_ojfkv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmiap"]
+atlas = ExtResource("2_ojfkv")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uchqc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_og7bq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tmiap")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vsi7i"]
+
+[node name="NielsMouwen" type="StaticBody2D"]
+script = ExtResource("1_21y6h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_uchqc")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vsi7i")
+
+[node name="Interactible" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactible"]
+shape = SubResource("RectangleShape2D_vsi7i")

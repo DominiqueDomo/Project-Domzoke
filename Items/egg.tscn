@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://btvvd00douad3"]
+
+[ext_resource type="Script" path="res://Items/egg.gd" id="1_xdeq6"]
+[ext_resource type="Texture2D" uid="uid://xnbmeoiaiwts" path="res://Assets/ItemSprites/egg.png" id="2_1buwm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6eonu"]
+atlas = ExtResource("2_1buwm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1orew"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6eonu")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_twmhs"]
+radius = 11.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2wqcy"]
+radius = 17.1172
+
+[node name="Egg" type="StaticBody2D"]
+script = ExtResource("1_xdeq6")
+interact_label = "NewWorld"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1orew")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_twmhs")
+
+[node name="Interactible" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactible"]
+shape = SubResource("CircleShape2D_2wqcy")

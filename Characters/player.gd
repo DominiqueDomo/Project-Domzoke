@@ -66,10 +66,10 @@ func _on_interaction_area_area_exited(area):
 	
 func _input(event):
 	if event.is_action_pressed("interact"):
-		if Global.dialogue_running == true:
+		if Global.dialogue_running == true and Global.questionasked == false:
 			if Global.gatekeeping == false:
 				Global.display_label_text.emit()
 			else:
 				Global.skipdialogue.emit()
 		elif all_interactions and Global.dialogue_running == false:
-			Global.interacted.emit((all_interactions[0].get_parent()).interact_label)
+			Global.interacted.emit((all_interactions[0].get_parent()).get_name())
