@@ -404,7 +404,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ergna"]
-size = Vector2(8, 8)
+size = Vector2(8, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bu8k"]
 size = Vector2(12, 16)
@@ -418,7 +418,7 @@ sprite_frames = SubResource("SpriteFrames_kpe2p")
 animation = &"move_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4)
+position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_ergna")
 
 [node name="InteractionComponents" type="Node2D" parent="."]

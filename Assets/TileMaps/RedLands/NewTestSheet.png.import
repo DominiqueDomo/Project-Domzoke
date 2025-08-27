@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dva23lryfp4ix"
-path="res://.godot/imported/MapMap.png-108b140a2765a101bc35f76859f45e3a.ctex"
+uid="uid://bon4ewxisl624"
+path="res://.godot/imported/NewTestSheet.png-93566171ec0e7d332489a8adcf323e3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TileMaps/MapMap.png"
-dest_files=["res://.godot/imported/MapMap.png-108b140a2765a101bc35f76859f45e3a.ctex"]
+source_file="res://Assets/TileMaps/RedLands/NewTestSheet.png"
+dest_files=["res://.godot/imported/NewTestSheet.png-93566171ec0e7d332489a8adcf323e3c.ctex"]
 
 [params]
 

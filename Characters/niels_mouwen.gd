@@ -1,6 +1,5 @@
 extends StaticBody2D
 
-@export var interact_label = "NielsMouwen" 
 @onready var sprite = $AnimatedSprite2D
 @onready var selfname = $".".get_name()
 func _ready() -> void:
@@ -8,5 +7,5 @@ func _ready() -> void:
 	sprite.play("idle")
 	
 func interacted(target):
-	if target == interact_label:
+	if target == selfname:
 		Global.setup_convo.emit("NielsMouwen")

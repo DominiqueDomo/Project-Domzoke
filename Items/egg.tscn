@@ -26,7 +26,6 @@ radius = 17.1172
 
 [node name="Egg" type="StaticBody2D"]
 script = ExtResource("1_xdeq6")
-interact_label = "NewWorld"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1orew")
