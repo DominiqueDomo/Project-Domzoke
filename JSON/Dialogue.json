@@ -16,13 +16,37 @@
 	},
 	"NewWorld": {
 		"yapper1": "Goober",
-		"str1": "Wauwie! it's working",
+		"str1": "You should join Gooberville",
 		
 		"yapper2": "Goober",
-		"str2": "That's crazy",
+		"str2": "You don't have to though",
 		
-		"yapper3": "You",
-		"str3": "Crazy?",
+		"yapper3": "Goober",
+		"str3": "Only if you want to",
+		
+		"yapper4": "Goober",
+		"str4": "Goober nation will have me",
+		
+		"yapper5": "Goober",
+		"str5": "And hopefully, you!",
+		
+		"yapper6": "Goober",
+		"str6": "Wauwie, now wouldn't that be awesome?",
+		
+		"yapper7": "Goober",
+		"str7": "We are fueled by friendship",
+		
+		"yapper8": "Goober",
+		"str8": "I wanna make more friends!",
+		
+		"yapper9": "Goober",
+		"str9": "So yeah I guess we're pretty awesome sauce! :D",
+		
+		"yapper10": "Goober",
+		"str10": "So join Gooberville today!",
+		
+		"yapper11": "Goober",
+		"str11": "I hope to see you soon!",
 	},
 	"AAAA": {
 		"yapper1": "Bloober",
