@@ -1,9 +1,9 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cim052jy5551w"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bh7sovb56lftr"]
 
-[ext_resource type="Texture2D" uid="uid://gvfysfc1gxmn" path="res://Assets/TileMaps/RedLands/RedLands1.png" id="1_k4l0c"]
+[ext_resource type="Texture2D" uid="uid://c0mwpgw4f2mmc" path="res://Assets/TileMaps/SnowLands/SnowLands.png" id="1_r5325"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ww3yx"]
-texture = ExtResource("1_k4l0c")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d3lqk"]
+texture = ExtResource("1_r5325")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -425,4 +425,4 @@ physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.156587, 0.441681, 0.362723, 1)
-sources/1 = SubResource("TileSetAtlasSource_ww3yx")
+sources/1 = SubResource("TileSetAtlasSource_d3lqk")
