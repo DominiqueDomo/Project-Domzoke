@@ -26,6 +26,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vsi7i"]
+size = Vector2(20, 30.75)
 
 [node name="NielsMouwen" type="StaticBody2D"]
 script = ExtResource("1_21y6h")
@@ -35,6 +36,7 @@ sprite_frames = SubResource("SpriteFrames_uchqc")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.25)
 shape = SubResource("RectangleShape2D_vsi7i")
 
 [node name="Interactible" type="Area2D" parent="."]
@@ -42,4 +44,5 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactible"]
+position = Vector2(0, 0.375)
 shape = SubResource("RectangleShape2D_vsi7i")

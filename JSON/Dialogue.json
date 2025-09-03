@@ -4,7 +4,7 @@
 		"yapper": "",
 		"voice": "",
 		"str": "",
-		
+		"func": "functionA(argument, otherargument)|functionB(arguement,otherargument)",
 		"buttonA": "",
 		"buttonB": "",
 		"buttonC": "",
@@ -23,30 +23,7 @@
 		
 		"yapper3": "Goober",
 		"str3": "Only if you want to",
-		
-		"yapper4": "Goober",
-		"str4": "Goober nation will have me",
-		
-		"yapper5": "Goober",
-		"str5": "And hopefully, you!",
-		
-		"yapper6": "Goober",
-		"str6": "Wauwie, now wouldn't that be awesome?",
-		
-		"yapper7": "Goober",
-		"str7": "We are fueled by friendship",
-		
-		"yapper8": "Goober",
-		"str8": "I wanna make more friends!",
-		
-		"yapper9": "Goober",
-		"str9": "So yeah I guess we're pretty awesome sauce! :D",
-		
-		"yapper10": "Goober",
-		"str10": "So join Gooberville today!",
-		
-		"yapper11": "Goober",
-		"str11": "I hope to see you soon!",
+		"func3": "Global.loadbackground('res://Scenes/secret_room.tscn')",
 	},
 	"AAAA": {
 		"yapper1": "Bloober",
@@ -111,10 +88,10 @@
 	},
 	"NielsMouwen": {
 		"yapper1": "Niels Mouwen",
-		"str1": "Hey Girrrrllll, weet je hoe het atoom voor cesium eruit ziet.",
+		"str1": "Hey Girrrrllll, weet je hoe het atoom voor cesium eruit ziet?",
 		
 		"yapper2": "Niels Mouwen",
-		"str2": "Ahem! Cesium heeft 55 protonen (en dus electronen) en 78 neutronen!",
+		"str2": "Ahem! Cesium heeft 55 protonen (en dus 55 electronen) en 78 neutronen!",
 		
 		"yapper3": "You",
 		"str3": "I don't care",

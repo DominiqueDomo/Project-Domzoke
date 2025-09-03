@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b81vpymttn7f2"]
+[gd_scene load_steps=25 format=3 uid="uid://b81vpymttn7f2"]
 
 [ext_resource type="Texture2D" uid="uid://do2m1vyh21o2c" path="res://Assets/CharacterSprites/Beeber/Beeber-Idle.png" id="1_f3yg3"]
 [ext_resource type="Script" path="res://Characters/beeber.gd" id="1_jbgy8"]
@@ -144,6 +144,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_rf3vw"]
+radius = 7.0
+
 [node name="Beeber" type="CharacterBody2D"]
 script = ExtResource("1_jbgy8")
 
@@ -155,3 +158,10 @@ shape = SubResource("RectangleShape2D_um4tr")
 sprite_frames = SubResource("SpriteFrames_e6dma")
 animation = &"idle_fez"
 frame_progress = 0.272256
+
+[node name="Interactible" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactible"]
+shape = SubResource("CircleShape2D_rf3vw")

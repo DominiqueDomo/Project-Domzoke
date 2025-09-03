@@ -1,4 +1,14 @@
 extends CharacterBody2D
 
+@onready var selfname = $".".get_name()
+@onready var sprite = $AnimatedSprite2D
+
 func _ready() -> void:
-	$AnimatedSprite2D.play("idle")
+	Global.interacted.connect(interacted)
+	sprite.play("idle")
+	
+func interacted(target):
+	"Interacted with something"
+	if target == selfname:
+		print("interacted with Beeber")
+		Global.loadbackground.emit("res://Scenes/testmap2.tscn")

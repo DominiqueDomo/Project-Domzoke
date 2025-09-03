@@ -1,12 +1,11 @@
-extends CharacterBody2D
+extends StaticBody2D
 
-@onready var selfname = $".".get_name()
 @onready var sprite = $AnimatedSprite2D
-
+@onready var selfname = $".".get_name()
 func _ready() -> void:
 	Global.interacted.connect(interacted)
 	sprite.play("idle")
 	
 func interacted(target):
 	if target == selfname:
-		Global.setup_convo.emit("AAAA")
+		Global.loadbackground.emit("res://Items/test_door.tscn")
