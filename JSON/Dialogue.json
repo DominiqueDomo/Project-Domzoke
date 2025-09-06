@@ -23,7 +23,7 @@
 		
 		"yapper3": "Goober",
 		"str3": "Only if you want to",
-		"func3": "Global.loadbackground('res://Scenes/secret_room.tscn')",
+		"func3": "testfunc()",	
 	},
 	"AAAA": {
 		"yapper1": "Bloober",

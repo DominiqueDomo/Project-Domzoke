@@ -8,4 +8,4 @@ func _ready() -> void:
 	
 func interacted(target):
 	if target == selfname:
-		Global.loadbackground.emit("res://Items/test_door.tscn")
+		Global.loadbackground.emit("res://Scenes/secret_room.tscn")

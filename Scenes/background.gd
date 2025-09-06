@@ -10,11 +10,9 @@ func _ready() -> void:
 func loadbackground(bgloaded):
 	if is_instance_valid(instance):
 		instance.queue_free()
+	print(bgloaded)
 	if bgloaded != "void":
 		background = load(bgloaded)
+		print(background)
 		instance = background.instantiate()
 		add_child(instance)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass

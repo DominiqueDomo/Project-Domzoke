@@ -59,7 +59,6 @@ func play_idle_animation(direction):
 
 func _on_interaction_area_area_entered(area):
 	all_interactions.insert(0, area)
-	print(all_interactions)
 
 func _on_interaction_area_area_exited(area):
 	all_interactions.erase(area)

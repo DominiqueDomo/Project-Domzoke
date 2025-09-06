@@ -1,28 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://bu687cfwplast"]
+[gd_scene load_steps=5 format=3 uid="uid://bu687cfwplast"]
 
 [ext_resource type="PackedScene" uid="uid://kks3rxwdtdqh" path="res://Characters/player.tscn" id="1_4cbuq"]
 [ext_resource type="Script" path="res://Scenes/background.gd" id="1_8reej"]
+[ext_resource type="Script" path="res://Scenes/camera_2d_player.gd" id="3_nw2ub"]
 [ext_resource type="PackedScene" uid="uid://dt0l50sfesi7e" path="res://Dialogue/dialogue.tscn" id="3_uomqb"]
 
 [node name="world" type="Node2D"]
-position = Vector2(32, 48)
 
 [node name="Background" type="Node2D" parent="."]
 z_index = -1
 script = ExtResource("1_8reej")
 
-[node name="player" parent="." instance=ExtResource("1_4cbuq")]
-z_index = 1
-position = Vector2(-225, -86)
-
-[node name="Camera2D" type="Camera2D" parent="player"]
-position = Vector2(0, -11)
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -19)
 zoom = Vector2(5, 5)
+limit_left = -1000
+script = ExtResource("3_nw2ub")
 
-[node name="dialogue" parent="player/Camera2D" instance=ExtResource("3_uomqb")]
+[node name="dialogue" parent="Camera2D" instance=ExtResource("3_uomqb")]
 visible = false
 offset_left = -115.0
-offset_top = 29.0
+offset_top = 30.0
 offset_right = -75.0
-offset_bottom = 69.0
+offset_bottom = 70.0
 scale = Vector2(0.2, 0.2)
+
+[node name="player" parent="." instance=ExtResource("1_4cbuq")]
+z_index = 1
+position = Vector2(0, 9)

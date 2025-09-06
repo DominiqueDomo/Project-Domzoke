@@ -130,8 +130,9 @@ func display_label_text():
 			Global.loadbackground.emit(Global.background_array[text])
 		#Checks if there's a function given in the dialogue
 		if Global.func_array[text] != "NONE":
-			Global.localfunc_array = Global.func_array[text].rsplit(",", false, 0)
-			call(Global.localfunc_array[0])
+			Global.localfunc_array = Global.func_array[text].rsplit("|", false, 0)
+			var argument = "test"
+			Global.localfunc_array[0].emit(argument)
 		#makes sure that the current voice is empty
 		var voiceplaying = ""
 		#if there is a voice given in the JSON, it will take that voice
@@ -219,8 +220,8 @@ func enddialogue():
 	resetdialogue()
 	#print(Global.gatekeeping)
 #this is the test function
-func testfunc():
-	print("Omg it works! Awesome!!")
+func testfunc(argument):
+	print("Omg it works! Awesome!!" +  argument)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
