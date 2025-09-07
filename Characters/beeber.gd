@@ -8,7 +8,5 @@ func _ready() -> void:
 	sprite.play("idle")
 	
 func interacted(target):
-	"Interacted with something"
 	if target == selfname:
-		print("interacted with Beeber")
 		Global.loadbackground.emit("res://Scenes/testmap2.tscn")

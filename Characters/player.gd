@@ -59,7 +59,10 @@ func play_idle_animation(direction):
 
 func _on_interaction_area_area_entered(area):
 	all_interactions.insert(0, area)
-
+	print(all_interactions[0])
+	print(str((all_interactions[0]).get_name()))
+	#Global.hitboxentered.emit((all_interactions[0]).get_name())
+	Global.hitboxentered.emit("gloop")
 func _on_interaction_area_area_exited(area):
 	all_interactions.erase(area)
 	

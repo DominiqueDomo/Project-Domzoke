@@ -45,6 +45,9 @@ var displayrange
 var loadedbackground = null
 var introplayed = false
 
+var player
+var entrypoint1
+
 signal display_label_text
 signal resetdialogue
 signal enddialogue
@@ -53,4 +56,5 @@ signal loadbackground
 signal buttonsappear
 signal skipdialogue
 signal interacted
+signal hitboxentered
 signal testfunc

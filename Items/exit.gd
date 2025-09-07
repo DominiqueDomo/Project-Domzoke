@@ -1,14 +1,14 @@
-extends StaticBody2D
+extends Area2D
 #in order to use this item, the NODE of it must contain 2 labels; one for entrypoint and one for location
-@onready var sprite = $AnimatedSprite2D
-@onready var selfname = $".".get_name()
 @onready var entrypointnum = $entrypoint.text
 @onready var location = $location.text
-func _ready() -> void:
-	Global.interacted.connect(interacted)
-	sprite.play("idle")
+@onready var selfname = $".".get_name()
 
+func _ready() -> void:
+	Global.interacted.connect(hitboxentered)
+	print(selfname)
 	
-func interacted(target):
+func hitboxentered(target):
+	print(target + ": " + selfname)
 	if target == selfname:
 		Global.loadbackground.emit(location, entrypointnum)

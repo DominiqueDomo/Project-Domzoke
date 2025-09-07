@@ -1,9 +1,61 @@
-[gd_scene load_steps=5 format=3 uid="uid://bu687cfwplast"]
+[gd_scene load_steps=9 format=3 uid="uid://bu687cfwplast"]
 
 [ext_resource type="PackedScene" uid="uid://kks3rxwdtdqh" path="res://Characters/player.tscn" id="1_4cbuq"]
 [ext_resource type="Script" path="res://Scenes/background.gd" id="1_8reej"]
 [ext_resource type="Script" path="res://Scenes/camera_2d_player.gd" id="3_nw2ub"]
 [ext_resource type="PackedScene" uid="uid://dt0l50sfesi7e" path="res://Dialogue/dialogue.tscn" id="3_uomqb"]
+
+[sub_resource type="Animation" id="Animation_t8hs8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.001, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_glv8q"]
+resource_name = "fade_to_normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_eopmx"]
+resource_name = "unblack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 0.933333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kpxc8"]
+_data = {
+"RESET": SubResource("Animation_t8hs8"),
+"fade_to_normal": SubResource("Animation_glv8q"),
+"unblack": SubResource("Animation_eopmx")
+}
 
 [node name="world" type="Node2D"]
 
@@ -11,20 +63,37 @@
 z_index = -1
 script = ExtResource("1_8reej")
 
+[node name="TransitionScreen" type="CanvasLayer" parent="Background"]
+
+[node name="ColorRect" type="ColorRect" parent="Background/TransitionScreen"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/TransitionScreen"]
+libraries = {
+"": SubResource("AnimationLibrary_kpxc8")
+}
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -19)
 zoom = Vector2(5, 5)
 limit_left = -1000
 script = ExtResource("3_nw2ub")
 
-[node name="dialogue" parent="Camera2D" instance=ExtResource("3_uomqb")]
-visible = false
-offset_left = -115.0
-offset_top = 30.0
-offset_right = -75.0
-offset_bottom = 70.0
-scale = Vector2(0.2, 0.2)
-
 [node name="player" parent="." instance=ExtResource("1_4cbuq")]
 z_index = 1
 position = Vector2(0, 9)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="dialogue" parent="CanvasLayer" instance=ExtResource("3_uomqb")]
+visible = false
+offset_top = 464.0
+offset_bottom = 504.0
+
+[connection signal="animation_finished" from="Background/TransitionScreen/AnimationPlayer" to="Background" method="_on_animation_player_animation_finished"]

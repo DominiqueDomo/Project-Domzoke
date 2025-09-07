@@ -64,4 +64,5 @@ offset_right = 214.0
 offset_bottom = 543.0
 
 [node name="IslandMap" parent="." instance=ExtResource("16_3mav2")]
+visible = false
 position = Vector2(576, 324)
