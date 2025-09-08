@@ -46,7 +46,6 @@ var loadedbackground = null
 var introplayed = false
 
 var player
-var entrypoint1
 
 signal display_label_text
 signal resetdialogue

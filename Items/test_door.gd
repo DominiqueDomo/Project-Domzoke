@@ -1,7 +1,7 @@
 extends StaticBody2D
 #in order to use this item, the NODE of it must contain 2 labels; one for entrypoint and one for location
 @onready var sprite = $AnimatedSprite2D
-@onready var selfname = $"Interactible".get_name()
+@onready var selfname = $".".get_name()
 @onready var entrypointnum = $entrypoint.text
 @onready var location = $location.text
 func _ready() -> void:

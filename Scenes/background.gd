@@ -31,9 +31,11 @@ func transition():
 		background = load(Global.backgroundvalue)
 		print("Changed background to " + str(background))
 		instance = background.instantiate()
+		#I need the name of the instance to get access to the entrypoints
+		var instancename = instance.get_name()
 		add_child(instance)
 		#this puts the player where they need to be
-		var entrypointtest = Global.get("entrypoint"+ entrypointnum)
+		var entrypointtest = get_node(instancename + "/entrypoint"+ entrypointnum)
 		(Global.player).position = entrypointtest.position
 		#this makes sure the camera goes over to the player
 		camera.position = (Global.player).position

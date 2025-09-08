@@ -5,7 +5,7 @@
 [ext_resource type="TileSet" uid="uid://cfu3qnob5hdby" path="res://TileMaps/testmap.tres" id="1_uttdf"]
 [ext_resource type="Texture2D" uid="uid://djtawuxo0cuq7" path="res://Assets/TileMaps/GambleFloor/GambleFloor.png" id="2_xrihy"]
 [ext_resource type="PackedScene" uid="uid://b5pe1le7oqle6" path="res://Items/gamble_wheel.tscn" id="3_rq5ow"]
-[ext_resource type="PackedScene" path="res://Characters/mr_gamblemoney.tscn" id="4_eifyd"]
+[ext_resource type="PackedScene" uid="uid://ctv0rh4g023ep" path="res://Characters/mr_gamblemoney.tscn" id="4_eifyd"]
 [ext_resource type="PackedScene" uid="uid://vjwae6ggl2lu" path="res://Items/exit.tscn" id="7_7ascc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y7wxs"]
@@ -372,18 +372,21 @@ position = Vector2(315, 93)
 [node name="entrypoint1" type="Node2D" parent="."]
 position = Vector2(384, 277)
 
-[node name="SouthExit" parent="." instance=ExtResource("7_7ascc")]
-position = Vector2(384, 297)
-scale = Vector2(2.4, 1)
+[node name="exit" parent="." instance=ExtResource("7_7ascc")]
+position = Vector2(384, 298)
 
-[node name="entrypoint" type="Label" parent="SouthExit"]
+[node name="entrypoint" type="Label" parent="exit"]
 visible = false
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 7.0
+offset_top = 21.0
+offset_right = 47.0
+offset_bottom = 44.0
 text = "1"
 
-[node name="location" type="Label" parent="SouthExit"]
+[node name="location" type="Label" parent="exit"]
 visible = false
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 7.0
+offset_top = 21.0
+offset_right = 208.0
+offset_bottom = 44.0
 text = "res://Scenes/testmap.tscn"
