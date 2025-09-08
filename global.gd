@@ -56,5 +56,5 @@ signal loadbackground
 signal buttonsappear
 signal skipdialogue
 signal interacted
-signal hitboxentered
+signal hitbox_entered
 signal testfunc

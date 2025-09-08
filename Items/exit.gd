@@ -5,10 +5,10 @@ extends Area2D
 @onready var selfname = $".".get_name()
 
 func _ready() -> void:
-	Global.interacted.connect(hitboxentered)
+	Global.hitbox_entered.connect(hitbox_entered)
 	print(selfname)
 	
-func hitboxentered(target):
+func hitbox_entered(target):
 	print(target + ": " + selfname)
 	if target == selfname:
 		Global.loadbackground.emit(location, entrypointnum)

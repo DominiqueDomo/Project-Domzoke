@@ -11,6 +11,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 	
 func loadbackground(bgloaded, entrypointnumtemp):
+	Global.dialogue_running = true
 	Global.backgroundvalue = bgloaded
 	entrypointnum = entrypointnumtemp
 	$TransitionScreen/AnimationPlayer.play("fade_to_normal")
@@ -37,3 +38,4 @@ func transition():
 		#this makes sure the camera goes over to the player
 		camera.position = (Global.player).position
 	$TransitionScreen/AnimationPlayer.play("unblack")
+	Global.dialogue_running = false
