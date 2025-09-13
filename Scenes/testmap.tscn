@@ -738,7 +738,10 @@ text = "res://Scenes/casino.tscn"
 position = Vector2(152, 120)
 
 [node name="entrypoint1" type="Node2D" parent="."]
-position = Vector2(-943, -166)
+position = Vector2(397, -135)
+
+[node name="entrypoint2" type="Node2D" parent="."]
+position = Vector2(69, 227)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

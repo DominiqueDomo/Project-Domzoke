@@ -44,6 +44,7 @@ var textspeed
 var displayrange
 var loadedbackground = null
 var introplayed = false
+var allowmovement = true
 
 var player
 

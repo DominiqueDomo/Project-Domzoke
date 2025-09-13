@@ -10,7 +10,7 @@ const SPEED = 100.0
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	#dialogue_running is also used to indicate we are switching from one scene to another
-	if Global.dialogue_running != true:
+	if Global.allowmovement == true:
 		var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 		if direction == Vector2(0, -1):
 			InteractionComponents.rotation_degrees = 0

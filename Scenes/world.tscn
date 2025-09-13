@@ -79,15 +79,15 @@ libraries = {
 "": SubResource("AnimationLibrary_kpxc8")
 }
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -19)
-zoom = Vector2(5, 5)
-limit_left = -1000
-script = ExtResource("3_nw2ub")
-
 [node name="player" parent="." instance=ExtResource("1_4cbuq")]
 z_index = 1
 position = Vector2(0, 9)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -11)
+zoom = Vector2(5, 5)
+limit_left = -1000
+script = ExtResource("3_nw2ub")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

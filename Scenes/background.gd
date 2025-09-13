@@ -7,11 +7,11 @@ var entrypointnum : String
 func _ready() -> void:
 	Global.player = $"../player"
 	Global.loadbackground.connect(loadbackground)
-	loadbackground("res://Scenes/testmap.tscn", "1")
+	loadbackground("res://Scenes/testmap.tscn", "2")
 	pass # Replace with function body.
 	
 func loadbackground(bgloaded, entrypointnumtemp):
-	Global.dialogue_running = true
+	Global.allowmovement = false
 	Global.backgroundvalue = bgloaded
 	entrypointnum = entrypointnumtemp
 	$TransitionScreen/AnimationPlayer.play("fade_to_normal")
@@ -40,4 +40,4 @@ func transition():
 		#this makes sure the camera goes over to the player
 		camera.position = (Global.player).position
 	$TransitionScreen/AnimationPlayer.play("unblack")
-	Global.dialogue_running = false
+	Global.allowmovement = true
