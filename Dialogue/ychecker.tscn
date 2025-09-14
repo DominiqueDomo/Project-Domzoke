@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg1c6jvgbmvgt"]
+
+[ext_resource type="Script" path="res://Dialogue/ychecker.gd" id="1_grqsw"]
+
+[node name="ychecker" type="Node2D"]
+script = ExtResource("1_grqsw")

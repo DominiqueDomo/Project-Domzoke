@@ -1,5 +1,6 @@
 extends Camera2D
 @onready var player = $"../player"
+@onready var egg = $"../Egg"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,4 +9,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position = (position.lerp(player.position, delta * 8)) - Vector2(0, 2.5)
+	
+	if Global.followplayer == true:
+		#if followplayer is true, then the camera's target will be the player, it's not rocket surgery
+		Global.cameratarget = player.position
+	position = ((position.lerp((Global.cameratarget + Global.cameraoffset), delta * 8))) 

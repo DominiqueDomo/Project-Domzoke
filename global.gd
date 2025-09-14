@@ -39,13 +39,19 @@ var funcqvalue = ""
 var yapperqvalue = ""
 
 var localfunc_array = []
-var dialogue_running = false
+
 var textspeed
 var displayrange
 var loadedbackground = null
 var introplayed = false
-var allowmovement = true
 
+#game permissions and current events
+var allowmovement = true
+var dialogue_running = false
+var followplayer = true
+var cameraoffset = Vector2(0,-20)
+var cameratarget
+#I don't remember what I made this var for but if I remove it the game crashes
 var player
 
 signal display_label_text
@@ -58,3 +64,4 @@ signal skipdialogue
 signal interacted
 signal hitbox_entered
 signal testfunc
+signal y_level_changed
