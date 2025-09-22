@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dxbfmf1ulm5sd" path="res://Assets/TileMaps/WallpaperGreenSheet.png" id="2_8pnvj"]
 [ext_resource type="TileSet" uid="uid://bh7sovb56lftr" path="res://SnowTiles.tres" id="2_gqxgp"]
 [ext_resource type="TileSet" uid="uid://c5letry1it7oj" path="res://TileMaps/Planks.tres" id="2_n3jmv"]
-[ext_resource type="PackedScene" path="res://Items/egg.tscn" id="2_r5mp6"]
-[ext_resource type="PackedScene" path="res://Characters/mr_gamblemoney.tscn" id="5_jmjf3"]
+[ext_resource type="PackedScene" uid="uid://btvvd00douad3" path="res://Items/egg.tscn" id="2_r5mp6"]
+[ext_resource type="PackedScene" uid="uid://ctv0rh4g023ep" path="res://Characters/mr_gamblemoney.tscn" id="5_jmjf3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b0gxs"]
 texture = ExtResource("2_8pnvj")

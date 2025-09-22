@@ -5,7 +5,7 @@
 [ext_resource type="TileSet" uid="uid://cfu3qnob5hdby" path="res://TileMaps/testmap.tres" id="1_uttdf"]
 [ext_resource type="Texture2D" uid="uid://djtawuxo0cuq7" path="res://Assets/TileMaps/GambleFloor/GambleFloor.png" id="2_xrihy"]
 [ext_resource type="PackedScene" uid="uid://b5pe1le7oqle6" path="res://Items/gamble_wheel.tscn" id="3_rq5ow"]
-[ext_resource type="PackedScene" path="res://Characters/mr_gamblemoney.tscn" id="4_eifyd"]
+[ext_resource type="PackedScene" uid="uid://ctv0rh4g023ep" path="res://Characters/mr_gamblemoney.tscn" id="4_eifyd"]
 [ext_resource type="PackedScene" uid="uid://vjwae6ggl2lu" path="res://Items/exit.tscn" id="7_7ascc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y7wxs"]

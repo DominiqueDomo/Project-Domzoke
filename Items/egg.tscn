@@ -19,15 +19,19 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_twmhs"]
-radius = 11.0
+radius = 6.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2wqcy"]
 radius = 17.1172
 
 [node name="Egg" type="StaticBody2D"]
+z_index = 1
+y_sort_enabled = true
 script = ExtResource("1_xdeq6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_1orew")
 animation = &"idle"
 

@@ -16,10 +16,10 @@
 [ext_resource type="PackedScene" uid="uid://dp7b08lt5p16v" path="res://Characters/Susan.tscn" id="6_0ngyp"]
 [ext_resource type="TileSet" uid="uid://c5letry1it7oj" path="res://TileMaps/Planks.tres" id="7_0ia4m"]
 [ext_resource type="PackedScene" uid="uid://cvew0h61v7ujs" path="res://Characters/Tinic.tscn" id="9_23see"]
-[ext_resource type="PackedScene" path="res://Characters/mr_gamblemoney.tscn" id="10_yoyur"]
-[ext_resource type="PackedScene" path="res://Items/TreasureChest.tscn" id="11_k0huq"]
+[ext_resource type="PackedScene" uid="uid://ctv0rh4g023ep" path="res://Characters/mr_gamblemoney.tscn" id="10_yoyur"]
+[ext_resource type="PackedScene" uid="uid://dasuft67i10ow" path="res://Items/TreasureChest.tscn" id="11_k0huq"]
 [ext_resource type="PackedScene" uid="uid://kcp36tfmu6a6" path="res://Characters/niels_mouwen.tscn" id="13_v1m5c"]
-[ext_resource type="PackedScene" path="res://Items/egg.tscn" id="14_w1tkg"]
+[ext_resource type="PackedScene" uid="uid://btvvd00douad3" path="res://Items/egg.tscn" id="14_w1tkg"]
 [ext_resource type="PackedScene" uid="uid://je1lk7f65rc7" path="res://Items/test_door.tscn" id="20_6r6ki"]
 [ext_resource type="PackedScene" uid="uid://b5pe1le7oqle6" path="res://Items/gamble_wheel.tscn" id="21_y3wxn"]
 [ext_resource type="Texture2D" uid="uid://dyift568he27l" path="res://Assets/ItemSprites/casino.png" id="23_2rq4w"]
@@ -770,3 +770,6 @@ text = "res://Scenes/casino.tscn"
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-404.1, 171)
 polygon = PackedVector2Array(382, -152, 317, -152, 323, -198, 485, -199, 486, -158, 490, -152, 426, -152, 426, -191, 420, -197, 388, -197, 382, -191)
+
+[node name="Egg7" parent="." instance=ExtResource("14_w1tkg")]
+position = Vector2(193, 52)

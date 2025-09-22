@@ -42,6 +42,7 @@ func setup_convo(convo):
 	NextDialButton.visible = true
 	Global.gatekeeping = false
 	Global.dialogue_running = true
+	Global.allowmovement = false
 	#makes all the dialogue buttons invisible
 	for p in range(0, 4):
 		get_node(Global.allchartypes_array[p] + "_button").visible = false
@@ -204,10 +205,10 @@ func resetdialogue():
 	Global.text_array = []
 	dialogue.text = ""
 	Global.dialogue_running = false
+	Global.allowmovement = true
 	visible_text_tween;
 	Conversation = ""
 	Global.questionasked = false
-
 	$".".visible = false
 	NextDialButton.visible = false
 #this function will end the dialogue, it triggers if no question is asked at all
